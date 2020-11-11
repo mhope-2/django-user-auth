@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <title>Acceptability Of Covid-19 Vaccine In Ghana</title>
+   </head>
+   <body>
+      {% block body_block %}
+      <div>
+      <div class="card mb-3" id="card1">
+         <img src="{% static 'app/assets/imgs/cov.png' %}" height="150px" alt="IMG">  
+      </div>
+      <div class="card mb-3" id="card2">
+         <div class="card-body">
+            <h2 class="card-title">Acceptability Of Covid-19 Vaccine In Ghana</h2>
+            <p class="card-text" style="color: #DC143C; font-weight: normal;">* Required</p>
+         </div>
+      </div>
+      <div class="card">
+         <div class="card-body" id="card3">
+            <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+            <h6 class="card-text">INVESTIGATORS</h6>
+            <h6 style="font-weight: normal; font-size: small;">1. Dr. Paul Owusu-Oduro, Gamma Health Consult, Accra.</h6>
+            <h6 style="font-weight: normal; font-size: small;">2. Dr. Jubin Osei-Mensah, Kumasi Center for Collaborative Research in Tropical Medicine, Kumasi.</h6>
+            <h6 style="font-weight: normal; font-size: small;">3. Dr. Joshua Arthur, Komfo Anokye Teaching Hospital, Kumasi.</h6>
+            <h6 style="font-weight: normal; font-size: small;">4. Rev'd. Fr. Prof. Kwamena W. C. Sagoe, University of Ghana Medical School, Accra.</h6>
+            <br>
+            <h6 style="font-weight: normal; font-size: small;">Please direct all enquiries in relation to this questionnaire to the following email addresses:</h6>
+            <a  href="mailto:paul.owusuoduro@gmail.com">
+               <h6 style="font-weight: normal; font-size: small; color: blue;">paul.owusuoduro@gmail.com</h6>
+            </a>
+            <a  href="mailto:gammahealthconsult@gmail.com">
+               <h6 style="font-weight: normal; font-size: small; color: blue;">gammahealthconsult@gmail.com</h6>
+            </a>
+         </div>
+      </div>
+      <br>
+      <div class="card">
+         <div class="card-body" id="card4">
+            <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+            <h6 class="card-text">GENERAL INFORMATION ABOUT THE STUDY</h6>
+            <h6 style="font-weight: normal; font-size: small;">
+               The study hopes to determine the level of acceptability of a COVID-19 candidate vaccine for clinical trial and subsequent mass vaccination upon a successful trial.<br><br>
+               Currently, non-pharmaceutical preventive methods appear to be the best means to limit further spread since no standard treatment or cure exists but our social structure and nature of interactions threaten the effectiveness and sustainability of these methods. Vaccines are being considered as a possible way of providing protection to susceptible or vulnerable populations. However, any vaccine candidate produced must be taken through clinical trials to ensure that it is able to offer protection and also doesn’t cause any serious side effects. A clinical trial typically goes through four (4) phases;<br><br>
+               PHASE I: Usually test a new drug/vaccine for the first time in a small group of people to evaluate a safe dosage range and identify side effects.<br><br>
+               PHASE II: Test treatments that have been found to be safe in phase I but now in a larger group of human subjects to monitor for any adverse side effects.<br><br>
+               PHASE III: Conducted on a larger population and in different regions and countries, and are often the step right before a new treatment is approved.<br><br>
+               PHASE IV: Takes place after country approval and there is a need for further testing in a wide population over a longer time frame.<br><br>
+               However, since the advent of the COVID-19 pandemic, a number of concerns have emerged on the use of a vaccine. 
+               As with all public health interventions, a major ingredient for success includes the acceptability of any planned intervention at the population level. Some of the factors that may impact acceptability include sociocultural as well as historical dynamics surrounding any event or the development of an intervention. It is therefore important to assess issues of acceptance and awareness around COVID-19 vaccines among the Ghanaian population. Findings from the study could be used to plan educational programs and create awareness among the Ghanaian community. 
+            </h6>
+         </div>
+      </div>
+      <br>
+      <div class="card">
+         <div class="card-body" id="card5">
+            <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+            <h6 class="card-text">DISCLAIMER</h6>
+            <h6 style="font-weight: normal; font-size: small;">None of the researchers or their institutions are involved in the development of any COVID-19 vaccine. The researchers also do not work and have not received funding from any company associated with COVID-19 vaccine.<br>
+               Information from this survey will be used for research purposes only.
+            </h6>
+         </div>
+      </div>
+      <br>
+      <div class="card">
+         <div class="card-body" id="card6">
+            <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+            <h6 class="card-text">CONFIDENTIALITY</h6>
+            <h6 style="font-weight: normal; font-size: small;">Responses provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+         </div>
+      </div>
+      <br>
+      <div class="card">
+         <div class="card-body" id="card7">
+            <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+            <h6 class="card-text">PARTICIPANTS CONSENT AND RIGHT TO WITHDRAW</h6>
+            <h6 style="font-weight: normal; font-size: small;">Participation in this study is absolutely voluntary. You can choose to withdraw at any stage until you submit the questionnaire. Your submission of the questionnaire will be taken as consent to participate fully in this study. However, we encourage you to participate and complete the questions since your opinion is very important in determining the level of acceptability of a COVID-19 candidate vaccine for trial and subsequent mass vaccination upon a successful trial. </h6>
+         </div>
+      </div>
+      <br>
+      <div class="card">
+         <div class="card-body" id="card8">
+            <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+            <h6 class="card-text">THIS SURVEY WILL TAKE A MAXIMUM TIME OF 10 MINUTES TO COMPLETE</h6>
+         </div>
+      </div>
+      <br>
+      <div class="card">
+         <div class="card-body" id="card9">
+            <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+            <p class="card-text" style="color: #DC143C; font-weight: normal;">* Required</p>
+            <h6 class="card-text" required>PLEASE ACCEPT</h6>
+            &nbsp;
+            <input type="radio" value="agree" id="radio-b" required>
+            <label for="radio-b">I Agree</label><br>
+         </div>
+      </div>
+      <br>
+      <form method="POST" name="telForm">
+         <div class="card">
+            <div class="card-body" id="card10">
+               <p class="card-text" style="color: #DC143C; font-weight: normal;">* Required</p>
+               <h6 class="card-text">Phone Number Verification</h6>
+               <label for="phone card-text">Kindly enter your phone number and submit😊</label>
+               <label for="phone card-text" id="phone-not-stored">NB: This phone number is used only for OTP authentication</label>
+               <div class="form-group" id="telForm">
+                  {% csrf_token %}
+                  {{ form | crispy }}
+              </div>
+              <input type="submit" id="btn" value="Submit" class="btn btn-primary">
+      </form>
+      </div>
+      {% endblock body_block %}
+      </div><br><br><br><br>
+      <style>
+         body {
+         background-color: rgb(248, 219, 225);
+         }
+         .card {
+         background-color: white;
+         text-align: left;
+         width: 40em;
+         margin:0 auto;
+         border-radius: 10px;
+         }
+         #card1 {
+         margin-top: 20px;
+         }
+         #card3 {
+         font-weight: lighter;
+         }
+         #card8 {
+         text-align: center;
+         }
+         #radio-b {
+         transform: scale(1.3);
+         }
+         #btn {
+         margin-left: 0px;
+         }
+         #telForm {
+           width: 150px;
+         }
+         #phone-not-stored {
+           color: #DC143C;
+         }
+      </style>
+      <script src="{% static 'app/js/index.js' %}"></script> 
+   </body>
+

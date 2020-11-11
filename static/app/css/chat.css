@@ -1,0 +1,365 @@
+:root {
+  --anim-easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --cf-anim-time: 10s;
+  --cf-breakpoint-1: 769px;
+  --cf-color-green: #1ed97b;
+  --cf-font-weight-bold: 900;
+  --cf-color-black: #222222;
+  --cf-color-black-alpha04: rgba(34, 34, 34, 0.4);
+  --cf-color-black-alpha02: rgba(34, 34, 34, 0.2);
+  --cf-color-grey: #ebebeb;
+  --cf-color-white: white;
+}
+
+#cf-context {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #form {
+    height: 0px;
+    overflow: hidden;
+  }
+
+  .hero-h2{
+    width: 100vw;
+    height: 100vh;
+  }
+
+.cf-input-button{
+    background-color: rgb(214, 226, 214);
+  }
+
+  .inputWrapper{
+     /*background-color: green;*/
+     background-color: #c4c4c431;
+
+  }
+
+  /*.dark-theme .conversational-form cf-chat-response thumb > p {*/
+  /*  background-color: white;*/
+  /*  background-image: url(/images/google.svg) !important;*/
+  /*}*/
+
+/*  .dark-theme .conversational-form cf-chat-response.user thumb {*/
+/*    background-color:white;*/
+/*    background-image: url(../images/Ellipse\ 18.png) !important;*/
+
+/*  }*/
+
+  dark-theme .conversational-form cf-chat-response.robot thumb {
+    background-color: white;
+  }
+
+  #chatstart{
+    margin: 0;
+    padding: auto;
+    padding-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    /* background-color: #868282; */
+    color: white;
+    font-weight: lighter;
+  }
+
+  .hold{
+    /* background-color: #ededed; */
+    background: linear-gradient(140.72deg, #72DEFF 0%, rgba(35, 31, 219, 0.51) 100%);
+    margin-top: -10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  /*#chatone{*/
+  /*  font-family: 'Lato', sans-serif;*/
+  /*  padding-left: 10px;*/
+  /*  font-weight: lighter;*/
+  /*  padding-top: 10px;*/
+  /*  padding-bottom: 0;*/
+  /*  margin-bottom: 0;*/
+  /*  font-size: large;*/
+
+  /*  !* background-color: #868282; *!*/
+
+  /*}*/
+
+  #conversational-form{
+    background-color: white;
+    color: white;
+  }
+
+  .conversational-form-inner{
+    background-color: white;
+  }
+
+  cf-chat{
+    background-color: white;
+    /*background-image: url("images/favicon.png");*/
+    display: block;
+  }
+
+  .conversational-form-inner input{
+  color: #00000050;
+  background-color: #c4c4c431;
+  }
+
+  .conversational-form{
+    /* color: hotpink; */
+  background-color: white;
+    }
+
+  .cf-button-input{
+    background-color: #c4c4c431;
+  }
+
+  /*cf-input.animate-in cf-input-button.cf-input-button{*/
+  /*   background-image: #c4c4c431; */
+
+  /*}*/
+
+  /*cf-input.animate-in{*/
+  /*   background-color: #c4c4c431;*/
+  /*}*/
+
+  /*.chat-popup{*/
+  /*  width: 50%;*/
+  /*}*/
+
+  /*#cf-context{*/
+  /*  width: 100% !important;*/
+  /*}*/
+
+  .user.can-edit.peak-thumb.show p{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+  }
+
+  .conversational-form--enable-animation .cf-button.animate-in{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+  }
+
+  .cf-button:hover, .cf-button:hover:not([checked=checked]){
+    color: green;
+  }
+
+  .conversational-form--enable-animation .cf-button.animate-in:hover{
+    background-color: white;
+    color: blue;
+    border: 1px solid  blue;
+
+  }
+
+  thumb .conversational-form--enable-animation cf-chat-response.user.peak-thumb {
+    background-color: tomato;
+  }
+
+
+  .conversational-form--enable-animation cf-chat-response text>p.show{
+    /* color:black; */
+    word-wrap: break-word;
+  }
+  .cf-input-button.cf-input-button{
+    background-color: white;
+    word-wrap: break-word;
+    /* background-image: url(telegram-plane-brands\ \(1\).svg); */
+    /* background-size:40px; */
+    /* padding:10px ; */
+    background-repeat: no-repeat ;
+    color: white;
+
+  }
+
+  cf-input-button.cf-input-button .cf-input-icons{
+    color: green;
+  }
+
+  cf-input-button.cf-input-button .cf-input-progress{
+    background-color: green;
+  }
+
+  cf-input-button.cf-input-button .cf-input-attachment{
+    background-color: green;
+  }
+
+  .conversational-form--enable-animation cf-chat-response text>p.show{
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    /* line-height: normal; */
+    font-family: 'Lato', sans-serif;
+    font-weight: light;
+    width: auto;
+  }
+
+.conversational-form--enable-animation cf-chat-response.robot.peak-thumb thumb {
+    /*background-image: url(../images/Ellipse\ 18.png) !important;*/
+    background-color: white;
+    width: 30px;
+    margin-right: 0;
+  }
+
+  .conversational-form--enable-animation cf-chat-response text>p.show{
+    /* color: blur; */
+    /* background-color: turquoise; */
+  }
+
+.conversational-form--enable-animation cf-chat-response thumb{
+    background-color: blue;
+  }
+
+
+  cf-chat-response.user thumb{
+    background-color: blue;
+
+  }
+
+  cf-input-button.cf-input-button:hover {
+    background-color: blue;
+  }
+
+  cf-chat-response.user thumb{
+    background-color: teal;
+  }
+
+  .conversational-form--enable-animation cf-chat-response text>p.show{
+    /* background-color: teal; */
+  }
+
+  .conversational-form--enable-animation cf-chat-response.user.peak-thumb thumb{
+    background-color: white;
+  }
+
+  /*cf-chat-response.show{*/
+  /*  padding-left: 10px;*/
+  /*}*/
+
+  /*#hide-button{*/
+  /*    display: none;*/
+  /*}*/
+
+
+/*#cf-context {*/
+/*  width: 350px;*/
+/*  height: 500px;*/
+/*}*/
+
+/*#form {*/
+/*  height: 0px;*/
+/*  overflow: hidden;*/
+/*}*/
+/*#form-appointment{*/
+/*  height: 0px;*/
+/*  overflow: hidden;*/
+/*}*/
+/*!* The popup chat - hidden by default *!*/
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/*!* Add styles to the form container *!*/
+/*.form-container {*/
+/*  max-width: 300px;*/
+/*  padding: 10px;*/
+/*  background-color: white;*/
+/*}*/
+
+/*!* Full-width textarea *!*/
+/*.form-container textarea {*/
+/*  width: 100%;*/
+/*  padding: 15px;*/
+/*  margin: 5px 0 22px 0;*/
+/*  border: none;*/
+/*  background: #f1f1f1;*/
+/*  resize: none;*/
+/*  min-height: 200px;*/
+/*}*/
+
+/*!* When the textarea gets focus, do something *!*/
+/*.form-container textarea:focus {*/
+/*  background-color: #ddd;*/
+/*  outline: none;*/
+/*}*/
+
+/*!* Set a style for the submit/send button *!*/
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/*!* Add a red background color to the cancel button *!*/
+/*.form-container .cancel {*/
+/*  background-color: red;*/
+/*}*/
+
+/*!* Add some hover effects to buttons *!*/
+/*.form-container .btn:hover, .open-button:hover {*/
+/*  opacity: 1;*/
+/*}*/
+/*.myForm{*/
+/*  !* Add shadows to create the "card" effect *!*/
+/*  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+/*  transition: 0.3s;*/
+/*}*/
+iframe {
+		height: 100%;
+    width: 100%;
+    border-width: 0px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    border: 0;
+    border: none;
+    min-height: 0px;
+    min-width: 0px;
+    background: transparent;
+}
+* {
+    box-sizing: border-box;
+}
+/*!* width *!*/
+::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+    /* background-color:; */
+}
+/*!* Track *!*/
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+
+/*@media screen and (max-width: 770px) {*/
+/*  #cf-context{*/
+/*    width: 100% !important;*/
+/*  }*/
+
+  /*.chat-popup{*/
+  /*  width: 100%;*/
+  /*  !* height: 100%; *!*/
+  /*}*/
+
+  /*#chatstart{*/
+  /*  font-size: 18px;*/
+  /*}*/
