@@ -53,7 +53,8 @@ class SignUpView(CreateView):
 class LogoutView(TemplateView):
     template_name = 'user_app/registration/logout_success.html'
 
-
+age_count marital_status_count religion_count job_type_count job_category_health_related_count
+clinical_or_nonclinical_job_count covid_knowledge_before_survey_count risk_of_covid_exposure_count
 
 @login_required
 def dashboard(request):
@@ -66,9 +67,6 @@ def dashboard(request):
 
     marital_status = 'marital_status'
     marital_status_count = list(Responses.objects.all().values(marital_status).annotate(total=Count(marital_status)).order_by('total'))
-
-    gender = 'gender'
-    gender_count = list(Responses.objects.all().values(gender).annotate(total=Count(gender)).order_by('total'))
 
     religion = 'religion'
     religion_count = list(Responses.objects.all().values(religion).annotate(total=Count(religion)).order_by('total'))
@@ -86,7 +84,7 @@ def dashboard(request):
     covid_knowledge_before_survey_count = list(Responses.objects.all().values(covid_knowledge_before_survey).annotate(total=Count(covid_knowledge_before_survey)).order_by('total'))
 
     risk_of_covid_exposure = 'risk_of_covid_exposure'
-    risk_of_covid_exposure = list(Responses.objects.all().values(risk_of_covid_exposure).annotate(total=Count(risk_of_covid_exposure)).order_by('total'))
+    risk_of_covid_exposure_count = list(Responses.objects.all().values(risk_of_covid_exposure).annotate(total=Count(risk_of_covid_exposure)).order_by('total'))
 
     know_of_anyone_diagnosed_with_covid = 'know_of_anyone_diagnosed_with_covid'
     know_of_anyone_diagnosed_with_covid_count = list(Responses.objects.all().values(know_of_anyone_diagnosed_with_covid).annotate(total=Count(know_of_anyone_diagnosed_with_covid)).order_by('total'))
@@ -148,51 +146,23 @@ def dashboard(request):
     preferred_vaccine_continent = 'preferred_vaccine_continent'
     preferred_vaccine_continent_count = list(Responses.objects.all().values(preferred_vaccine_continent).annotate(total=Count(preferred_vaccine_continent)).order_by('total'))
 
-    age = 'age'
-    age_count = list(Responses.objects.all().values(age).annotate(total=Count(age)).order_by('total'))
+    vaccine_scientists_should_include_ghanaian = 'vaccine_scientists_should_include_ghanaian'
+    vaccine_scientists_should_include_ghanaian_count = list(Responses.objects.all().values(vaccine_scientists_should_include_ghanaian).annotate(total=Count(vaccine_scientists_should_include_ghanaian)).order_by('total'))
 
-    gender = 'gender'
-    gender_count = list(Responses.objects.all().values(gender).annotate(total=Count(gender)).order_by('total'))
+    participate_in_mass_covid_vaccination = 'participate_in_mass_covid_vaccination'
+    participate_in_mass_covid_vaccination_count = list(Responses.objects.all().values(participate_in_mass_covid_vaccination).annotate(total=Count(participate_in_mass_covid_vaccination)).order_by('total'))
 
-    age = 'age'
-    age_count = list(Responses.objects.all().values(age).annotate(total=Count(age)).order_by('total'))
+    prepared_to_pay_for_vaccine = 'prepared_to_pay_for_vaccine'
+    prepared_to_pay_for_vaccine_count = list(Responses.objects.all().values(prepared_to_pay_for_vaccine).annotate(total=Count(prepared_to_pay_for_vaccine)).order_by('total'))
 
-    gender = 'gender'
-    gender_count = list(Responses.objects.all().values(gender).annotate(total=Count(gender)).order_by('total'))
+    estimated_vaccine_cost_range = 'estimated_vaccine_cost_range'
+    estimated_vaccine_cost_range_count = list(Responses.objects.all().values(estimated_vaccine_cost_range).annotate(total=Count(estimated_vaccine_cost_range)).order_by('total'))
 
-    age = 'age'
-    age_count = list(Responses.objects.all().values(age).annotate(total=Count(age)).order_by('total'))
+    origin_of_vaccine_influence_your_decision_to_participate = 'origin_of_vaccine_influence_your_decision_to_participate'
+    origin_of_vaccine_influence_your_decision_to_participate_count = list(Responses.objects.all().values(origin_of_vaccine_influence_your_decision_to_participate).annotate(total=Count(origin_of_vaccine_influence_your_decision_to_participate)).order_by('total'))
 
-    gender = 'gender'
-    gender_count = list(Responses.objects.all().values(gender).annotate(total=Count(gender)).order_by('total'))
-
-    age = 'age'
-    age_count = list(Responses.objects.all().values(age).annotate(total=Count(age)).order_by('total'))
-
-    gender = 'gender'
-    gender_count = list(Responses.objects.all().values(gender).annotate(total=Count(gender)).order_by('total'))
-
-    age = 'age'
-    age_count = list(Responses.objects.all().values(age).annotate(total=Count(age)).order_by('total'))
-
-    gender = 'gender'
-    gender_count = list(Responses.objects.all().values(gender).annotate(total=Count(gender)).order_by('total'))
-
-    age = 'age'
-    age_count = list(Responses.objects.all().values(age).annotate(total=Count(age)).order_by('total'))
-
-    gender = 'gender'
-    gender_count = list(Responses.objects.all().values(gender).annotate(total=Count(gender)).order_by('total'))
-
-    age = 'age'
-    age_count = list(Responses.objects.all().values(age).annotate(total=Count(age)).order_by('total'))
-
-    gender = 'gender'
-    gender_count = list(Responses.objects.all().values(gender).annotate(total=Count(gender)).order_by('total'))
-
-
-
-
+    preferred_vaccine_origin = 'preferred_vaccine_origin'
+    preferred_vaccine_origin_count = list(Responses.objects.all().values(preferred_vaccine_origin).annotate(total=Count(preferred_vaccine_origin)).order_by('total'))
 
 
     return render(request, 'user_app/registration/login_success.html', 
