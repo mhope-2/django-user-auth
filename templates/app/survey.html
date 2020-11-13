@@ -70,13 +70,13 @@
             <input type="radio"  name="cfc-q5" value="Clergy/Religious Leader" class="form-control" cf-label="Clergy/Religious Leader">
             <input type="radio" name="cfc-q5" value="Formal private sector employee (e.g. bank, industry)" class="form-control" cf-label="Formal private sector employee (e.g. bank, industry)">
             <input type="radio" name="cfc-q5" value="Informal private sector employee (artisans, e.t.c)" class="form-control" cf-label="Informal private sector employee (artisans, e.t.c)">
-            <input type="radio"  name="cfc-q5" value="Other" class="form-control" cf-label="Other">
+            <input type="radio"  name="cfc-q5" value="Job-Type-Other" class="form-control" cf-label="Job-Type-Other">
         </fieldset>
 
-        <!-- <fieldset>
+        <fieldset>
             <label for="name">Job Type</label>
-            <input type="text" name="cfc-q5-other" cf-conditional-cfc-q5="Other" cf-questions="Kindly enter your job type" class="form-control"/>
-        </fieldset> -->
+            <input type="text" name="cfc-q5-other" cf-conditional-cfc-q5="Job-Type-Other" cf-questions="Kindly enter your job type" class="form-control"/>
+        </fieldset> 
 
         <!-- <cf-robot-message cf-questions="QUESTION 06"></cf-robot-message> -->
         <!-- <fieldset>
@@ -85,10 +85,10 @@
         </fieldset> -->
 
         <!-- <cf-robot-message cf-questions="QUESTION 07"></cf-robot-message> -->
-        <fieldset>
+        {% comment %} <fieldset>
             <label for="name">Country of residence</label>
             <input type="text" name="cfc-q7" cf-questions="Kindly enter your country of residence" class="form-control"/>
-        </fieldset>
+        </fieldset> {% endcomment %}
 
         <!-- <cf-robot-message cf-questions="QUESTION 08"></cf-robot-message> -->
         <fieldset cf-questions="Is your category of job Healthcare or Health-related?" cf-error="Please enter a valid input">
@@ -201,12 +201,12 @@
             <input type="radio" name="cfc-q24" cf-conditional-cfc-q23="No" cf-label="I don’t believe it will protect me." class="form-control" value="I don’t believe it will protect me.">
             <input type="radio" name="cfc-q24" cf-conditional-cfc-q23="No" cf-label="I am afraid of the side effects." class="form-control" value="I am afraid of the side effects.">
             <input type="radio" name="cfc-q24" cf-conditional-cfc-q23="No" cf-label="I don’t trust the manufacturer or those countries producing it." class="form-control" value="I don’t trust the manufacturer or those countries producing it.">
-            <input type="radio" name="cfc-q24" cf-conditional-cfc-q23="No" cf-label="Other" class="form-control" value="Other">
+            <input type="radio" name="cfc-q24" cf-conditional-cfc-q23="No" cf-label="Reason-Other" class="form-control" value="Reason-Other">
         </fieldset>
 
         <fieldset>
             <label for="name">Reason</label>
-            <input type="number" cf-questions="Kindly enter your reason" cf-conditional-cfc-23="Other" class="form-control" name="cfc-24-other"/>
+            <input type="number" cf-questions="Kindly enter your reason" cf-conditional-cfc-23="Reason-Other" class="form-control" name="cfc-24-other"/>
         </fieldset>
 
         <!-- 
@@ -318,7 +318,9 @@
             <input type="radio" name="cfc-q36" cf-conditional-cfc-q32="Yes" cf-conditional-cfc-q35="Yes" cf-label="Anywhere aside Ghana" class="form-control" value="Anywhere aside Ghana"> 
         </fieldset>
 
-        <input type="text" cf-questions="Survey Complete. Your response has been submitted. Thank you for your time. 😊" />
+       <fieldset cf-questions="Survey Complete. Thank you for your time. Kindly exit to submit your response. 😊" cf-error="Please enter a valid input">
+            <input type="radio" name="exit" cf-label="exit" value="exit"/>
+       </fieldset>
         <!-- END -->
 
       </form>

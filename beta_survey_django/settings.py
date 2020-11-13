@@ -38,8 +38,24 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'django_celery_beat',
+    'rest_framework',
+    'corsheaders',
     'app',
+    'user_app',
 ]
+
+# AUTH_USER_MODEL = 'user_app.User'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During dev't only
+SITE_ID = 1 # new
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'hopemichael720@gmail.com'
+EMAIL_HOST_PASSWORD = 'wrtolgsgyvwxbhtg'
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = 'File Enc Team <noreply@surveyteam.com>'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,9 +65,18 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'beta_survey_django.urls'
+
+
+CELERY_BROKER_URL = 'amqp://localhost'
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_METHODS = [
+    'POST',
+]
 
 TEMPLATES = [
     {
@@ -81,6 +106,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'survey-beta',
+#         'USER': 'advertuser',
+#         'PASSWORD': 'YU2bns492ub79onu@$)@0857bfjg',
+#         'HOST': '94.130.18.107',
+#         'PORT': '3306'}
+# }
 
 
 # Password validation
@@ -120,12 +155,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'user_app:login_success'

@@ -1,7 +1,7 @@
 from django import forms
 from .models import Phone, OTP
 
-class PhoneForm(forms.Form):
+class PhoneForm(forms.ModelForm):
     phone = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Enter Contact', 'size':'12', 'class': "form-control"}))
 
     def __init__(self, *args, **kwargs):
@@ -10,6 +10,7 @@ class PhoneForm(forms.Form):
         
     class Meta:
         verbose_name = 'Phone Number'
+        model = Phone
         fields = ['phone']
 
 class OTPForm(forms.ModelForm):

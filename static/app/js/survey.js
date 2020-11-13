@@ -36,19 +36,19 @@ window.onload = function () {
 
         //JSONIFY
         let jsonString = {
-          age: String(formDataSerialized["cfc-q1"]),
+          age: parseInt(formDataSerialized["cfc-q1"]),
           gender: String(formDataSerialized["cfc-q2"][0]),
           marital_status: String(formDataSerialized["cfc-q3"][0]),
           religion: String(formDataSerialized["cfc-q4"][0]),
           religion_other: String(formDataSerialized["cfc-q4-other"]),
           job_type: String(formDataSerialized["cfc-q5"][0]),
           job_type_other: String(formDataSerialized["cfc-q5-other"]),
-          nationality: String(formDataSerialized["cfc-q6"]),
-          country: String(formDataSerialized["cfc-q7"]),
+          // nationality: String(formDataSerialized["cfc-q6"]),
+          // country: String(formDataSerialized["cfc-q7"]),
           job_category_health_related: String(formDataSerialized["cfc-q8"][0]),
           clinical_or_nonclinical_job: String(formDataSerialized["cfc-q9"][0]),
-          covid_knowledge: String(formDataSerialized["cfc-q10"][0]),
-          exposed_to_covid: String(formDataSerialized["cfc-q11"][0]),
+          covid_knowledge_before_survey: String(formDataSerialized["cfc-q10"][0]),
+          risk_of_covid_exposure: String(formDataSerialized["cfc-q11"][0]),
           know_of_anyone_diagnosed_with_covid: String(formDataSerialized["cfc-q12"][0]),
           know_of_anyone_hospitalized_due_to_covid: String(formDataSerialized["cfc-q13"][0]),
           know_of_anyone_die_due_to_covid: String(formDataSerialized["cfc-q14"][0]),
@@ -72,55 +72,49 @@ window.onload = function () {
           vaccine_scientists_should_include_ghanaian: String(formDataSerialized["cfc-q31"][0]),
           participate_in_mass_covid_vaccination: String(formDataSerialized["cfc-q32"][0]),
           prepared_to_pay_for_vaccine: String(formDataSerialized["cfc-q33"][0]),
-          vaccine_cost_range: String(formDataSerialized["cfc-q34"][0]),
+          estimated_vaccine_cost_range: String(formDataSerialized["cfc-q34"][0]),
           origin_of_vaccine_influence_your_decision_to_participate: String(formDataSerialized["cfc-q35"][0]),
           preferred_vaccine_origin: String(formDataSerialized["cfc-q36"][0])
         };
 
         console.log("JSONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\n",jsonString);
 
-        // GENERATE OTP
-        // var random_number = Math.floor(100000 + Math.random() * 900000);
-        // console.log(random_number)
-
         
         // get_url="http://localhost:5000"
-        let headers = new Headers();
+        // let headers = new Headers();
 
-        headers.append("Content-Type", "application/json");
-        headers.append("Accept", "application/json");
+        // headers.append("Content-Type", "application/json");
+        // headers.append("Accept", "application/json");
 
-        headers.append(
-          "Access-Control-Allow-Origin",
-          "https://cors-anywhere.herokuapp.com/https://api.sumitomo.snwolley.com/data"
-        );
-        headers.append("Access-Control-Allow-Credentials", "true");
-
-
-
-    //  console.log(JSON.stringify(jsonString))
-        //push form data to db
-      // $.ajax({
-      //   method: "POST",
-      //   headers: headers,
-      //   url:
-      //     "https://cors-anywhere.herokuapp.com/https://api.sumitomo.snwolley.com/data",
-      //   crossDomain: true,
-      //   contentType: "application/json",
-      //   data: JSON.stringify(jsonString),
-      //   dataType: "json",
-      //   success: function (data) {
-      //     console.log(data);
-      //   },
-      //   error: function (err) {
-      //     console.log("ERROR: ",err);
-      //   },
-      // });
+        // // headers.append(
+        //   "Access-Control-Allow-Origin",
+        //   "http://127.0.0.1:8000/response/"
+        // // );
+        // headers.append("Access-Control-Allow-Credentials", "true");
 
 
 
+     console.log(JSON.stringify(jsonString))
+      // push form data to api
+      
+      const $crf_token = $('[name="csrfmiddlewaretoken"]').attr('value');
+      $.ajax({
+        method: "POST",
+        headers:{"X-CSRFToken": $crf_token},
+        url: String(window.location.origin)+"/response",
+        crossDomain: true,
+        contentType: "application/json",
+        data: JSON.stringify(jsonString),
+        dataType: "json",
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (err) {
+        console.log("ERROR: ",err);
+        },
+    });
 
-
+    
       
         conversationalForm.remapTagsAndStartFrom(1, 1, true);
       },
