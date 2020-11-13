@@ -53,21 +53,6 @@ class SignUpView(CreateView):
 class LogoutView(TemplateView):
     template_name = 'user_app/registration/logout_success.html'
 
-# age_count marital_status_count religion_count job_type_count job_category_health_related_count
-# clinical_or_nonclinical_job_count covid_knowledge_before_survey_count risk_of_covid_exposure_count
-# know_of_anyone_diagnosed_with_covid_count know_of_anyone_hospitalized_due_to_covid_count
-# know_of_anyone_die_due_to_covid_count  know_of_covid_preventive_measures_count 
-# believe_in_facemask_protection_count believe_in_social_distancing_count  believe_in_hand_washing_count
-# think_covid_is_gone_count think_we_need_covid_vaccine_count think_vaccines_are_safe_count
-# heard_of_any_covid_candidate_vaccine_count participate_in_clinical_covid_vaccine_trial_count
-# reason_not_to_participate_in_clinical_covid_vaccine_trial_count motivation_for_participation_count
-# route_of_vaccine_administration_count type_of_vaccine_acceptable_count 
-# phase_of_clinical_trial_to_participate_in_count country_of_vaccine_influence_your_decision_to_participate_count
-# preferred_vaccine_continent_count vaccine_scientists_should_include_ghanaian_count
-# participate_in_mass_covid_vaccination_count prepared_to_pay_for_vaccine_count
-# estimated_vaccine_cost_range_count origin_of_vaccine_influence_your_decision_to_participate_count
-# preferred_vaccine_origin_count
-
 
 @login_required
 def dashboard(request):
@@ -175,8 +160,34 @@ def dashboard(request):
     preferred_vaccine_origin_count = list(Responses.objects.all().values(preferred_vaccine_origin).annotate(total=Count(preferred_vaccine_origin)).order_by('total'))
 
 
-    return render(request, 'user_app/registration/login_success.html', 
-                                                {'age_count':age_count})
+    return render(request, 'user_app/registration/login_success.html', {'age_count':age_count},{'marital_status_count':marital_status_count},
+    {'religion_count':religion_count}, {'job_type_count':job_type_count}, {'job_category_health_related_count':job_category_health_related_count},
+    {'clinical_or_nonclinical_job_count':clinical_or_nonclinical_job_count}, {'covid_knowledge_before_survey_count':covid_knowledge_before_survey_count},
+    {'risk_of_covid_exposure_count':risk_of_covid_exposure_count}, {'know_of_anyone_diagnosed_with_covid_count':know_of_anyone_diagnosed_with_covid_count},
+    {'know_of_anyone_hospitalized_due_to_covid_count':know_of_anyone_hospitalized_due_to_covid_count}, {'know_of_anyone_die_due_to_covid_count':know_of_anyone_die_due_to_covid_count},
+    {'know_of_covid_preventive_measures_count':know_of_covid_preventive_measures_count}, {'believe_in_facemask_protection_count':believe_in_facemask_protection_count},
+    {'believe_in_social_distancing_count':believe_in_social_distancing_count}, {'believe_in_hand_washing_count':believe_in_hand_washing_count},
+    {'think_covid_is_gone_count':think_covid_is_gone_count}, {'think_we_need_covid_vaccine_count'}, {'think_vaccines_are_safe_count':think_vaccines_are_safe_count},
+    {'heard_of_any_covid_candidate_vaccine_count':heard_of_any_covid_candidate_vaccine_count}, {'participate_in_clinical_covid_vaccine_trial_count':participate_in_clinical_covid_vaccine_trial_count},
+    {'reason_not_to_participate_in_clinical_covid_vaccine_trial_count':reason_not_to_participate_in_clinical_covid_vaccine_trial_count}, {'motivation_for_participation_count':motivation_for_participation_count},
+    {'route_of_vaccine_administration_count':route_of_vaccine_administration_count}, {'type_of_vaccine_acceptable_count':type_of_vaccine_acceptable_count},
+    {'phase_of_clinical_trial_to_participate_in_count':phase_of_clinical_trial_to_participate_in_count}, {'country_of_vaccine_influence_your_decision_to_participate_count':country_of_vaccine_influence_your_decision_to_participate_count},
+    {'preferred_vaccine_continent_count':preferred_vaccine_continent_count}, {'vaccine_scientists_should_include_ghanaian_count':vaccine_scientists_should_include_ghanaian_count}, {'participate_in_mass_covid_vaccination_count':participate_in_mass_covid_vaccination_count},
+    {'prepared_to_pay_for_vaccine_count':prepared_to_pay_for_vaccine_count}, {'estimated_vaccine_cost_range_count':estimated_vaccine_cost_range_count}, {'origin_of_vaccine_influence_your_decision_to_participate_count':origin_of_vaccine_influence_your_decision_to_participate_count},
+    {'preferred_vaccine_origin_count':preferred_vaccine_origin_count}
+        )
+   
+   
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+
+
 
 
 def verify(request, uuid):
@@ -189,6 +200,6 @@ def verify(request, uuid):
     user.is_active = True
     user.save()
 
-    return redirect('user_login')
+    return redirect('login')
 
 
