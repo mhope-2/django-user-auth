@@ -48,7 +48,7 @@ class Responses(models.Model):
     know_of_covid_preventive_measures = models.CharField(max_length=255, blank=True, null=True)
     believe_in_facemask_protection = models.CharField(max_length=255, blank=True, null=True)
     believe_in_social_distancing = models.CharField(max_length=255, blank=True, null=True)
-    belive_in_hand_washing = models.CharField(max_length=255, blank=True, null=True)
+    believe_in_hand_washing = models.CharField(max_length=255, blank=True, null=True)
     think_covid_is_gone = models.CharField(max_length=255, blank=True, null=True)
     think_we_need_covid_vaccine = models.CharField(max_length=255, blank=True, null=True)
     think_vaccines_are_safe = models.CharField(max_length=255, blank=True, null=True)

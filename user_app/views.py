@@ -53,8 +53,21 @@ class SignUpView(CreateView):
 class LogoutView(TemplateView):
     template_name = 'user_app/registration/logout_success.html'
 
-age_count marital_status_count religion_count job_type_count job_category_health_related_count
-clinical_or_nonclinical_job_count covid_knowledge_before_survey_count risk_of_covid_exposure_count
+# age_count marital_status_count religion_count job_type_count job_category_health_related_count
+# clinical_or_nonclinical_job_count covid_knowledge_before_survey_count risk_of_covid_exposure_count
+# know_of_anyone_diagnosed_with_covid_count know_of_anyone_hospitalized_due_to_covid_count
+# know_of_anyone_die_due_to_covid_count  know_of_covid_preventive_measures_count 
+# believe_in_facemask_protection_count believe_in_social_distancing_count  believe_in_hand_washing_count
+# think_covid_is_gone_count think_we_need_covid_vaccine_count think_vaccines_are_safe_count
+# heard_of_any_covid_candidate_vaccine_count participate_in_clinical_covid_vaccine_trial_count
+# reason_not_to_participate_in_clinical_covid_vaccine_trial_count motivation_for_participation_count
+# route_of_vaccine_administration_count type_of_vaccine_acceptable_count 
+# phase_of_clinical_trial_to_participate_in_count country_of_vaccine_influence_your_decision_to_participate_count
+# preferred_vaccine_continent_count vaccine_scientists_should_include_ghanaian_count
+# participate_in_mass_covid_vaccination_count prepared_to_pay_for_vaccine_count
+# estimated_vaccine_cost_range_count origin_of_vaccine_influence_your_decision_to_participate_count
+# preferred_vaccine_origin_count
+
 
 @login_required
 def dashboard(request):
@@ -104,8 +117,8 @@ def dashboard(request):
     believe_in_social_distancing = 'believe_in_social_distancing'
     believe_in_social_distancing_count = list(Responses.objects.all().values(believe_in_social_distancing).annotate(total=Count(believe_in_social_distancing)).order_by('total'))
 
-    belive_in_hand_washing = 'belive_in_hand_washing'
-    belive_in_hand_washing_count = list(Responses.objects.all().values(belive_in_hand_washing).annotate(total=Count(belive_in_hand_washing)).order_by('total'))
+    believe_in_hand_washing = 'belive_in_hand_washing'
+    believe_in_hand_washing_count = list(Responses.objects.all().values(believe_in_hand_washing).annotate(total=Count(believe_in_hand_washing)).order_by('total'))
 
     think_covid_is_gone = 'think_covid_is_gone'
     think_covid_is_gone_count = list(Responses.objects.all().values(think_covid_is_gone).annotate(total=Count(think_covid_is_gone)).order_by('total'))
@@ -120,10 +133,7 @@ def dashboard(request):
     heard_of_any_covid_candidate_vaccine_count = list(Responses.objects.all().values(heard_of_any_covid_candidate_vaccine).annotate(total=Count(heard_of_any_covid_candidate_vaccine)).order_by('total'))
 
     participate_in_clinical_covid_vaccine_trial = 'participate_in_clinical_covid_vaccine_trial'
-    gender_count = list(Responses.objects.all().values(gender).annotate(total=Count(gender)).order_by('total'))
-
-    participate_in_clinical_covid_vaccine_trial = 'participate_in_clinical_covid_vaccine_trial'
-    participate_in_clinical_covid_vaccine_trial = list(Responses.objects.all().values(participate_in_clinical_covid_vaccine_trial).annotate(total=Count(participate_in_clinical_covid_vaccine_trial)).order_by('total'))
+    participate_in_clinical_covid_vaccine_trial_count = list(Responses.objects.all().values(participate_in_clinical_covid_vaccine_trial).annotate(total=Count(participate_in_clinical_covid_vaccine_trial)).order_by('total'))
 
     reason_not_to_participate_in_clinical_covid_vaccine_trial = 'reason_not_to_participate_in_clinical_covid_vaccine_trial'
     reason_not_to_participate_in_clinical_covid_vaccine_trial_count = list(Responses.objects.all().values(reason_not_to_participate_in_clinical_covid_vaccine_trial).annotate(total=Count(reason_not_to_participate_in_clinical_covid_vaccine_trial)).order_by('total'))

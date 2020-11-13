@@ -1746,3 +1746,6 @@ AttributeError: 'Responses' object has no attribute 'my_charfield'
 2020-11-13 04:36:59,804,804 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta_survey_django/user_app/views.py changed, reloading.
 2020-11-13 04:36:59,804,804 asyncio DEBUG Using selector: KqueueSelector
 2020-11-13 04:37:02,090,90 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 04:52:18,760,760 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 04:52:34,673,673 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 04:52:46,809,809 asyncio DEBUG Using selector: KqueueSelector
