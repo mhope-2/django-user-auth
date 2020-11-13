@@ -18,6 +18,8 @@ from django.utils.decorators import method_decorator
 from app.models import Responses
 from django.contrib.auth.decorators import login_required
 
+import pandas as pd
+import numpy as np
 
 
 
@@ -62,12 +64,29 @@ def dashboard(request):
     age = 'age'
     age_queryset= list(Responses.objects.all().values(age).annotate(total=Count(age)).order_by('total'))
 
+    df = pd.DataFrame(age_queryset)
+    conditions = [
+    (df['age'] < 18),
+    ((df['age']>=18)&(df['age']<=40)),
+    ((df['age']>40)&(df['age']<=60)),
+    (df['age'] > 60)
+    ]
+    values = ['< 18', '18 - 40', '41 - 60', '> 60']
+    df['age_group'] = np.select(conditions, values)
+
+    df_new=df.groupby('age_group').sum()
+    queryset=df_new.to_dict()
+
+
     age_labels=[]
     age_data=[]
 
-    for idx,item in enumerate(age_queryset):
-        age_labels.append(age_queryset[idx][age])
-        age_labels.append(age_queryset[idx]['total'])
+    for item in queryset['total'].keys():
+        age_labels.append(item)
+    for item in queryset['total'].values():
+        age_data.append(item)
+
+    
     
     ##########################################################################################################################################
     # GENDER
@@ -89,8 +108,8 @@ def dashboard(request):
     marital_status_data=[]
 
     for idx,item in enumerate(marital_status_queryset):
-        labels.append(marital_status_queryset[idx][marital_status])
-        data.append(marital_status_queryset[idx]['total'])
+        marital_status_labels.append(marital_status_queryset[idx]['marital_status'])
+        marital_status_data.append(marital_status_queryset[idx]['total'])
 
     ##########################################################################################################################################
     religion = 'religion'
@@ -100,8 +119,8 @@ def dashboard(request):
     religion_data=[]
 
     for idx,item in enumerate(religion_queryset):
-        labels.append(religion_queryset[idx][religion])
-        data.append(religion_queryset[idx]['total'])
+        religion_labels.append(religion_queryset[idx][religion])
+        religion_data.append(religion_queryset[idx]['total'])
 
     ##########################################################################################################################################
     job_type = 'job_type'
@@ -111,7 +130,7 @@ def dashboard(request):
     job_type_data=[]
 
     for idx,item in enumerate(job_type_queryset):
-        job_type_labels.append(job_type_queryset[idx][religion])
+        job_type_labels.append(job_type_queryset[idx][job_type])
         job_type_data.append(job_type_queryset[idx]['total'])
 
     ##########################################################################################################################################
@@ -121,7 +140,7 @@ def dashboard(request):
     job_category_health_related_labels=[]
     job_category_health_related_data=[]
 
-    for idx,item in enumerate(job_type_queryset):
+    for idx,item in enumerate(job_category_health_related_queryset):
         job_category_health_related_labels.append(job_category_health_related_queryset[idx][job_category_health_related])
         job_category_health_related_data.append(job_category_health_related_queryset[idx]['total'])
 
@@ -130,8 +149,8 @@ def dashboard(request):
     clinical_or_nonclinical_job = 'clinical_or_nonclinical_job'
     clinical_or_nonclinical_job_queryset= list(Responses.objects.all().values(clinical_or_nonclinical_job).annotate(total=Count(clinical_or_nonclinical_job)).order_by('total'))
 
-    job_category_health_related_labels=[]
-    job_category_health_related_data=[]
+    clinical_or_nonclinical_job_labels=[]
+    clinical_or_nonclinical_job_data=[]
 
     for idx,item in enumerate(clinical_or_nonclinical_job_queryset):
         clinical_or_nonclinical_job_labels.append(clinical_or_nonclinical_job_queryset[idx][clinical_or_nonclinical_job])
@@ -142,8 +161,8 @@ def dashboard(request):
     covid_knowledge_before_survey = 'covid_knowledge_before_survey'
     covid_knowledge_before_survey_queryset= list(Responses.objects.all().values(covid_knowledge_before_survey).annotate(total=Count(covid_knowledge_before_survey)).order_by('total'))
 
-    job_category_health_related_labels=[]
-    job_category_health_related_data=[]
+    covid_knowledge_before_survey_labels = []
+    covid_knowledge_before_survey_data = []
 
     for idx,item in enumerate(covid_knowledge_before_survey_queryset):
         covid_knowledge_before_survey_labels.append(covid_knowledge_before_survey_queryset[idx][covid_knowledge_before_survey])
@@ -154,8 +173,8 @@ def dashboard(request):
     risk_of_covid_exposure = 'risk_of_covid_exposure'
     risk_of_covid_exposure_queryset= list(Responses.objects.all().values(risk_of_covid_exposure).annotate(total=Count(risk_of_covid_exposure)).order_by('total'))
 
-    job_category_health_related_labels=[]
-    job_category_health_related_data=[]
+    risk_of_covid_exposure_labels=[]
+    risk_of_covid_exposure_data=[]
 
     for idx,item in enumerate(risk_of_covid_exposure_queryset):
         covid_knowledge_before_survey_labels.append(risk_of_covid_exposure_queryset[idx][risk_of_covid_exposure])
@@ -166,15 +185,12 @@ def dashboard(request):
     know_of_anyone_diagnosed_with_covid = 'know_of_anyone_diagnosed_with_covid'
     know_of_anyone_diagnosed_with_covid_queryset= list(Responses.objects.all().values(know_of_anyone_diagnosed_with_covid).annotate(total=Count(know_of_anyone_diagnosed_with_covid)).order_by('total'))
 
-    risk_of_covid_exposure = 'risk_of_covid_exposure'
-    risk_of_covid_exposure_queryset= list(Responses.objects.all().values(risk_of_covid_exposure).annotate(total=Count(risk_of_covid_exposure)).order_by('total'))
-
-    covid_knowledge_before_survey_labels=[]
-    covid_knowledge_before_survey_data=[]
+    know_of_anyone_diagnosed_with_covid_labels=[]
+    know_of_anyone_diagnosed_with_covid_data=[]
 
     for idx,item in enumerate(know_of_anyone_diagnosed_with_covid_queryset):
-        covid_knowledge_before_survey_labels.append(risk_of_covid_exposure_queryset[idx][risk_of_covid_exposure])
-        covid_knowledge_before_survey_data.append(risk_of_covid_exposure_queryset[idx]['total'])
+        know_of_anyone_diagnosed_with_covid_labels.append(know_of_anyone_diagnosed_with_covid_queryset[idx][know_of_anyone_diagnosed_with_covid])
+        know_of_anyone_diagnosed_with_covid_data.append(know_of_anyone_diagnosed_with_covid_queryset[idx]['total'])
 
     ##########################################################################################################################################
 
@@ -185,32 +201,32 @@ def dashboard(request):
     know_of_anyone_hospitalized_due_to_covid_data=[]
 
     for idx,item in enumerate(know_of_anyone_hospitalized_due_to_covid_queryset):
-        know_of_anyone_hospitalized_due_to_covid_labels.append(risk_of_covid_exposure_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
-        know_of_anyone_hospitalized_due_to_covid_data.append(risk_of_covid_exposure_queryset[idx]['total'])
+        know_of_anyone_hospitalized_due_to_covid_labels.append(know_of_anyone_hospitalized_due_to_covid_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
+        know_of_anyone_hospitalized_due_to_covid_data.append(know_of_anyone_hospitalized_due_to_covid_queryset[idx]['total'])
 
     ##########################################################################################################################################
 
     know_of_anyone_die_due_to_covid = 'know_of_anyone_die_due_to_covid'
     know_of_anyone_die_due_to_covid_queryset= list(Responses.objects.all().values(know_of_anyone_die_due_to_covid).annotate(total=Count(know_of_anyone_die_due_to_covid)).order_by('total'))
 
-    know_of_anyone_die_due_to_covid_covid_labels=[]
+    know_of_anyone_die_due_to_covid_labels=[]
     know_of_anyone_die_due_to_covid_data=[]
 
     for idx,item in enumerate(know_of_anyone_die_due_to_covid_queryset):
-        know_of_anyone_die_due_to_covid_labels.append(risk_of_covid_exposure_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
-        know_of_anyone_die_due_to_covid_data.append(risk_of_covid_exposure_queryset[idx]['total'])
+        know_of_anyone_die_due_to_covid_labels.append(know_of_anyone_die_due_to_covid_queryset[idx][know_of_anyone_die_due_to_covid])
+        know_of_anyone_die_due_to_covid_data.append(know_of_anyone_die_due_to_covid_queryset[idx]['total'])
 
     ##########################################################################################################################################
 
     know_of_covid_preventive_measures = 'know_of_covid_preventive_measures'
     know_of_covid_preventive_measures_queryset= list(Responses.objects.all().values(know_of_covid_preventive_measures).annotate(total=Count(know_of_covid_preventive_measures)).order_by('total'))
     
-    know_of_anyone_hospitalized_due_to_covid_labels=[]
-    know_of_anyone_hospitalized_due_to_covid_data=[]
+    know_of_covid_preventive_measures_labels=[]
+    know_of_covid_preventive_measures_data=[]
 
-    for idx,item in enumerate(know_of_anyone_die_due_to_covid_queryset):
-        know_of_anyone_hospitalized_due_to_covid_labels.append(know_of_anyone_die_due_to_covid_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
-        know_of_anyone_hospitalized_due_to_covid_data.append(risk_of_covid_exposure_queryset[idx]['total'])
+    for idx,item in enumerate(know_of_covid_preventive_measures_queryset):
+        know_of_covid_preventive_measures_labels.append(know_of_covid_preventive_measures_queryset[idx][know_of_covid_preventive_measures])
+        know_of_covid_preventive_measures_data.append(know_of_covid_preventive_measures_queryset[idx]['total'])
 
     ##########################################################################################################################################
 
@@ -221,7 +237,7 @@ def dashboard(request):
     believe_in_facemask_protection_data=[]
 
     for idx,item in enumerate(believe_in_facemask_protection_queryset):
-        believe_in_facemask_protection_labels.append(believe_in_facemask_protection_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
+        believe_in_facemask_protection_labels.append(believe_in_facemask_protection_queryset[idx][believe_in_facemask_protection])
         believe_in_facemask_protection_data.append(believe_in_facemask_protection_queryset[idx]['total'])
 
     ##########################################################################################################################################
@@ -233,7 +249,7 @@ def dashboard(request):
     believe_in_social_distancing_data=[]
 
     for idx,item in enumerate(believe_in_social_distancing_queryset):
-        believe_in_social_distancing_labels.append(believe_in_social_distancing_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
+        believe_in_social_distancing_labels.append(believe_in_social_distancing_queryset[idx][believe_in_social_distancing])
         believe_in_social_distancing_data.append(believe_in_social_distancing_queryset[idx]['total'])
 
     ##########################################################################################################################################
@@ -253,8 +269,8 @@ def dashboard(request):
     think_covid_is_gone = 'think_covid_is_gone'
     think_covid_is_gone_queryset= list(Responses.objects.all().values(think_covid_is_gone).annotate(total=Count(think_covid_is_gone)).order_by('total'))
 
-    believe_in_social_distancing_labels=[]
-    believe_in_social_distancing_data=[]
+    think_covid_is_gone_labels=[]
+    think_covid_is_gone_data=[]
 
     for idx,item in enumerate(think_covid_is_gone_queryset):
         think_covid_is_gone_labels.append(think_covid_is_gone_queryset[idx][think_covid_is_gone])
@@ -265,12 +281,12 @@ def dashboard(request):
     think_we_need_covid_vaccine = 'think_we_need_covid_vaccine'
     think_we_need_covid_vaccine_queryset= list(Responses.objects.all().values(think_we_need_covid_vaccine).annotate(total=Count(think_we_need_covid_vaccine)).order_by('total'))
 
-    believe_in_social_distancing_labels=[]
-    believe_in_social_distancing_data=[]
+    think_we_need_covid_vaccine_labels=[]
+    think_we_need_covid_vaccine_data=[]
 
     for idx,item in enumerate(think_we_need_covid_vaccine_queryset):
-        think_covid_is_gone_labels.append(think_we_need_covid_vaccine_queryset[idx][think_we_need_covid_vaccine])
-        think_covid_is_gone_data.append(think_we_need_covid_vaccine_queryset[idx]['total'])
+        think_we_need_covid_vaccine_labels.append(think_we_need_covid_vaccine_queryset[idx][think_we_need_covid_vaccine])
+        think_we_need_covid_vaccine_data.append(think_we_need_covid_vaccine_queryset[idx]['total'])
 
     ##########################################################################################################################################
  
@@ -313,11 +329,11 @@ def dashboard(request):
     reason_not_to_participate_in_clinical_covid_vaccine_trial = 'reason_not_to_participate_in_clinical_covid_vaccine_trial'
     reason_not_to_participate_in_clinical_covid_vaccine_trial_queryset= list(Responses.objects.all().values(reason_not_to_participate_in_clinical_covid_vaccine_trial).annotate(total=Count(reason_not_to_participate_in_clinical_covid_vaccine_trial)).order_by('total'))
 
-    participate_in_clinical_covid_vaccine_trial_labels=[]
-    participate_in_clinical_covid_vaccine_trial_data=[]
+    reason_not_to_participate_in_clinical_covid_vaccine_trial_labels=[]
+    reason_not_to_participate_in_clinical_covid_vaccine_trial_data=[]
 
-    for idx,item in enumerate(heard_of_any_covid_candidate_vaccine_queryset):
-        reason_not_to_participate_in_clinical_covid_vaccine_trial_labels.append(reason_not_to_participate_in_clinical_covid_vaccine_trial_queryset[idx][participate_in_clinical_covid_vaccine_trial])
+    for idx,item in enumerate(reason_not_to_participate_in_clinical_covid_vaccine_trial_queryset):
+        reason_not_to_participate_in_clinical_covid_vaccine_trial_labels.append(reason_not_to_participate_in_clinical_covid_vaccine_trial_queryset[idx][reason_not_to_participate_in_clinical_covid_vaccine_trial])
         reason_not_to_participate_in_clinical_covid_vaccine_trial_data.append(reason_not_to_participate_in_clinical_covid_vaccine_trial_queryset[idx]['total'])
 
     ##########################################################################################################################################
@@ -325,93 +341,254 @@ def dashboard(request):
     motivation_for_participation = 'motivation_for_participation'
     motivation_for_participation_queryset= list(Responses.objects.all().values(motivation_for_participation).annotate(total=Count(motivation_for_participation)).order_by('total'))
 
+    motivation_for_participation_labels=[]
+    motivation_for_participation_data=[]
+
+    for idx,item in enumerate(motivation_for_participation_queryset):
+        motivation_for_participation_labels.append(motivation_for_participation_queryset[idx][motivation_for_participation])
+        motivation_for_participation_data.append(motivation_for_participation_queryset[idx]['total'])
+
     ##########################################################################################################################################
 
     route_of_vaccine_administration = 'route_of_vaccine_administration'
     route_of_vaccine_administration_queryset= list(Responses.objects.all().values(route_of_vaccine_administration).annotate(total=Count(route_of_vaccine_administration)).order_by('total'))
+
+    route_of_vaccine_administration_labels=[]
+    route_of_vaccine_administration_data=[]
+
+    for idx,item in enumerate(route_of_vaccine_administration_queryset):
+        route_of_vaccine_administration_labels.append(route_of_vaccine_administration_queryset[idx][route_of_vaccine_administration])
+        route_of_vaccine_administration_data.append(route_of_vaccine_administration_queryset[idx]['total'])
 
     ##########################################################################################################################################
 
     type_of_vaccine_acceptable = 'type_of_vaccine_acceptable'
     type_of_vaccine_acceptable_queryset= list(Responses.objects.all().values(type_of_vaccine_acceptable).annotate(total=Count(type_of_vaccine_acceptable)).order_by('total'))
 
+    type_of_vaccine_acceptable_labels=[]
+    type_of_vaccine_acceptable_data=[]
+
+    for idx,item in enumerate(type_of_vaccine_acceptable_queryset):
+        type_of_vaccine_acceptable_labels.append(type_of_vaccine_acceptable_queryset[idx][type_of_vaccine_acceptable])
+        type_of_vaccine_acceptable_data.append(type_of_vaccine_acceptable_queryset[idx]['total'])
+
     ##########################################################################################################################################
 
     phase_of_clinical_trial_to_participate_in = 'phase_of_clinical_trial_to_participate_in'
     phase_of_clinical_trial_to_participate_in_queryset= list(Responses.objects.all().values(phase_of_clinical_trial_to_participate_in).annotate(total=Count(phase_of_clinical_trial_to_participate_in)).order_by('total'))
+
+    phase_of_clinical_trial_to_participate_in_labels=[]
+    phase_of_clinical_trial_to_participate_in_data=[]
+
+    for idx,item in enumerate(phase_of_clinical_trial_to_participate_in_queryset):
+        phase_of_clinical_trial_to_participate_in_labels.append(phase_of_clinical_trial_to_participate_in_queryset[idx][phase_of_clinical_trial_to_participate_in])
+        phase_of_clinical_trial_to_participate_in_data.append(phase_of_clinical_trial_to_participate_in_queryset[idx]['total'])
 
     ##########################################################################################################################################
 
     country_of_vaccine_influence_your_decision_to_participate = 'country_of_vaccine_influence_your_decision_to_participate'
     country_of_vaccine_influence_your_decision_to_participate_queryset= list(Responses.objects.all().values(country_of_vaccine_influence_your_decision_to_participate).annotate(total=Count(country_of_vaccine_influence_your_decision_to_participate)).order_by('total'))
 
+    country_of_vaccine_influence_your_decision_to_participate_labels=[]
+    country_of_vaccine_influence_your_decision_to_participate_data=[]
+
+    for idx,item in enumerate(country_of_vaccine_influence_your_decision_to_participate_queryset):
+        country_of_vaccine_influence_your_decision_to_participate_labels.append(country_of_vaccine_influence_your_decision_to_participate_queryset[idx][country_of_vaccine_influence_your_decision_to_participate])
+        country_of_vaccine_influence_your_decision_to_participate_data.append(country_of_vaccine_influence_your_decision_to_participate_queryset[idx]['total'])
+
     ##########################################################################################################################################
 
     preferred_vaccine_continent = 'preferred_vaccine_continent'
     preferred_vaccine_continent_queryset= list(Responses.objects.all().values(preferred_vaccine_continent).annotate(total=Count(preferred_vaccine_continent)).order_by('total'))
+
+    preferred_vaccine_continent_labels=[]
+    preferred_vaccine_continent_data=[]
+
+    for idx,item in enumerate(preferred_vaccine_continent_queryset):
+        preferred_vaccine_continent_labels.append(preferred_vaccine_continent_queryset[idx][preferred_vaccine_continent])
+        preferred_vaccine_continent_labels.append(preferred_vaccine_continent_queryset[idx]['total'])
+
 
     ##########################################################################################################################################
 
     vaccine_scientists_should_include_ghanaian = 'vaccine_scientists_should_include_ghanaian'
     vaccine_scientists_should_include_ghanaian_queryset= list(Responses.objects.all().values(vaccine_scientists_should_include_ghanaian).annotate(total=Count(vaccine_scientists_should_include_ghanaian)).order_by('total'))
 
+    vaccine_scientists_should_include_ghanaian_labels=[]
+    vaccine_scientists_should_include_ghanaian_data=[]
+
+    for idx,item in enumerate(vaccine_scientists_should_include_ghanaian_queryset):
+        vaccine_scientists_should_include_ghanaian_labels.append(vaccine_scientists_should_include_ghanaian_queryset[idx][vaccine_scientists_should_include_ghanaian])
+        vaccine_scientists_should_include_ghanaian_labels.append(vaccine_scientists_should_include_ghanaian_queryset[idx]['total'])
+
     ##########################################################################################################################################
 
     participate_in_mass_covid_vaccination = 'participate_in_mass_covid_vaccination'
     participate_in_mass_covid_vaccination_queryset= list(Responses.objects.all().values(participate_in_mass_covid_vaccination).annotate(total=Count(participate_in_mass_covid_vaccination)).order_by('total'))
+
+    participate_in_mass_covid_vaccination_labels=[]
+    participate_in_mass_covid_vaccination_data=[]
+
+    for idx,item in enumerate(participate_in_mass_covid_vaccination_queryset):
+        participate_in_mass_covid_vaccination_labels.append(participate_in_mass_covid_vaccination_queryset[idx][participate_in_mass_covid_vaccination])
+        participate_in_mass_covid_vaccination_data.append(participate_in_mass_covid_vaccination_queryset[idx]['total'])
 
     ##########################################################################################################################################
 
     prepared_to_pay_for_vaccine = 'prepared_to_pay_for_vaccine'
     prepared_to_pay_for_vaccine_queryset= list(Responses.objects.all().values(prepared_to_pay_for_vaccine).annotate(total=Count(prepared_to_pay_for_vaccine)).order_by('total'))
 
+    prepared_to_pay_for_vaccine_labels=[]
+    prepared_to_pay_for_vaccine_data=[]
+
+    for idx,item in enumerate(prepared_to_pay_for_vaccine_queryset):
+        preferred_vaccine_continent_labels.append(prepared_to_pay_for_vaccine_queryset[idx][prepared_to_pay_for_vaccine])
+        preferred_vaccine_continent_data.append(prepared_to_pay_for_vaccine_queryset[idx]['total'])
+
+    
     ##########################################################################################################################################
 
     estimated_vaccine_cost_range = 'estimated_vaccine_cost_range'
     estimated_vaccine_cost_range_queryset= list(Responses.objects.all().values(estimated_vaccine_cost_range).annotate(total=Count(estimated_vaccine_cost_range)).order_by('total'))
+
+    estimated_vaccine_cost_range_labels=[]
+    estimated_vaccine_cost_range_data=[]
+
+    for idx,item in enumerate(estimated_vaccine_cost_range_queryset):
+        estimated_vaccine_cost_range_labels.append(estimated_vaccine_cost_range_queryset[idx][estimated_vaccine_cost_range])
+        estimated_vaccine_cost_range_data.append(estimated_vaccine_cost_range_queryset[idx]['total'])
 
     ##########################################################################################################################################
 
     origin_of_vaccine_influence_your_decision_to_participate = 'origin_of_vaccine_influence_your_decision_to_participate'
     origin_of_vaccine_influence_your_decision_to_participate_queryset= list(Responses.objects.all().values(origin_of_vaccine_influence_your_decision_to_participate).annotate(total=Count(origin_of_vaccine_influence_your_decision_to_participate)).order_by('total'))
 
+    origin_of_vaccine_influence_your_decision_to_participate_labels=[]
+    origin_of_vaccine_influence_your_decision_to_participate_data=[]
+
+    for idx,item in enumerate(origin_of_vaccine_influence_your_decision_to_participate_queryset):
+        origin_of_vaccine_influence_your_decision_to_participate_labels.append(origin_of_vaccine_influence_your_decision_to_participate_queryset[idx][origin_of_vaccine_influence_your_decision_to_participate])
+        origin_of_vaccine_influence_your_decision_to_participate_data.append(origin_of_vaccine_influence_your_decision_to_participate_queryset[idx]['total'])
+
     ##########################################################################################################################################
 
     preferred_vaccine_origin = 'preferred_vaccine_origin'
     preferred_vaccine_origin_queryset= list(Responses.objects.all().values(preferred_vaccine_origin).annotate(total=Count(preferred_vaccine_origin)).order_by('total'))
 
+    preferred_vaccine_origin_labels=[]
+    preferred_vaccine_origin_data=[]
+
+    for idx,item in enumerate(preferred_vaccine_origin_queryset):
+        preferred_vaccine_origin_labels.append(preferred_vaccine_origin_queryset[idx][preferred_vaccine_origin])
+        preferred_vaccine_origin_data.append(preferred_vaccine_origin_queryset[idx]['total'])
+
+
     ##########################################################################################################################################
 
 
     return render(request, 'user_app/registration/login_success.html', {
-    'age_count':age_count, 'marital_status_count':marital_status_count,
-    'religion_count':religion_count, 'job_type_count':job_type_count, 'job_category_health_related_count':job_category_health_related_count,
-    'clinical_or_nonclinical_job_count':clinical_or_nonclinical_job_count, 'covid_knowledge_before_survey_count':covid_knowledge_before_survey_count,
-    'risk_of_covid_exposure_count':risk_of_covid_exposure_count, 'know_of_anyone_diagnosed_with_covid_count':know_of_anyone_diagnosed_with_covid_count,
-    'know_of_anyone_hospitalized_due_to_covid_count':know_of_anyone_hospitalized_due_to_covid_count, 'know_of_anyone_die_due_to_covid_count':know_of_anyone_die_due_to_covid_count,
-    'know_of_covid_preventive_measures_count':know_of_covid_preventive_measures_count, 'believe_in_facemask_protection_count':believe_in_facemask_protection_count,
-    'believe_in_social_distancing_count':believe_in_social_distancing_count, 'believe_in_hand_washing_count':believe_in_hand_washing_count,
-    'think_covid_is_gone_count':think_covid_is_gone_count, 'think_we_need_covid_vaccine_count':think_we_need_covid_vaccine_count, 'think_vaccines_are_safe_count':think_vaccines_are_safe_count,
-    'heard_of_any_covid_candidate_vaccine_count':heard_of_any_covid_candidate_vaccine_count, 'participate_in_clinical_covid_vaccine_trial_count':participate_in_clinical_covid_vaccine_trial_count,
-    'reason_not_to_participate_in_clinical_covid_vaccine_trial_count':reason_not_to_participate_in_clinical_covid_vaccine_trial_count, 'motivation_for_participation_count':motivation_for_participation_count,
-    'route_of_vaccine_administration_count':route_of_vaccine_administration_count, 'type_of_vaccine_acceptable_count':type_of_vaccine_acceptable_count,
-    'phase_of_clinical_trial_to_participate_in_count':phase_of_clinical_trial_to_participate_in_count, 'country_of_vaccine_influence_your_decision_to_participate_count':country_of_vaccine_influence_your_decision_to_participate_count,
-    'preferred_vaccine_continent_count':preferred_vaccine_continent_count, 'vaccine_scientists_should_include_ghanaian_count':vaccine_scientists_should_include_ghanaian_count, 'participate_in_mass_covid_vaccination_count':participate_in_mass_covid_vaccination_count,
-    'prepared_to_pay_for_vaccine_count':prepared_to_pay_for_vaccine_count, 'estimated_vaccine_cost_range_count':estimated_vaccine_cost_range_count, 'origin_of_vaccine_influence_your_decision_to_participate_count':origin_of_vaccine_influence_your_decision_to_participate_count,
-    'preferred_vaccine_origin_count':preferred_vaccine_origin_count
+        'gender_labels': gender_labels,
+        'gender_data': gender_data,
+
+        'age_labels': age_labels,
+        'age_data': age_data,
+
+        'marital_status_labels': marital_status_labels,
+        'marital_status_data': marital_status_data,
+
+        'religion_labels': religion_labels,
+        'religion_data': religion_data,
+
+        'job_type_labels': job_type_labels,
+        'job_type_data': job_type_labels,
+
+        'job_category_health_related_labels': job_category_health_related_labels,
+        'job_category_health_related_data': job_category_health_related_labels,
+
+        'clinical_or_nonclinical_job_labels': clinical_or_nonclinical_job_labels,
+        'clinical_or_nonclinical_job_data': clinical_or_nonclinical_job_data,
+        
+        'covid_knowledge_before_survey_labels':covid_knowledge_before_survey_labels,
+        'covid_knowledge_before_survey_data':covid_knowledge_before_survey_data,
+
+        'risk_of_covid_exposure_labels':risk_of_covid_exposure_labels,
+        'risk_of_covid_exposure_data': risk_of_covid_exposure_data,
+
+        'know_of_anyone_diagnosed_with_covid_labels': know_of_anyone_diagnosed_with_covid_labels,
+        'know_of_anyone_diagnosed_with_covid_data': know_of_anyone_diagnosed_with_covid_data,
+
+        'know_of_anyone_hospitalized_due_to_covid_labels': know_of_anyone_hospitalized_due_to_covid_labels,
+        'know_of_anyone_hospitalized_due_to_covid_data': know_of_anyone_hospitalized_due_to_covid_data,
+
+        'know_of_anyone_die_due_to_covid_labels': know_of_anyone_die_due_to_covid_labels,
+        'know_of_anyone_die_due_to_covid_data': know_of_anyone_die_due_to_covid_data,
+
+        'know_of_covid_preventive_measures_labels': know_of_covid_preventive_measures_labels,
+        'know_of_covid_preventive_measures_data': know_of_covid_preventive_measures_data,
+
+        'believe_in_facemask_protection_labels': believe_in_facemask_protection_labels,
+        'believe_in_facemask_protection_data': believe_in_facemask_protection_data,
+
+        'believe_in_social_distancing_labels': believe_in_social_distancing_labels,
+        'believe_in_social_distancing_data': believe_in_social_distancing_data,
+
+        'believe_in_hand_washing_labels': believe_in_hand_washing_labels,
+        'believe_in_hand_washing_data': believe_in_hand_washing_data,
+
+        'think_covid_is_gone_labels': think_covid_is_gone_labels,
+        'think_covid_is_gone_data': think_covid_is_gone_data,
+
+        'think_we_need_covid_vaccine_labels': think_we_need_covid_vaccine_labels,
+        'think_we_need_covid_vaccine_data': think_we_need_covid_vaccine_data,
+
+        'think_vaccines_are_safe_labels': think_vaccines_are_safe_labels,
+        'think_vaccines_are_safe_data': 'think_vaccines_are_safe_data',
+
+        'heard_of_any_covid_candidate_vaccine_labels':heard_of_any_covid_candidate_vaccine_labels,
+        'heard_of_any_covid_candidate_vaccine_data': heard_of_any_covid_candidate_vaccine_data,
+
+        'participate_in_clinical_covid_vaccine_trial_labels': participate_in_clinical_covid_vaccine_trial_labels,
+        'participate_in_clinical_covid_vaccine_trial_data': participate_in_clinical_covid_vaccine_trial_data,
+
+        'reason_not_to_participate_in_clinical_covid_vaccine_trial': reason_not_to_participate_in_clinical_covid_vaccine_trial,
+        'participate_in_clinical_covid_vaccine_trial_data': participate_in_clinical_covid_vaccine_trial_data,
+
+        'participate_in_clinical_covid_vaccine_trial_labels': participate_in_clinical_covid_vaccine_trial_labels,
+        'participate_in_clinical_covid_vaccine_trial_data': participate_in_clinical_covid_vaccine_trial_data,
+
+        'participate_in_clinical_covid_vaccine_trial_labels': participate_in_clinical_covid_vaccine_trial_labels,
+        'participate_in_clinical_covid_vaccine_trial_data': participate_in_clinical_covid_vaccine_trial_data,
+
+        'type_of_vaccine_acceptable_labels': type_of_vaccine_acceptable_labels,
+        'type_of_vaccine_acceptable_data': type_of_vaccine_acceptable_data,
+
+        'phase_of_clinical_trial_to_participate_in_labels': phase_of_clinical_trial_to_participate_in_labels,
+        'phase_of_clinical_trial_to_participate_in_data':phase_of_clinical_trial_to_participate_in_data,
+
+        'country_of_vaccine_influence_your_decision_to_participate_labels': country_of_vaccine_influence_your_decision_to_participate_labels,
+        'country_of_vaccine_influence_your_decision_to_participate_data': country_of_vaccine_influence_your_decision_to_participate_data,       
+
+        'preferred_vaccine_continent_labels': preferred_vaccine_continent_labels,
+        'preferred_vaccine_continent_data': preferred_vaccine_continent_data,
+
+        'vaccine_scientists_should_include_ghanaian_labels': vaccine_scientists_should_include_ghanaian_labels,
+        'vaccine_scientists_should_include_ghanaian_data': vaccine_scientists_should_include_ghanaian_data,
+
+        'prepared_to_pay_for_vaccine_labels': prepared_to_pay_for_vaccine_labels,
+        'prepared_to_pay_for_vaccine_data': prepared_to_pay_for_vaccine_data,
+
+        'estimated_vaccine_cost_range_labels': estimated_vaccine_cost_range_labels,
+        'estimated_vaccine_cost_range_data': estimated_vaccine_cost_range_data,
+
+        'origin_of_vaccine_influence_your_decision_to_participate_labels': origin_of_vaccine_influence_your_decision_to_participate_labels,
+        'origin_of_vaccine_influence_your_decision_to_participate_data': origin_of_vaccine_influence_your_decision_to_participate_data,
+
+        'preferred_vaccine_origin_labels': preferred_vaccine_origin_labels,
+        'preferred_vaccine_origin_data': preferred_vaccine_origin_data 
+
     })
    
    
-  
- 
- 
-  
- 
- 
- 
- 
-
-
 
 
 def verify(request, uuid):

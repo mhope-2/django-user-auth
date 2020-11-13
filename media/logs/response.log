@@ -2007,3 +2007,1000 @@ NameError: name 'age_count' is not defined
 2020-11-13 12:46:17,567,567 asyncio DEBUG Using selector: KqueueSelector
 2020-11-13 12:46:32,124,124 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta_survey_django/user_app/views.py changed, reloading.
 2020-11-13 12:46:32,125,125 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 21:57:14,679,679 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 92, in dashboard
+    labels.append(marital_status_queryset[idx][marital_status])
+NameError: name 'labels' is not defined
+2020-11-13 22:02:16,938,938 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:09:11,243,243 django.request WARNING Not Found: /]
+2020-11-13 22:09:32,316,316 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 92, in dashboard
+    labels.append(marital_status_queryset[idx][marital_status])
+NameError: name 'labels' is not defined
+2020-11-13 22:10:08,526,526 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:10:08,527,527 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:10:23,503,503 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 93, in dashboard
+    marital_status_data.append(marital_status_queryset[idx]['total'])
+NameError: name 'data' is not defined
+2020-11-13 22:10:54,495,495 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:11:00,124,124 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 103, in dashboard
+    labels.append(religion_queryset[idx][religion])
+NameError: name 'labels' is not defined
+2020-11-13 22:11:12,338,338 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:11:12,338,338 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:11:16,896,896 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:11:16,907,907 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:11:21,229,229 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 114, in dashboard
+    job_type_labels.append(job_type_queryset[idx][religion])
+KeyError: 'religion'
+2020-11-13 22:11:36,572,572 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 114, in dashboard
+    job_type_labels.append(job_type_queryset[idx][religion])
+KeyError: 'religion'
+2020-11-13 22:11:37,436,436 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:11:37,437,437 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:11:52,747,747 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 125, in dashboard
+    job_category_health_related_labels.append(job_category_health_related_queryset[idx][job_category_health_related])
+IndexError: list index out of range
+2020-11-13 22:12:28,980,980 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:12:35,985,985 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 125, in dashboard
+    job_category_health_related_labels.append(job_category_health_related_queryset[idx][job_category_health_related])
+IndexError: list index out of range
+2020-11-13 22:13:03,159,159 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:13:03,159,159 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:13:08,379,379 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 137, in dashboard
+    clinical_or_nonclinical_job_labels.append(clinical_or_nonclinical_job_queryset[idx][clinical_or_nonclinical_job])
+NameError: name 'clinical_or_nonclinical_job_labels' is not defined
+2020-11-13 22:13:45,508,508 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:13:45,509,509 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:13:49,462,462 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:13:49,463,463 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:13:52,471,471 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 149, in dashboard
+    covid_knowledge_before_survey_labels.append(covid_knowledge_before_survey_queryset[idx][covid_knowledge_before_survey])
+UnboundLocalError: local variable 'covid_knowledge_before_survey_labels' referenced before assignment
+2020-11-13 22:14:08,087,87 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:14:08,087,87 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:14:17,785,785 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 150, in dashboard
+    covid_knowledge_before_survey_data.append(covid_knowledge_before_survey_queryset[idx]['total'])
+UnboundLocalError: local variable 'covid_knowledge_before_survey_data' referenced before assignment
+2020-11-13 22:14:45,465,465 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 150, in dashboard
+    covid_knowledge_before_survey_data.append(covid_knowledge_before_survey_queryset[idx]['total'])
+UnboundLocalError: local variable 'covid_knowledge_before_survey_data' referenced before assignment
+2020-11-13 22:15:40,137,137 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:15:40,138,138 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:15:48,026,26 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:15:48,027,27 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:15:59,120,120 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 188, in dashboard
+    know_of_anyone_hospitalized_due_to_covid_labels.append(risk_of_covid_exposure_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
+KeyError: 'know_of_anyone_hospitalized_due_to_covid'
+2020-11-13 22:16:38,563,563 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 188, in dashboard
+    know_of_anyone_hospitalized_due_to_covid_labels.append(risk_of_covid_exposure_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
+KeyError: 'know_of_anyone_hospitalized_due_to_covid'
+2020-11-13 22:17:20,664,664 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:17:20,666,666 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:17:24,459,459 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 200, in dashboard
+    know_of_anyone_die_due_to_covid_labels.append(risk_of_covid_exposure_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
+NameError: name 'know_of_anyone_die_due_to_covid_labels' is not defined
+2020-11-13 22:17:38,068,68 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:17:38,084,84 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:17:47,487,487 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 200, in dashboard
+    know_of_anyone_die_due_to_covid_labels.append(know_of_anyone_die_due_to_covid_queryset[idx][know_of_anyone_die_due_to_covid])
+NameError: name 'know_of_anyone_die_due_to_covid_labels' is not defined
+2020-11-13 22:17:47,903,903 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:17:47,904,904 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:18:11,412,412 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 200, in dashboard
+    know_of_anyone_die_due_to_covid_labels.append(know_of_anyone_die_due_to_covid_queryset[idx][know_of_anyone_die_due_to_covid])
+NameError: name 'know_of_anyone_die_due_to_covid_labels' is not defined
+2020-11-13 22:18:15,345,345 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:18:27,673,673 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:18:27,674,674 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:18:35,516,516 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 212, in dashboard
+    know_of_anyone_hospitalized_due_to_covid_labels.append(know_of_anyone_die_due_to_covid_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
+KeyError: 'know_of_anyone_hospitalized_due_to_covid'
+2020-11-13 22:18:53,740,740 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:18:53,741,741 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:19:07,090,90 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:19:07,091,91 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:19:11,673,673 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:19:11,674,674 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:19:16,112,112 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:19:16,113,113 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:19:19,870,870 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:19:19,871,871 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:19:23,849,849 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:19:23,850,850 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:19:34,126,126 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:19:34,134,134 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:19:37,469,469 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 213, in dashboard
+    know_of_covid_preventive_measures_data.append(know_of_covid_prevknow_of_covid_preventive_measures_querysetentive_measures_queryset[idx]['total'])
+NameError: name 'know_of_covid_prevknow_of_covid_preventive_measures_querysetentive_measures_queryset' is not defined
+2020-11-13 22:20:00,971,971 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:20:00,973,973 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:20:05,610,610 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 224, in dashboard
+    believe_in_facemask_protection_labels.append(believe_in_facemask_protection_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
+KeyError: 'know_of_anyone_hospitalized_due_to_covid'
+2020-11-13 22:20:26,297,297 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 224, in dashboard
+    believe_in_facemask_protection_labels.append(believe_in_facemask_protection_queryset[idx][believe_in_facemask_protection])
+KeyError: 'know_of_anyone_hospitalized_due_to_covid'
+2020-11-13 22:20:26,364,364 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:20:26,365,365 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:20:51,527,527 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 236, in dashboard
+    believe_in_social_distancing_labels.append(believe_in_social_distancing_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
+KeyError: 'know_of_anyone_hospitalized_due_to_covid'
+2020-11-13 22:21:10,967,967 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:21:10,968,968 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:21:15,620,620 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 260, in dashboard
+    think_covid_is_gone_labels.append(think_covid_is_gone_queryset[idx][think_covid_is_gone])
+NameError: name 'think_covid_is_gone_labels' is not defined
+2020-11-13 22:21:33,417,417 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:21:33,418,418 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:21:37,123,123 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:21:37,124,124 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:21:52,121,121 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 320, in dashboard
+    reason_not_to_participate_in_clinical_covid_vaccine_trial_labels.append(reason_not_to_participate_in_clinical_covid_vaccine_trial_queryset[idx][participate_in_clinical_covid_vaccine_trial])
+NameError: name 'reason_not_to_participate_in_clinical_covid_vaccine_trial_labels' is not defined
+2020-11-13 22:22:16,125,125 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:22:16,126,126 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:22:19,222,222 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 320, in dashboard
+    reason_not_to_participate_in_clinical_covid_vaccine_trial_labels.append(reason_not_to_participate_in_clinical_covid_vaccine_trial_queryset[idx][participate_in_clinical_covid_vaccine_trial])
+NameError: name 'reason_not_to_participate_in_clinical_covid_vaccine_trial_labels' is not defined
+2020-11-13 22:22:39,982,982 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:22:39,983,983 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:22:45,220,220 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 320, in dashboard
+    reason_not_to_participate_in_clinical_covid_vaccine_trial_labels.append(reason_not_to_participate_in_clinical_covid_vaccine_trial_queryset[idx][reason_not_to_participate_in_clinical_covid_vaccine_trial])
+NameError: name 'reason_not_to_participate_in_clinical_covid_vaccine_trial_labels' is not defined
+2020-11-13 22:23:02,850,850 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:23:02,851,851 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:23:07,617,617 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:23:07,618,618 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:23:13,197,197 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:23:13,198,198 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:23:16,543,543 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 408, in dashboard
+    'jcovid_knowledge_before_survey_labels':jcovid_knowledge_before_survey_labels,
+NameError: name 'jcovid_knowledge_before_survey_labels' is not defined
+2020-11-13 22:23:47,209,209 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:23:47,209,209 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:23:50,219,219 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:23:50,220,220 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:23:54,898,898 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 411, in dashboard
+    'risk_of_covid_exposure_labels':risk_of_covid_exposure_labels,
+NameError: name 'risk_of_covid_exposure_labels' is not defined
+2020-11-13 22:24:55,342,342 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:24:55,344,344 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:24:58,891,891 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 410, in dashboard
+NameError: name 'risk_of_covid_exposure_labels' is not defined
+2020-11-13 22:25:13,230,230 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 410, in dashboard
+NameError: name 'risk_of_covid_exposure_labels' is not defined
+2020-11-13 22:25:56,044,44 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:25:56,044,44 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:26:12,400,400 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:26:12,402,402 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:26:20,543,543 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:26:20,545,545 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:26:23,700,700 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 408, in dashboard
+    'risk_of_covid_exposure_labels':risk_of_covid_exposure_labels,
+NameError: name 'risk_of_covid_exposure_labels' is not defined
+2020-11-13 22:27:01,245,245 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:27:01,246,246 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:27:05,771,771 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:27:05,772,772 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:27:08,917,917 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 408, in dashboard
+    'risk_of_covid_exposure_labels':risk_of_covid_exposure_labels,
+NameError: name 'risk_of_covid_exposure_labels' is not defined
+2020-11-13 22:27:41,787,787 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:27:41,787,787 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:27:45,976,976 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:27:45,976,976 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:27:51,029,29 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:27:51,030,30 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:28:00,456,456 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:28:00,456,456 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:28:03,239,239 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:28:03,240,240 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:28:10,281,281 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:28:10,286,286 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:28:13,522,522 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 411, in dashboard
+    'know_of_anyone_diagnosed_with_covid_labels': know_of_anyone_diagnosed_with_covid_labels,
+NameError: name 'know_of_anyone_diagnosed_with_covid_labels' is not defined
+2020-11-13 22:28:55,745,745 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:28:55,750,750 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:29:00,468,468 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:29:00,468,468 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:29:04,396,396 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:29:04,397,397 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:29:07,627,627 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:29:07,649,649 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:29:12,717,717 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:29:12,718,718 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:29:17,280,280 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 417, in dashboard
+    'know_of_anyone_die_due_to_covid_covid_labels': know_of_anyone_die_due_to_covid_covid_labels,
+NameError: name 'know_of_anyone_die_due_to_covid_covid_labels' is not defined
+2020-11-13 22:29:51,174,174 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:29:51,175,175 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:30:03,129,129 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:30:03,130,130 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:30:15,428,428 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:30:15,429,429 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:30:19,550,550 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:30:19,550,550 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:30:25,337,337 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 435, in dashboard
+    'think_we_need_covid_vaccinelabels': think_we_need_covid_vaccinelabels,
+NameError: name 'think_we_need_covid_vaccinelabels' is not defined
+2020-11-13 22:30:39,612,612 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:30:39,613,613 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:30:43,760,760 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:30:43,761,761 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:30:47,614,614 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 435, in dashboard
+    'think_we_need_covid_vaccine_labels': think_we_need_covid_vaccine_labels,
+NameError: name 'think_we_need_covid_vaccine_labels' is not defined
+2020-11-13 22:31:08,048,48 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:31:08,048,48 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:31:15,277,277 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:31:15,278,278 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:31:19,505,505 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 435, in dashboard
+    'think_we_need_covid_vaccine_labels': think_we_need_covid_vaccine_labels,
+NameError: name 'think_we_need_covid_vaccine_labels' is not defined
+2020-11-13 22:32:02,955,955 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 435, in dashboard
+    'think_we_need_covid_vaccine_labels': think_we_need_covid_vaccine_labels,
+NameError: name 'think_we_need_covid_vaccine_labels' is not defined
+2020-11-13 22:32:36,453,453 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 435, in dashboard
+    'think_we_need_covid_vaccine_labels': think_we_need_covid_vaccine_labels,
+NameError: name 'think_we_need_covid_vaccine_labels' is not defined
+2020-11-13 22:33:10,702,702 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:33:10,703,703 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:33:14,165,165 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:33:14,166,166 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:33:18,277,277 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:33:18,278,278 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:33:21,124,124 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:33:21,125,125 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:33:27,122,122 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:33:27,124,124 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:33:33,184,184 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:33:33,185,185 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:33:36,014,14 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 456, in dashboard
+    'type_of_vaccine_acceptable_labels': type_of_vaccine_acceptable_labels,
+NameError: name 'type_of_vaccine_acceptable_labels' is not defined
+2020-11-13 22:34:20,624,624 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:34:20,626,626 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:34:41,623,623 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:34:41,624,624 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:34:47,844,844 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:34:47,845,845 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:34:53,705,705 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:34:53,706,706 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:35:04,468,468 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:35:04,485,485 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:35:13,618,618 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:35:13,619,619 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:35:16,282,282 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:35:16,283,283 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:35:27,196,196 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:35:27,197,197 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:35:30,497,497 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:35:30,498,498 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:35:40,137,137 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:35:40,137,137 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:35:50,598,598 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:35:50,598,598 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:35:53,635,635 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:35:53,636,636 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:36:01,028,28 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:36:01,029,29 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:36:04,579,579 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:36:04,583,583 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:36:11,904,904 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:36:11,905,905 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:36:24,108,108 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:36:24,109,109 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:36:27,560,560 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:36:27,561,561 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:36:35,106,106 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:36:35,107,107 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:36:43,597,597 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:36:43,598,598 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:36:57,106,106 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:36:57,106,106 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:37:08,090,90 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:37:08,091,91 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:37:13,699,699 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:37:13,700,700 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:37:21,075,75 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:37:21,076,76 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:37:27,529,529 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:37:27,530,530 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:37:31,654,654 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:37:31,655,655 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:37:35,801,801 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:37:35,802,802 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:37:38,881,881 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:37:38,882,882 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:37:46,146,146 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:37:46,153,153 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:37:56,959,959 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:37:56,960,960 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:38:06,599,599 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:38:06,600,600 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:38:10,977,977 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:38:10,978,978 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:38:16,454,454 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:38:16,455,455 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:38:19,299,299 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:38:19,300,300 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:38:27,223,223 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:38:27,223,223 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:38:31,027,27 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:38:31,032,32 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:38:42,583,583 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:38:42,583,583 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:38:51,113,113 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:38:51,114,114 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:38:59,436,436 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:38:59,436,436 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:39:05,845,845 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:39:05,846,846 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:39:08,719,719 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:39:08,720,720 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:39:20,083,83 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:39:20,084,84 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:39:23,757,757 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:39:23,758,758 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:39:34,225,225 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:39:34,226,226 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:39:50,374,374 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:39:50,375,375 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:40:07,543,543 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:40:07,544,544 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:40:19,961,961 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:40:19,962,962 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:40:27,914,914 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:40:27,915,915 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:40:33,890,890 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:40:33,891,891 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:40:37,026,26 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:40:37,026,26 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:40:39,710,710 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:40:39,710,710 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:40:58,629,629 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:40:58,659,659 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:41:01,400,400 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:41:01,401,401 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:41:04,108,108 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:41:04,109,109 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:41:08,033,33 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:41:08,034,34 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:41:13,484,484 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:41:13,485,485 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:41:28,269,269 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:41:28,270,270 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:41:32,246,246 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:41:32,247,247 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:41:40,954,954 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:41:40,955,955 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:41:50,015,15 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:41:50,016,16 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:42:05,776,776 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:42:05,776,776 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:42:10,628,628 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:42:10,629,629 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:42:25,024,24 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:42:25,024,24 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:42:31,903,903 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:42:31,904,904 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:42:43,104,104 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:42:43,112,112 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:42:51,614,614 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:42:51,618,618 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:43:18,755,755 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:43:18,756,756 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:43:26,192,192 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:43:26,193,193 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:43:32,403,403 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:43:32,404,404 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:43:36,205,205 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:43:36,206,206 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:43:40,233,233 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:43:40,234,234 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:43:43,249,249 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:43:43,251,251 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:43:51,705,705 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:43:51,706,706 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:43:58,342,342 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:43:58,344,344 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:44:10,009,9 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:44:10,010,10 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:44:13,237,237 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:44:13,238,238 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:44:21,483,483 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:44:21,484,484 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:44:27,006,6 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:44:27,008,8 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:44:33,265,265 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:44:33,265,265 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:44:36,785,785 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:44:36,788,788 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:44:44,659,659 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:44:44,660,660 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:44:54,643,643 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:44:54,644,644 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:45:10,370,370 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:45:10,371,371 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:45:25,557,557 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:45:25,557,557 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:45:43,065,65 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:45:43,066,66 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:45:58,557,557 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:45:58,557,557 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:46:19,554,554 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:46:19,554,554 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:46:23,906,906 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:46:23,907,907 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:46:28,778,778 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:46:28,779,779 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:46:37,196,196 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:46:37,197,197 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:46:43,361,361 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:46:43,362,362 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:46:47,811,811 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:46:47,812,812 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:46:54,984,984 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:46:54,984,984 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:47:10,395,395 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:47:10,396,396 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:47:13,152,152 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:47:13,153,153 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:47:16,014,14 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:47:16,015,15 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:47:26,335,335 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:47:26,336,336 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:47:38,423,423 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:47:38,424,424 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:47:48,204,204 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:47:48,205,205 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:47:52,398,398 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:47:52,399,399 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:49:27,163,163 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:49:27,164,164 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:49:34,277,277 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:49:34,284,284 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:49:37,832,832 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:49:37,834,834 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:49:45,618,618 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:49:45,619,619 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:49:48,989,989 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:49:48,990,990 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:49:59,031,31 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:49:59,032,32 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:50:03,084,84 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:50:03,085,85 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:50:09,251,251 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:50:09,251,251 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:50:35,578,578 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:50:35,579,579 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:50:38,372,372 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:50:38,373,373 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:50:42,326,326 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:50:42,326,326 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:50:45,018,18 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:50:45,019,19 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:50:52,065,65 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:50:52,066,66 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:50:55,754,754 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:50:55,755,755 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:51:05,903,903 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:51:05,904,904 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:51:17,179,179 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:51:17,179,179 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:51:29,434,434 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:51:29,436,436 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:51:33,466,466 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:51:33,467,467 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:51:37,967,967 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 378, in dashboard
+    country_of_vaccine_influence_your_decision_to_participate_data.append(country_of_vaccine_influence_your_decision_to_participate_queryset[idx]['total'])
+NameError: name 'country_of_vaccine_influence_your_decision_to_participate_data' is not defined
+2020-11-13 22:52:58,711,711 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 378, in dashboard
+    country_of_vaccine_influence_your_decision_to_participate_data.append(country_of_vaccine_influence_your_decision_to_participate_queryset[idx]['total'])
+NameError: name 'country_of_vaccine_influence_your_decision_to_participate_data' is not defined
+2020-11-13 22:53:04,151,151 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:53:04,151,151 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:53:08,034,34 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 439, in dashboard
+    estimated_vaccine_cost_range_labels.append(prepared_to_pay_for_vaccine_queryset[idx][estimated_vaccine_cost_range])
+NameError: name 'estimated_vaccine_cost_range_labels' is not defined
+2020-11-13 22:53:26,229,229 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:53:26,230,230 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:53:30,672,672 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:53:30,673,673 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:53:34,357,357 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:53:34,358,358 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:53:39,592,592 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:53:39,593,593 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:53:46,608,608 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:53:46,609,609 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:53:52,619,619 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:53:52,620,620 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:53:58,729,729 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:53:58,730,730 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:54:12,812,812 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:54:12,813,813 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:54:17,203,203 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1863, in add_fields
+    join_info = self.setup_joins(name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1565, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'heard_of_any_covid_candidata_vaccine' into field. Choices are: age, believe_in_facemask_protection, believe_in_hand_washing, believe_in_social_distancing, clinical_or_nonclinical_job, country_of_vaccine_influence_your_decision_to_participate, covid_knowledge_before_survey, created_at, estimated_vaccine_cost_range, gender, heard_of_any_covid_candidate_vaccine, id, job_category_health_related, job_type, job_type_other, know_of_anyone_diagnosed_with_covid, know_of_anyone_die_due_to_covid, know_of_anyone_hospitalized_due_to_covid, know_of_covid_preventive_measures, marital_status, motivation_for_participation, origin_of_vaccine_influence_your_decision_to_participate, participate_in_clinical_covid_vaccine_trial, participate_in_mass_covid_vaccination, phase_of_clinical_trial_to_participate_in, preferred_vaccine_continent, preferred_vaccine_origin, prepared_to_pay_for_vaccine, reason_not_to_participate_in_clinical_covid_vaccine_trial, reason_not_to_participate_in_clinical_covid_vaccine_trial_other, religion, religion_other, risk_of_covid_exposure, route_of_vaccine_administration, think_covid_is_gone, think_vaccines_are_safe, think_we_need_covid_vaccine, type_of_vaccine_acceptable, updated_at, vaccine_scientists_should_include_ghanaian
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 287, in dashboard
+    heard_of_any_covid_candidata_vaccine_queryset= list(Responses.objects.all().values(heard_of_any_covid_candidata_vaccine).annotate(total=Count(heard_of_any_covid_candidata_vaccine)).order_by('total'))
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/db/models/query.py", line 841, in values
+    clone = self._values(*fields, **expressions)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/db/models/query.py", line 836, in _values
+    clone.query.set_values(fields)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2174, in set_values
+    self.add_fields(field_names, True)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1885, in add_fields
+    raise FieldError("Cannot resolve keyword %r into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'heard_of_any_covid_candidata_vaccine' into field. Choices are: age, believe_in_facemask_protection, believe_in_hand_washing, believe_in_social_distancing, clinical_or_nonclinical_job, country_of_vaccine_influence_your_decision_to_participate, covid_knowledge_before_survey, created_at, estimated_vaccine_cost_range, gender, heard_of_any_covid_candidate_vaccine, id, job_category_health_related, job_type, job_type_other, know_of_anyone_diagnosed_with_covid, know_of_anyone_die_due_to_covid, know_of_anyone_hospitalized_due_to_covid, know_of_covid_preventive_measures, marital_status, motivation_for_participation, origin_of_vaccine_influence_your_decision_to_participate, participate_in_clinical_covid_vaccine_trial, participate_in_mass_covid_vaccination, phase_of_clinical_trial_to_participate_in, preferred_vaccine_continent, preferred_vaccine_origin, prepared_to_pay_for_vaccine, reason_not_to_participate_in_clinical_covid_vaccine_trial, reason_not_to_participate_in_clinical_covid_vaccine_trial_other, religion, religion_other, risk_of_covid_exposure, route_of_vaccine_administration, think_covid_is_gone, think_vaccines_are_safe, think_we_need_covid_vaccine, type_of_vaccine_acceptable, updated_at, vaccine_scientists_should_include_ghanaian
+2020-11-13 22:55:31,122,122 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:55:31,125,125 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:55:35,309,309 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:55:35,309,309 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:55:37,915,915 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:55:37,916,916 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:55:40,731,731 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:55:40,731,731 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:55:44,953,953 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:55:44,953,953 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:55:51,189,189 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:55:51,190,190 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:56:18,845,845 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:56:18,847,847 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:56:21,841,841 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 439, in dashboard
+    estimated_vaccine_cost_range_labels.append(prepared_to_pay_for_vaccine_queryset[idx][estimated_vaccine_cost_range])
+KeyError: 'estimated_vaccine_cost_range'
+2020-11-13 22:56:40,952,952 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:56:40,953,953 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:56:43,830,830 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:56:43,830,830 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:56:49,064,64 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 463, in dashboard
+    preferred_vaccine_origin_labels.append(preferred_vaccine_origin_queryset[idx][origin_of_vaccine_influence_your_decision_to_participate])
+KeyError: 'origin_of_vaccine_influence_your_decision_to_participate'
+2020-11-13 22:57:10,446,446 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 463, in dashboard
+    preferred_vaccine_origin_labels.append(preferred_vaccine_origin_queryset[idx][preferred_vaccine_origin])
+KeyError: 'origin_of_vaccine_influence_your_decision_to_participate'
+2020-11-13 22:57:10,625,625 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:57:10,626,626 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:57:20,815,815 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:57:20,816,816 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:57:23,872,872 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:57:23,874,874 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:57:28,687,687 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:57:28,688,688 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:57:31,990,990 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:57:31,991,991 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:57:34,671,671 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 558, in dashboard
+    'prepared_to_pay_for_vaccine_labels': prepared_to_pay_for_vaccine_labels,
+NameError: name 'prepared_to_pay_for_vaccine_labels' is not defined
+2020-11-13 22:58:14,464,464 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:58:14,465,465 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:58:23,088,88 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 558, in dashboard
+    'prepared_to_pay_for_vaccine_labels': prepared_to_pay_for_vaccine_labels,
+NameError: name 'prepared_to_pay_for_vaccine_labels' is not defined
+2020-11-13 22:58:25,632,632 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 558, in dashboard
+    'prepared_to_pay_for_vaccine_labels': prepared_to_pay_for_vaccine_labels,
+NameError: name 'prepared_to_pay_for_vaccine_labels' is not defined
+2020-11-13 22:58:54,025,25 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:58:54,027,27 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 22:58:57,792,792 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 22:58:57,793,793 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:01:47,864,864 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:01:47,865,865 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:16:37,599,599 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:16:37,609,609 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:16:45,662,662 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:16:45,663,663 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:16:54,068,68 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:16:54,069,69 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:17:46,314,314 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:17:46,316,316 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:17:59,348,348 asyncio DEBUG Using selector: KqueueSelector
