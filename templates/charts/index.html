@@ -101,16 +101,16 @@
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Latest Hits</h2>
+                        <h2 class="tm-block-title">Age</h2>
                         <canvas id="ageChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">BAr</h2>
+                        <h2 class="tm-block-title">Age</h2>
                         <canvas id="ageBar"></canvas>
                     </div>
-                </div>
+                </div><br><br>
                 
  {% comment %}  {% endcomment %}
  {% comment %}  {% endcomment %}
@@ -124,16 +124,16 @@
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Latest Hits</h2>
+                        <h2 class="tm-block-title">Gender</h2>
                         <canvas id="genderChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">BAr</h2>
+                        <h2 class="tm-block-title">Gender</h2>
                         <canvas id="genderBar"></canvas>
                     </div>
-                </div>
+                </div><br><br><br><br>
 {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
@@ -146,16 +146,16 @@
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Latest Hits</h2>
+                        <h2 class="tm-block-title">Marital Status</h2>
                         <canvas id="maritalChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">BAr</h2>
+                        <h2 class="tm-block-title">Marital Status</h2>
                         <canvas id="maritalBar"></canvas>
                     </div>
-                </div>
+                </div><br><br>
 {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
@@ -177,9 +177,49 @@
                         <h2 class="tm-block-title">Religion</h2>
                         <canvas id="religionBar"></canvas>
                     </div>
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Religion provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Job Type</h2>
+                        <canvas id="jobTypeChart"></canvas>
+                    </div>
                 </div>
-
-
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Job Type</h2>
+                        <canvas id="jobTypeBar"></canvas>
+                    </div>
+                </div> <br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Category provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Job Category</h2>
+                        <canvas id="jobCategoryChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Job Category</h2>
+                        <canvas id="jobCategoryBar"></canvas>
+                    </div>
+                </div>                                
                 
 
 
@@ -266,7 +306,6 @@
     </div>
     <script src="{% static 'charts/js/jquery-3.3.1.min.js' %}"></script> 
     <!-- https://jquery.com/download/ -->
-    <script src="charts/js/moment.min.js"></script>
     <script src="{% static 'charts/js/moment.min.js' %}"></script> 
     <!-- https://momentjs.com/ -->
     <script src="{% static 'charts/js/utils.js' %}"></script> 
@@ -289,7 +328,7 @@
             configPie,
             lineChart;
         ageBar, ageChart, genderChart, genderBar,maritalBar,maritalChart
-        religionBar,religionChart;
+        religionBar,religionChart, jobTypeChart, jobTypeBar, jobCategoryChart, jobCategoryBar;
         // DOM is ready
         $(function () {
             updateChartOptions();
@@ -337,7 +376,7 @@ function drawBarChart() {
         labels: {{ age_labels|safe }},
         datasets: [
           {
-            label: {{ age_labels|safe }},
+            label: "Age Data",
             data: {{ age_data|safe }},
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
@@ -397,7 +436,7 @@ function drawBarChart() {
         labels: {{ gender_labels|safe }},
         datasets: [
           {
-            label: {{ gender_labels|safe }},
+            label: "Gender Data",
             data: {{ gender_data|safe }},
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
@@ -424,7 +463,9 @@ function drawBarChart() {
 
     genderBar = new Chart(ctxBar, configBar);
   }
-
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
   if ($("#maritalBar").length) {
     ctxBar = document.getElementById("maritalBar").getContext("2d");
 
@@ -480,7 +521,9 @@ function drawBarChart() {
 
     maritalBar = new Chart(ctxBar, configBar);
   }
-
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
   if ($("#religionBar").length) {
     ctxBar = document.getElementById("religionBar").getContext("2d");
 
@@ -509,7 +552,7 @@ function drawBarChart() {
         labels: {{ religion_labels|safe }},
         datasets: [
           {
-            label: {{ religion_labels|safe }},
+            label: ["Religion Data"],
             data: {{ religion_data|safe }},
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
@@ -536,6 +579,122 @@ function drawBarChart() {
 
     religionBar = new Chart(ctxBar, configBar);
   }
+
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+if ($("#jobTypeBar").length) {
+    ctxBar = document.getElementById("jobTypeBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ job_type_labels|safe }},
+        datasets: [
+          {
+            label: ["Job Type Data"],
+            data: {{ job_type_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    jobTypeBar = new Chart(ctxBar, configBar);
+  }
+{% comment %}  {% endcomment %}
+if ($("#jobCategoryBar").length) {
+    ctxBar = document.getElementById("jobCategoryBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ job_category_health_related_labels|safe }},
+        datasets: [
+          {
+            label: ["Job Category Data"],
+            data: {{ job_category_health_related_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    jobCategoryBar = new Chart(ctxBar, configBar);
+  }
+
 
 
 
@@ -674,6 +833,74 @@ function drawPieChart() {
 
     religionChart = new Chart(ctxPie, configPie);
   }
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+  if ($("#jobTypeChart").length) {
+    ctxPie = document.getElementById("jobTypeChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ job_type_data|safe }},
+            backgroundColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            label: "Job Type Data"
+          }
+        ],
+        labels: {{ job_type_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    jobTypeChart = new Chart(ctxPie, configPie);
+  }
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+
+if ($("#jobCategoryChart").length) {
+    ctxPie = document.getElementById("jobCategoryChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ job_category_health_related_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Job Category Data"
+          }
+        ],
+        labels: {{ job_category_health_related_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    jobCategoryChart = new Chart(ctxPie, configPie);
+  }
 
 
 }
@@ -712,7 +939,15 @@ function updateBarChart() {
   if (religionBar) {
     religionBar.options = optionsBar;
     religionBar.update();
-  } 
+  }
+  if (jobTypeBar) {
+    jobTypeBar.options = optionsBar;
+    jobTypeBar.update();
+  }
+  if (jobCategoryBar){
+    jobCategoryBar.options = optionsBar;
+    jobCategoryBar.update();
+  }
 }
 
 function reloadPage() {

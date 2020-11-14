@@ -500,10 +500,10 @@ def dashboard(request):
         'religion_data': religion_data,
 
         'job_type_labels': job_type_labels,
-        'job_type_data': job_type_labels,
+        'job_type_data': job_type_data,
 
         'job_category_health_related_labels': job_category_health_related_labels,
-        'job_category_health_related_data': job_category_health_related_labels,
+        'job_category_health_related_data': job_category_health_related_data,
 
         'clinical_or_nonclinical_job_labels': clinical_or_nonclinical_job_labels,
         'clinical_or_nonclinical_job_data': clinical_or_nonclinical_job_data,
