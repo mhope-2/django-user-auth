@@ -1,121 +1,146 @@
-const width_threshold = 480;
+// let ctxLine,
+// ctxBar,
+// ctxPie,
+// optionsLine,
+// optionsBar,
+// optionsPie,
+// configLine,
+// configBar,
+// configPie,
+// lineChart;
+// barChart, pieChart;
+// // DOM is ready
+// $(function () {
+// updateChartOptions();
+// drawBarChart(); // Bar Chart
+// drawPieChart(); // Pie Chart
 
-function drawBarChart() {
-  if ($("#barChart").length) {
-    ctxBar = document.getElementById("barChart").getContext("2d");
+// $(window).resize(function () {
+//     updateChartOptions();
+//     updateLineChart();
+//     updateBarChart();
+//     reloadPage();
+// });
+// })
 
-    optionsBar = {
-      responsive: true,
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true
-            },
-            scaleLabel: {
-              display: true,
-              labelString: "Hits"
-            }
-          }
-        ]
-      }
-    };
+// const width_threshold = 480;
 
-    optionsBar.maintainAspectRatio =
-      $(window).width() < width_threshold ? false : true;
+// function drawBarChart() {
+// if ($("#pieChart").length) {
+// ctxBar = document.getElementById("barChart").getContext("2d");
 
-    configBar = {
-      type: "bar",
-      data: {
-        labels: {{ gender_labels|safe }},
-        datasets: [
-          {
-            label: "# of Hits",
-            data: {{ gender_data|safe }},
-            backgroundColor: [
-              "rgba(255, 99, 132, 0.2)",
-              "rgba(54, 162, 235, 0.2)",
-              "rgba(255, 206, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(153, 102, 255, 0.2)",
-              "rgba(255, 159, 64, 0.2)"
-            ],
-            borderColor: [
-              "rgba(255,99,132,1)",
-              "rgba(54, 162, 235, 1)",
-              "rgba(255, 206, 86, 1)",
-              "rgba(75, 192, 192, 1)",
-              "rgba(153, 102, 255, 1)",
-              "rgba(255, 159, 64, 1)"
-            ],
-            borderWidth: 1
-          }
-        ]
-      },
-      options: optionsBar
-    };
+// optionsBar = {
+// responsive: true,
+// scales: {
+// yAxes: [
+// {
+// ticks: {
+//   beginAtZero: true
+// },
+// scaleLabel: {
+//   display: true,
+//   labelString: "Count"
+// }
+// }
+// ]
+// }
+// };
 
-    barChart = new Chart(ctxBar, configBar);
-  }
-}
+// optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
 
-function drawPieChart() {
-  if ($("#pieChart").length) {
-    ctxPie = document.getElementById("pieChart").getContext("2d");
-    optionsPie = {
-      responsive: true,
-      maintainAspectRatio: false
-    };
+// configBar = {
+// type: "bar",
+// data: {
+// labels: {{ age_labels|safe }},
+// datasets: [
+// {
+// label: {{ age_labels|safe }},
+// data: {{ age_data|safe }},
+// backgroundColor: [
+//   "rgba(255, 99, 132, 0.2)",
+//   "rgba(54, 162, 235, 0.2)",
+//   "rgba(255, 206, 86, 0.2)",
+//   "rgba(75, 192, 192, 0.2)",
+//   "rgba(153, 102, 255, 0.2)",
+//   "rgba(255, 159, 64, 0.2)"
+// ],
+// borderColor: [
+//   "rgba(255,99,132,1)",
+//   "rgba(54, 162, 235, 1)",
+//   "rgba(255, 206, 86, 1)",
+//   "rgba(75, 192, 192, 1)",
+//   "rgba(153, 102, 255, 1)",
+//   "rgba(255, 159, 64, 1)"
+// ],
+// borderWidth: 1
+// }
+// ]
+// },
+// options: optionsBar
+// };
 
-    configPie = {
-      type: "pie",
-      data: {
-        datasets: [
-          {
-            data: [4600, 5400],
-            backgroundColor: [
-              window.chartColors.purple,
-              window.chartColors.green
-            ],
-            label: "Storage"
-          }
-        ],
-        labels: ["Used: 4,600 GB", "Available: 5,400 GB"]
-      },
-      options: optionsPie
-    };
+// barChart = new Chart(ctxBar, configBar);
+// }
+// }
 
-    pieChart = new Chart(ctxPie, configPie);
-  }
-}
+// function drawPieChart() {
+// if ($("#ageChart").length) {
+// ctxPie = document.getElementById("ageChart").getContext("2d");
+// optionsPie = {
+// responsive: true,
+// maintainAspectRatio: false
+// };
 
-function updateChartOptions() {
-  if ($(window).width() < width_threshold) {
-    if (optionsLine) {
-      optionsLine.maintainAspectRatio = false;
-    }
-    if (optionsBar) {
-      optionsBar.maintainAspectRatio = false;
-    }
-  } else {
-    if (optionsLine) {
-      optionsLine.maintainAspectRatio = true;
-    }
-    if (optionsBar) {
-      optionsBar.maintainAspectRatio = true;
-    }
-  }
-}
+// configPie = {
+// type: "pie",
+// data: {
+// datasets: [
+// {
+// data: {{ age_data|safe }},
+// backgroundColor: [
+//   window.chartColors.purple,
+//   window.chartColors.green
+// ],
+// label: "Storage"
+// }
+// ],
+// labels: {{ age_labels|safe }}
+// },
+// options: optionsPie
+// };
 
-function updateBarChart() {
-  if (barChart) {
-    barChart.options = optionsBar;
-    barChart.update();
-  }
-}
+// pieChart = new Chart(ctxPie, configPie);
+// }
 
-function reloadPage() {
-  setTimeout(function() {
-    window.location.reload();
-  }); // Reload the page so that charts will display correctly
-}
+// }
+
+// function updateChartOptions() {
+// if ($(window).width() < width_threshold) {
+// if (optionsLine) {
+// optionsLine.maintainAspectRatio = false;
+// }
+// if (optionsBar) {
+// optionsBar.maintainAspectRatio = false;
+// }
+// } else {
+// if (optionsLine) {
+// optionsLine.maintainAspectRatio = true;
+// }
+// if (optionsBar) {
+// optionsBar.maintainAspectRatio = true;
+// }
+// }
+// }
+
+// function updateBarChart() {
+// if (barChart) {
+// barChart.options = optionsBar;
+// barChart.update();
+// }
+// }
+
+// function reloadPage() {
+// setTimeout(function() {
+// window.location.reload();
+// }); // Reload the page so that charts will display correctly
+// }

@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard Admin Template by Tooplate.com</title>
+    <link rel="icon" href="{% static 'app/assets/imgs/maame.png' %}" type="image/x-icon">
+    <title>Admin Dashboard</title>
     <!--
 
     Template 2108 Dashboard
@@ -89,21 +90,100 @@
                         </div>
                     </nav>
                 </div>
+            </div><br><br>
+            <!-- AGE -->
+            <div class="card">
+                <div class="card-body" id="card6">
+            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Responses provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
                         <h2 class="tm-block-title">Latest Hits</h2>
-                        <canvas id="pieChart"></canvas>
+                        <canvas id="ageChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
                         <h2 class="tm-block-title">BAr</h2>
-                        <canvas id="barChart"></canvas>
+                        <canvas id="ageBar"></canvas>
                     </div>
                 </div>
+                
+ {% comment %}  {% endcomment %}
+ {% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+            <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Responses provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Latest Hits</h2>
+                        <canvas id="genderChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">BAr</h2>
+                        <canvas id="genderBar"></canvas>
+                    </div>
+                </div>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+            <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Responses provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Latest Hits</h2>
+                        <canvas id="maritalChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">BAr</h2>
+                        <canvas id="maritalBar"></canvas>
+                    </div>
+                </div>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+            <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Religion provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Religion</h2>
+                        <canvas id="religionChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Religion</h2>
+                        <canvas id="religionBar"></canvas>
+                    </div>
+                </div>
+
+
+                
+
+
+
 
 {% comment %} 
                 <div class="tm-col tm-col-big">
@@ -196,7 +276,7 @@
     <!-- https://fullcalendar.io/ -->
     <script src="{% static 'charts/js/bootstrap.min.js' %}"></script> 
     <!-- https://getbootstrap.com/ -->
-    <!-- <script src="{% static 'charts/js/tooplate-scripts.js' %}"></script> -->
+    {% comment %} <script src="{% static 'charts/js/tooplate-scripts.js' %}"></script> {% endcomment %}
     <script>
         let ctxLine,
             ctxBar,
@@ -208,7 +288,8 @@
             configBar,
             configPie,
             lineChart;
-        barChart, pieChart;
+        ageBar, ageChart, genderChart, genderBar,maritalBar,maritalChart
+        religionBar,religionChart;
         // DOM is ready
         $(function () {
             updateChartOptions();
@@ -225,11 +306,11 @@
     </script>
 
 <script>
-    const width_threshold = 480;
+    const width_threshold = 0;
 
 function drawBarChart() {
-  if ($("#barChart").length) {
-    ctxBar = document.getElementById("barChart").getContext("2d");
+  if ($("#ageBar").length) {
+    ctxBar = document.getElementById("ageBar").getContext("2d");
 
     optionsBar = {
       responsive: true,
@@ -241,15 +322,74 @@ function drawBarChart() {
             },
             scaleLabel: {
               display: true,
-              labelString: "Hits"
+              labelString: "Count"
             }
           }
         ]
       }
     };
 
-    optionsBar.maintainAspectRatio =
-      $(window).width() < width_threshold ? false : true;
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ age_labels|safe }},
+        datasets: [
+          {
+            label: {{ age_labels|safe }},
+            data: {{ age_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    ageBar = new Chart(ctxBar, configBar);
+  }
+  {% comment %}  {% endcomment %}
+  {% comment %}  {% endcomment %}
+   {% comment %}  {% endcomment %}
+  {% comment %}  {% endcomment %}
+
+  if ($("#genderBar").length) {
+    ctxBar = document.getElementById("genderBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
 
     configBar = {
       type: "bar",
@@ -257,7 +397,7 @@ function drawBarChart() {
         labels: {{ gender_labels|safe }},
         datasets: [
           {
-            label: "# of Hits",
+            label: {{ gender_labels|safe }},
             data: {{ gender_data|safe }},
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
@@ -282,13 +422,165 @@ function drawBarChart() {
       options: optionsBar
     };
 
-    barChart = new Chart(ctxBar, configBar);
+    genderBar = new Chart(ctxBar, configBar);
   }
+
+  if ($("#maritalBar").length) {
+    ctxBar = document.getElementById("maritalBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ marital_status_labels|safe }},
+        datasets: [
+          {
+            label: {{ marital_status_labels|safe }},
+            data: {{ marital_status_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    maritalBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#religionBar").length) {
+    ctxBar = document.getElementById("religionBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ religion_labels|safe }},
+        datasets: [
+          {
+            label: {{ religion_labels|safe }},
+            data: {{ religion_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    religionBar = new Chart(ctxBar, configBar);
+  }
+
+
+
 }
 
+
+{% comment %}  {% endcomment %} {% comment %}  {% endcomment %} {% comment %}  {% endcomment %} {% comment %}  {% endcomment %}
+{% comment %} PIE {% endcomment %}
+
 function drawPieChart() {
-  if ($("#pieChart").length) {
-    ctxPie = document.getElementById("pieChart").getContext("2d");
+  if ($("#ageChart").length) {
+    ctxPie = document.getElementById("ageChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ age_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: {{ age_labels|safe }}
+          }
+        ],
+        labels: {{ age_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    ageChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#genderChart").length) {
+    ctxPie = document.getElementById("genderChart").getContext("2d");
     optionsPie = {
       responsive: true,
       maintainAspectRatio: false
@@ -301,8 +593,12 @@ function drawPieChart() {
           {
             data: {{ gender_data|safe }},
             backgroundColor: [
-              window.chartColors.purple,
-              window.chartColors.green
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
             ],
             label: "Storage"
           }
@@ -312,8 +608,74 @@ function drawPieChart() {
       options: optionsPie
     };
 
-    pieChart = new Chart(ctxPie, configPie);
+    genderChart = new Chart(ctxPie, configPie);
   }
+
+  if ($("#maritalChart").length) {
+    ctxPie = document.getElementById("maritalChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ marital_status_data|safe }},
+            backgroundColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            label: {{ marital_status_labels|safe }}
+          }
+        ],
+        labels: {{ marital_status_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    maritalChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#religionChart").length) {
+    ctxPie = document.getElementById("religionChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ religion_data|safe }},
+            backgroundColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            label: {{ religion_labels|safe }}
+          }
+        ],
+        labels: {{ religion_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    religionChart = new Chart(ctxPie, configPie);
+  }
+
+
 }
 
 function updateChartOptions() {
@@ -335,10 +697,22 @@ function updateChartOptions() {
 }
 
 function updateBarChart() {
-  if (barChart) {
-    barChart.options = optionsBar;
-    barChart.update();
+  if (ageBar) {
+    ageBar.options = optionsBar;
+    ageBar.update();
   }
+  if (genderBar) {
+    genderBar.options = optionsBar;
+    genderBar.update();
+  }
+  if (maritalBar) {
+    maritalBar.options = optionsBar;
+    maritalBar.update();
+  } 
+  if (religionBar) {
+    religionBar.options = optionsBar;
+    religionBar.update();
+  } 
 }
 
 function reloadPage() {
@@ -347,8 +721,7 @@ function reloadPage() {
   }); // Reload the page so that charts will display correctly
 }
 
-</script>
-
+</script> 
 
 
 

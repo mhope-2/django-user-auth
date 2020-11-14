@@ -78,7 +78,7 @@ def dashboard(request):
     queryset=df_new.to_dict()
 
 
-    age_labels=["< 18", "18 - 40", "41 - 60", "> 60"]
+    age_labels=[" < 18 years ", " 18 - 40 years ", " 41 - 60 years ", " > 60 years "]
     age_data=[]
 
     # for item in queryset['total'].keys():
@@ -487,8 +487,8 @@ def dashboard(request):
 
 
     return render(request, 'charts/index.html', {
-        'gender_labels': json.dumps(gender_labels),
-        'gender_data': json.dumps(gender_data),
+        'gender_labels': gender_labels,
+        'gender_data': gender_data,
 
         'age_labels': age_labels,
         'age_data': age_data,
