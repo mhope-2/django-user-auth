@@ -17,14 +17,170 @@
 
 {% block body_block %}
 
-<canvas id="age" width="1" height="1"></canvas>
+    <canvas id="age_pie"></canvas>
 
-<p>{{marital_status_data}}</p>
+    <canvas id="age_bar"></canvas>
+
+
+
+
+
+
+<script>
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+window.chartColors = {
+      red: 'rgb(255, 99, 132)',
+      orange: 'rgb(255, 159, 64)',
+      yellow: 'rgb(255, 205, 86)',
+      green: 'rgb(75, 192, 192)',
+      blue: 'rgb(54, 162, 235)',
+      purple: 'rgb(153, 102, 255)',
+      grey: 'rgb(201, 203, 207)'
+    };
+
+var age_pie_config = {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: {{ age_data|safe }},
+          backgroundColor: [
+            window.chartColors.purple, window.chartColors.green, window.chartColors.red, window.chartColors.orange
+          ],
+          label: 'Age'
+        }],
+        labels: {{ age_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    window.onload = function() {
+      var ctx = document.getElementById('age_pie').getContext('2d');
+      window.agePie = new Chart(ctx, age_pie_config);
+    };
+
+var age_bar_config = {
+      type: 'bar',
+      data: {
+        datasets: [{
+          data: {{ age_data|safe }},
+          backgroundColor: [
+            window.chartColors.purple, window.chartColors.green, window.chartColors.red, window.chartColors.orange
+          ],
+          borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1,
+          label: 'Age'
+        }],
+        labels: {{ age_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    window.onload = function() {
+      var ctx = document.getElementById('age_bar').getContext('2d');
+      window.ageBar = new Chart(ctx, age_bar_config);
+    };
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 {% endblock body_block %}
-
-<script>
-
 
 </script>

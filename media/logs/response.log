@@ -3004,3 +3004,373 @@ NameError: name 'prepared_to_pay_for_vaccine_labels' is not defined
 2020-11-13 23:17:46,314,314 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
 2020-11-13 23:17:46,316,316 asyncio DEBUG Using selector: KqueueSelector
 2020-11-13 23:17:59,348,348 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:26:27,736,736 django.request WARNING Not Found: /favicon.ico
+2020-11-13 23:32:47,771,771 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:32:47,819,819 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:32:52,253,253 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:32:52,254,254 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:32:57,878,878 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:32:57,878,878 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:33:01,310,310 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:33:01,311,311 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:33:08,533,533 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:33:08,534,534 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:33:11,697,697 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:33:11,698,698 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:33:14,777,777 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-13 23:33:14,778,778 asyncio DEBUG Using selector: KqueueSelector
+2020-11-13 23:44:24,315,315 django.request WARNING Not Found: /favicon.ico
+2020-11-13 23:46:13,692,692 django.request WARNING Not Found: /favicon.ico
+2020-11-13 23:46:54,002,2 django.request WARNING Not Found: /favicon.ico
+2020-11-13 23:55:57,319,319 django.request WARNING Not Found: /favicon.ico
+2020-11-13 23:56:09,939,939 django.request WARNING Not Found: /favicon.ico
+2020-11-14 00:22:47,746,746 django.request WARNING Not Found: /favicon.ico
+2020-11-14 00:35:43,653,653 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-14 00:35:43,700,700 asyncio DEBUG Using selector: KqueueSelector
+2020-11-14 00:35:50,208,208 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-14 00:35:50,209,209 asyncio DEBUG Using selector: KqueueSelector
+2020-11-14 00:36:54,834,834 django.request WARNING Not Found: /admin/view/survey/dashboard/css/bootstrap.min.css
+2020-11-14 00:36:54,834,834 django.request WARNING Not Found: /admin/view/survey/dashboard/js/jquery-3.3.1.min.js
+2020-11-14 00:36:54,838,838 django.request WARNING Not Found: /admin/view/survey/dashboard/css/fullcalendar.min.css
+2020-11-14 00:36:54,847,847 django.request WARNING Not Found: /admin/view/survey/dashboard/css/tooplate.css
+2020-11-14 00:36:54,853,853 django.request WARNING Not Found: /admin/view/survey/dashboard/css/fontawesome.min.css
+2020-11-14 00:36:54,863,863 django.request WARNING Not Found: /admin/view/survey/dashboard/js/moment.min.js
+2020-11-14 00:36:54,914,914 django.request WARNING Not Found: /admin/view/survey/dashboard/js/utils.js
+2020-11-14 00:36:54,935,935 django.request WARNING Not Found: /admin/view/survey/dashboard/js/tooplate-scripts.js
+2020-11-14 00:36:54,969,969 django.request WARNING Not Found: /admin/view/survey/dashboard/js/bootstrap.min.js
+2020-11-14 00:36:54,979,979 django.request WARNING Not Found: /admin/view/survey/dashboard/js/fullcalendar.min.js
+2020-11-14 00:36:54,983,983 django.request WARNING Not Found: /admin/view/survey/dashboard/js/Chart.min.js
+2020-11-14 00:36:55,005,5 django.request WARNING Not Found: /admin/view/survey/dashboard/js/utils.js
+2020-11-14 00:36:55,083,83 django.request WARNING Not Found: /admin/view/survey/dashboard/js/Chart.min.js
+2020-11-14 00:36:55,120,120 django.request WARNING Not Found: /admin/view/survey/dashboard/js/fullcalendar.min.js
+2020-11-14 00:36:55,171,171 django.request WARNING Not Found: /admin/view/survey/dashboard/js/bootstrap.min.js
+2020-11-14 00:36:55,188,188 django.request WARNING Not Found: /admin/view/survey/dashboard/js/tooplate-scripts.js
+2020-11-14 00:36:55,238,238 django.request WARNING Not Found: /favicon.ico
+2020-11-14 00:43:25,422,422 asyncio DEBUG Using selector: KqueueSelector
+2020-11-14 00:43:32,137,137 django.request WARNING Not Found: /admin/view/survey/dashboard/js/moment.min.js
+2020-11-14 00:43:32,165,165 django.request WARNING Not Found: /admin/view/survey/dashboard/css/bootstrap.min.css
+2020-11-14 00:43:35,682,682 django.request WARNING Not Found: /admin/view/survey/dashboard/css/bootstrap.min.css
+2020-11-14 00:43:35,715,715 django.request WARNING Not Found: /admin/view/survey/dashboard/js/moment.min.js
+2020-11-14 00:43:35,826,826 django.request WARNING Not Found: /admin/view/survey/dashboard/js/moment.min.js
+2020-11-14 00:44:45,258,258 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'enblblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 489, in dashboard
+    return render(request, 'charts/index.html', {
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 522, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 234: 'enblblock', expected 'endblock'. Did you forget to register or load this tag?
+2020-11-14 00:45:05,709,709 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'enblblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 489, in dashboard
+    return render(request, 'charts/index.html', {
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 522, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 234: 'enblblock', expected 'endblock'. Did you forget to register or load this tag?
+2020-11-14 00:45:17,686,686 django.request WARNING Not Found: /admin/view/survey/dashboard/css/bootstrap.min.css
+2020-11-14 00:45:17,731,731 django.request WARNING Not Found: /admin/view/survey/dashboard/js/moment.min.js
+2020-11-14 00:45:17,816,816 django.request WARNING Not Found: /admin/view/survey/dashboard/js/moment.min.js
+2020-11-14 00:51:19,619,619 django.request WARNING Not Found: /admin/view/survey/dashboard/js/moment.min.js
+2020-11-14 00:52:16,785,785 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 00:52:17,064,64 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 00:53:21,791,791 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 00:53:43,747,747 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 00:53:43,833,833 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 00:53:57,323,323 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 00:54:41,742,742 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 00:54:52,541,541 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 00:55:08,463,463 django.request WARNING Not Found: /admin/view/survey/dashboard/login.html
+2020-11-14 00:55:12,906,906 django.request WARNING Not Found: /admin/view/survey/dashboard/login.html
+2020-11-14 00:56:30,462,462 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 489, in dashboard
+    return render(request, 'charts/index.html', {
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader_tags.py", line 53, in render
+    result = self.nodelist.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'logout_success' not found. 'logout_success' is not a valid view function or pattern name.
+2020-11-14 00:58:48,159,159 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 489, in dashboard
+    return render(request, 'charts/index.html', {
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader_tags.py", line 53, in render
+    result = self.nodelist.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'logout_success' not found. 'logout_success' is not a valid view function or pattern name.
+2020-11-14 00:59:34,751,751 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 489, in dashboard
+    return render(request, 'charts/index.html', {
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader_tags.py", line 53, in render
+    result = self.nodelist.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'logout_success' not found. 'logout_success' is not a valid view function or pattern name.
+2020-11-14 01:00:00,622,622 asyncio DEBUG Using selector: KqueueSelector
+2020-11-14 01:00:08,146,146 django.request ERROR Internal Server Error: /admin/view/survey/dashboard/
+Traceback (most recent call last):
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py", line 489, in dashboard
+    return render(request, 'charts/index.html', {
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/loader_tags.py", line 53, in render
+    result = self.nodelist.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/mhope/Documents/projects/beta-survey-django/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'logout_success' not found. 'logout_success' is not a valid view function or pattern name.
+2020-11-14 01:01:56,229,229 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:02:25,702,702 django.request WARNING Not Found: /accounts/login/
+2020-11-14 01:03:52,961,961 django.request WARNING Not Found: /accounts/login/
+2020-11-14 01:04:43,827,827 django.request WARNING Not Found: /admin/views/survey/dashboard
+2020-11-14 01:04:48,828,828 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:05:04,346,346 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:05:54,363,363 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:06:12,339,339 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:06:23,814,814 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:06:42,293,293 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:09:02,458,458 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:09:10,824,824 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:11:04,788,788 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:11:16,314,314 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:11:16,410,410 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:15:11,166,166 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:15:11,326,326 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:15:36,274,274 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:15:36,394,394 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:16:41,845,845 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:16:41,963,963 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:18:16,216,216 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:18:16,448,448 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:19:35,667,667 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:19:35,774,774 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:19:47,719,719 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:19:47,794,794 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:19:47,840,840 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:20:43,836,836 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:20:43,981,981 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:21:04,400,400 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:21:04,535,535 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:21:19,374,374 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:21:19,524,524 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:23:31,953,953 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:23:32,039,39 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:25:16,863,863 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:25:16,939,939 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:25:45,814,814 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:25:45,922,922 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:26:12,787,787 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:26:12,969,969 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:27:07,800,800 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:27:30,334,334 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:27:46,750,750 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:28:11,932,932 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:28:23,580,580 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:28:35,267,267 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:30:22,898,898 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:30:40,118,118 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:39:10,014,14 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:39:10,070,70 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:39:16,986,986 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:39:16,989,989 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:41:31,690,690 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-14 01:41:31,692,692 asyncio DEBUG Using selector: KqueueSelector
+2020-11-14 01:41:44,160,160 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-14 01:41:44,161,161 asyncio DEBUG Using selector: KqueueSelector
+2020-11-14 01:41:58,167,167 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
+2020-11-14 01:41:58,168,168 asyncio DEBUG Using selector: KqueueSelector
+2020-11-14 01:43:02,646,646 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:43:02,739,739 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:44:24,389,389 asyncio DEBUG Using selector: KqueueSelector
+2020-11-14 01:45:15,724,724 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:45:15,775,775 django.request WARNING Not Found: /favicon.ico
+2020-11-14 01:46:08,648,648 django.request WARNING Not Found: /admin/view/survey/dashboard/charts/js/moment.min.js
+2020-11-14 01:46:08,798,798 django.request WARNING Not Found: /favicon.ico

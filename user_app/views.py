@@ -20,7 +20,7 @@ from django.contrib.auth.decorators import login_required
 
 import pandas as pd
 import numpy as np
-
+import json
 
 
 class HomeView(TemplateView):
@@ -78,11 +78,11 @@ def dashboard(request):
     queryset=df_new.to_dict()
 
 
-    age_labels=[]
+    age_labels=["< 18", "18 - 40", "41 - 60", "> 60"]
     age_data=[]
 
-    for item in queryset['total'].keys():
-        age_labels.append(item)
+    # for item in queryset['total'].keys():
+    #     age_labels.append(item)
     for item in queryset['total'].values():
         age_data.append(item)
 
@@ -486,9 +486,9 @@ def dashboard(request):
     ##########################################################################################################################################
 
 
-    return render(request, 'user_app/registration/login_success.html', {
-        'gender_labels': gender_labels,
-        'gender_data': gender_data,
+    return render(request, 'charts/index.html', {
+        'gender_labels': json.dumps(gender_labels),
+        'gender_data': json.dumps(gender_data),
 
         'age_labels': age_labels,
         'age_data': age_data,
