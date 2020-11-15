@@ -1180,3 +1180,4 @@ TypeError: Responses() got an unexpected keyword argument 'belive_in_hand_washin
 2020-11-15 01:58:20,159,159 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/user_app/views.py changed, reloading.
 2020-11-15 01:58:20,161,161 asyncio DEBUG Using selector: KqueueSelector
 2020-11-15 02:21:39,416,416 asyncio DEBUG Using selector: KqueueSelector
+2020-11-15 02:27:02,960,960 asyncio DEBUG Using selector: KqueueSelector
