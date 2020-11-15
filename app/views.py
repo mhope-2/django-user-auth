@@ -66,7 +66,7 @@ def response_api(request):
         if serializer.is_valid():
             print("SERIALIZER VALID")
             serializer.save()
-            return Response(request.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
             
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -177,8 +177,8 @@ def dashboard(request):
     risk_of_covid_exposure_data=[]
 
     for idx,item in enumerate(risk_of_covid_exposure_queryset):
-        covid_knowledge_before_survey_labels.append(risk_of_covid_exposure_queryset[idx][risk_of_covid_exposure])
-        covid_knowledge_before_survey_data.append(risk_of_covid_exposure_queryset[idx]['total'])
+        risk_of_covid_exposure_labels.append(risk_of_covid_exposure_queryset[idx][risk_of_covid_exposure])
+        risk_of_covid_exposure_data.append(risk_of_covid_exposure_queryset[idx]['total'])
 
     ##########################################################################################################################################
 
@@ -584,7 +584,8 @@ def dashboard(request):
         'origin_of_vaccine_influence_your_decision_to_participate_data': origin_of_vaccine_influence_your_decision_to_participate_data,
 
         'preferred_vaccine_origin_labels': preferred_vaccine_origin_labels,
-        'preferred_vaccine_origin_data': preferred_vaccine_origin_data 
+        'preferred_vaccine_origin_data': preferred_vaccine_origin_data ,
+        'q': covid_knowledge_before_survey_queryset
 
     })
    

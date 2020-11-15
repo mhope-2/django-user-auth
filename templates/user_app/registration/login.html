@@ -122,7 +122,7 @@
     </form>
     </form>
 	<div class="text-center">Don't have an account? <a href="{% url 'user_app:signup' %}">Sign Up</a></div>
-	<div class="text-center">Forgot Password? <a href="{% url 'user_app:password_rest_form' %}">Reset</a></div><br><br><br>
+	{% comment %} <div class="text-center">Forgot Password? <a href="{% url 'user_app:password_rest_form' %}">Reset</a></div><br><br><br> {% endcomment %}
 	<br><br><br>
 </div>
 </body>

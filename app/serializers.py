@@ -19,7 +19,7 @@ class ResponseSerializer(serializers.ModelSerializer):
     know_of_covid_preventive_measures = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
     believe_in_facemask_protection = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
     believe_in_social_distancing = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
-    belive_in_hand_washing = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
+    believe_in_hand_washing = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
     think_covid_is_gone = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
     think_we_need_covid_vaccine = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
     think_vaccines_are_safe = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)

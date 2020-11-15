@@ -27,7 +27,7 @@
 
 </head>
 {% block body_block %}
-<body id="reportsPage">
+<body id="reportsPage" style="background-image: url({% static 'charts/img/dash-bg-02.jpg' %})">
     <div class="" id="home">
         <div class="container">
             <div class="row">
@@ -94,21 +94,22 @@
             <!-- AGE -->
             <div class="card">
                 <div class="card-body" id="card6">
-            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Responses provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
-            </div>
+                  <h6 style="font-weight: normal; font-size: small; width: fit-content;">Responses provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+                </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
-                <div class="tm-col tm-col-md">
+                <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
                         <h2 class="tm-block-title">Age</h2>
                         <canvas id="ageChart"></canvas>
                     </div>
-                </div>
+                  </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
                         <h2 class="tm-block-title">Age</h2>
                         <canvas id="ageBar"></canvas>
+                     </div>
                     </div>
                 </div><br><br>
                 
@@ -133,7 +134,8 @@
                         <h2 class="tm-block-title">Gender</h2>
                         <canvas id="genderBar"></canvas>
                     </div>
-                </div><br><br><br><br>
+                  </div>
+                </div>
 {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
@@ -155,7 +157,8 @@
                         <h2 class="tm-block-title">Marital Status</h2>
                         <canvas id="maritalBar"></canvas>
                     </div>
-                </div><br><br>
+                   </div>
+                </div>
 {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
@@ -177,7 +180,8 @@
                         <h2 class="tm-block-title">Religion</h2>
                         <canvas id="religionBar"></canvas>
                     </div>
-                </div><br><br>
+                  </div>
+               </div>
 {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
@@ -198,7 +202,8 @@
                         <h2 class="tm-block-title">Job Type</h2>
                         <canvas id="jobTypeBar"></canvas>
                     </div>
-                </div> <br><br>
+                </div>
+              </div>
 {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
@@ -210,17 +215,151 @@
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Job Category</h2>
+                        <h2 class="tm-block-title">Job Category Health Related?</h2>
                         <canvas id="jobCategoryChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Job Category</h2>
+                        <h2 class="tm-block-title">Job Category Health Related?</h2>
                         <canvas id="jobCategoryBar"></canvas>
                     </div>
-                </div>                                
-                
+                  </div>  
+                </div>                              
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Category provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Clinical or Administrative</h2>
+                        <canvas id="clinicalOrNotChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Clinical or Administrative</h2>
+                        <canvas id="clinicalOrNotBar"></canvas>
+                    </div>
+                  </div>  
+                </div>  
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid Knowledge be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Covid Knowledge Before Survey</h2>
+                        <canvas id="knowCovidChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Covid Knowledge Before Survey</h2>
+                        <canvas id="knowCovidBar"></canvas>
+                    </div>
+                  </div>  
+                </div>  
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid Knowledge be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Risk of Covid Exposure</h2>
+                        <canvas id="covidRiskChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Risk of Covid Exposure</h2>
+                        <canvas id="covidRiskBar"></canvas>
+                    </div>
+                  </div>  
+                </div> 
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid Knowledge be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Knowledge of Covid Diagnosed People</h2>
+                        <canvas id="covidDiagnosedChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Knowledge of Covid Diagnosed People</h2>
+                        <canvas id="covidDiagnosedBar"></canvas>
+                    </div>
+                  </div>  
+                </div> 
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid Knowledge be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Knowledge of Covid Hospitalized People</h2>
+                        <canvas id="covidHospitalizedChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Knowledge of Covid Hospitalized People</h2>
+                        <canvas id="covidHospitalizedBar"></canvas>
+                    </div>
+                  </div>  
+                </div>
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid Knowledge be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Knowledge of People Dead Because of Covid</h2>
+                        <canvas id="covidDeadChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Knowledge of People Dead Because of Covid</h2>
+                        <canvas id="covidDeadBar"></canvas>
+                    </div>
+                  </div>  
+                </div>
+
+
 
 
 
@@ -328,7 +467,10 @@
             configPie,
             lineChart;
         ageBar, ageChart, genderChart, genderBar,maritalBar,maritalChart
-        religionBar,religionChart, jobTypeChart, jobTypeBar, jobCategoryChart, jobCategoryBar;
+        religionBar,religionChart, jobTypeChart, jobTypeBar, jobCategoryChart, jobCategoryBar,
+        clinicalOrNotChart, clinicalOrNotBar, knowCovidChart, knowCovidBar, covidRiskBar, covidRiskChart,
+        covidDiagnosedChart, covidDiagnosedBar, covidHospitalizedBar, covidHospitalizedChart,
+        covidDeadBar, covidDeadChart;
         // DOM is ready
         $(function () {
             updateChartOptions();
@@ -695,6 +837,344 @@ if ($("#jobCategoryBar").length) {
     jobCategoryBar = new Chart(ctxBar, configBar);
   }
 
+{% comment %}  {% endcomment %}
+
+if ($("#clinicalOrNotBar").length) {
+    ctxBar = document.getElementById("clinicalOrNotBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ clinical_or_nonclinical_job_data|safe }},
+        datasets: [
+          {
+            label: "Clinical or Administrative Data",
+            data: {{ clinical_or_nonclinical_job_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    clinicalOrNotBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#knowCovidBar").length) {
+    ctxBar = document.getElementById("knowCovidBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ covid_knowledge_before_survey_labels|safe }},
+        datasets: [
+          {
+            label: "Covid Knowledge Data",
+            data: {{ covid_knowledge_before_survey_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    knowCovidBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#covidRiskBar").length) {
+    ctxBar = document.getElementById("covidRiskBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ risk_of_covid_exposure_labels|safe }},
+        datasets: [
+          {
+            label: "Risk of Covid Exposure Data",
+            data: {{ risk_of_covid_exposure_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    knowCovidBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#covidDiagnosedBar").length) {
+    ctxBar = document.getElementById("covidDiagnosedBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ know_of_anyone_diagnosed_with_covid_labels|safe }},
+        datasets: [
+          {
+            label: "Knowledge of Covid Diagnosed People Data",
+            data: {{ know_of_anyone_diagnosed_with_covid_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    covidDiagnosedBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#covidHospitalizedBar").length) {
+    ctxBar = document.getElementById("covidHospitalizedBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ know_of_anyone_hospitalized_due_to_covid_labels|safe }},
+        datasets: [
+          {
+            label: "Knowledge of Covid Hospitalized People Data",
+            data: {{ know_of_anyone_hospitalized_due_to_covid_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    covidHospitalizedBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#covidDeadBar").length) {
+    ctxBar = document.getElementById("covidDeadBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ know_of_anyone_die_due_to_covid_labels|safe }},
+        datasets: [
+          {
+            label: "Knowledge of People Dead Because of Covid",
+            data: {{ know_of_anyone_die_due_to_covid_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    covidDeadBar = new Chart(ctxBar, configBar);
+  }
+
 
 
 
@@ -891,7 +1371,7 @@ if ($("#jobCategoryChart").length) {
               "rgba(255, 159, 64, 1)"
 
             ],
-            label: "Job Category Data"
+            label: "Job Category Health or Not"
           }
         ],
         labels: {{ job_category_health_related_labels|safe }}
@@ -901,6 +1381,205 @@ if ($("#jobCategoryChart").length) {
 
     jobCategoryChart = new Chart(ctxPie, configPie);
   }
+
+  if ($("#clinicalOrNotChart").length) {
+    ctxPie = document.getElementById("clinicalOrNotChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ clinical_or_nonclinical_job_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Clinical or Non-clinical Category Data"
+          }
+        ],
+        labels: {{ clinical_or_nonclinical_job_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    clinicalOrNotChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#knowCovidChart").length) {
+    ctxPie = document.getElementById("knowCovidChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ covid_knowledge_before_survey_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Covid Knowledge Data"
+          }
+        ],
+        labels: {{ covid_knowledge_before_survey_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    knowCovidChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#covidRiskChart").length) {
+    ctxPie = document.getElementById("covidRiskChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ risk_of_covid_exposure_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Risk of Covid Exposure Data"
+          }
+        ],
+        labels: {{ risk_of_covid_exposure_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    knowCovidChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#covidDiagnosedChart").length) {
+    ctxPie = document.getElementById("covidDiagnosedChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ know_of_anyone_diagnosed_with_covid_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Knowledge of Covid Diagnosed People Data"
+          }
+        ],
+        labels: {{ know_of_anyone_diagnosed_with_covid_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    covidDiagnosedChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#covidHospitalizedChart").length) {
+    ctxPie = document.getElementById("covidHospitalizedChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ know_of_anyone_hospitalized_due_to_covid_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Knowledge of Covid Diagnosed People Data"
+          }
+        ],
+        labels: {{ know_of_anyone_hospitalized_due_to_covid_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    covidHospitalizedChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#covidDeadChart").length) {
+    ctxPie = document.getElementById("covidDeadChart").getContext("2d");
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ know_of_anyone_die_due_to_covid_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Knowledge of People Dead Because of Covid"
+          }
+        ],
+        labels: {{ know_of_anyone_die_due_to_covid_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    covidDeadChart = new Chart(ctxPie, configPie);
+  }
+
 
 
 }
@@ -948,6 +1627,34 @@ function updateBarChart() {
     jobCategoryBar.options = optionsBar;
     jobCategoryBar.update();
   }
+  if (clinicalOrNotBar){
+      clinicalOrNotBar.options = optionsBar;
+      clinicalOrNotBar.update();
+  }
+  if (knowCovidBar){
+      knowCovidBar.options = optionsBar;
+      knowCovidBar.update();
+  }
+  if (covidRiskBar){
+    covidRiskBar.options = optionsBar;
+    covidRiskBar.update();
+      }
+  if (covidDiagnosedBar){
+      covidDiagnosedBar.options = optionsBar;
+      covidDiagnosedBar.update();
+  }
+  if(covidHospitalizedBar){
+      covidHospitalizedBar.options = optionsBar;
+      covidHospitalizedBar.update();
+  }
+  if(covidDeadBar){
+      covidDeadBar.options = optionsBar;
+      covidDeadBar.update();
+  }
+
+
+
+  
 }
 
 function reloadPage() {

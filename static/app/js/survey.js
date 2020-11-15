@@ -12,6 +12,8 @@ window.onload = function () {
       // console.log(event)
       var userInput = event.detail.text;
       var formDataSerialized = conversationalForm.getFormData(true);
+       
+
 
       if (userInput === "Hello" || userInput === "Hi") {
         conversationalForm.addRobotChatResponse("Hello 😊");
@@ -55,7 +57,7 @@ window.onload = function () {
           know_of_covid_preventive_measures: String(formDataSerialized["cfc-q15"][0]),
           believe_in_facemask_protection: String(formDataSerialized["cfc-q16"][0]),
           believe_in_social_distancing: String(formDataSerialized["cfc-q17"][0]),
-          belive_in_hand_washing: String(formDataSerialized["cfc-q18"][0]),
+          believe_in_hand_washing: String(formDataSerialized["cfc-q18"][0]),
           think_covid_is_gone: String(formDataSerialized["cfc-q19"][0]),
           think_we_need_covid_vaccine: String(formDataSerialized["cfc-q20"][0]),
           think_vaccines_are_safe: String(formDataSerialized["cfc-q21"][0]),
