@@ -19,26 +19,33 @@ def index(request):
     if request.method == 'POST':
         form = PhoneForm(request.POST)
         model = Phone
+
         if form.is_valid():
             phone = form.cleaned_data['phone']
-            form.save()
-            # send SMS
-            deywuro_sms = "https://deywuro.com/api/sms"
-            gen_otp=str(random.Random(uuid.uuid1().hex).getrandbits(128))[0:6]
-            params = {
-                    "username": "sammy",
-                    "password": "suppORT_pass_0987",
-                    "source": "Test",
-                    "destination": "{}".format(str(phone)),
-                    "message": "Your OTP is {}".format(gen_otp)
-            }
-            deywuro_request = requests.get(url = deywuro_sms, params = params, headers = {"Content-Type":"application/json"})   
-            otp_save = OTP(otp=gen_otp)
-            otp_save.save()
+            if len(phone) < 10:
+                return redirect('index')
+            if Phone.objects.filter(phone=phone).exists():
+                print("EXISTST")
+                return redirect('index')
+            else:
+                form.save()
+                # send SMS
+                deywuro_sms = "https://deywuro.com/api/sms"
+                gen_otp=str(random.Random(uuid.uuid1().hex).getrandbits(128))[0:6]
+                params = {
+                        "username": "sammy",
+                        "password": "suppORT_pass_0987",
+                        "source": "Test",
+                        "destination": "{}".format(str(phone)),
+                        "message": "Your OTP is {}".format(gen_otp)
+                }
+                deywuro_request = requests.get(url = deywuro_sms, params = params, headers = {"Content-Type":"application/json"})   
+                otp_save = OTP(otp=gen_otp)
+                otp_save.save()
 
-            data = deywuro_request.json()
-            print("SMS RESPONSE", data)
-            return redirect('verify_otp')
+                data = deywuro_request.json()
+                print("SMS RESPONSE", data)
+                return redirect('verify_otp')
     else:
         form = PhoneForm()
 
