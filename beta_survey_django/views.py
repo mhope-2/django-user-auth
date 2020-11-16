@@ -47,7 +47,7 @@ def index(request):
     # sending get request and saving the response as response object 
     location_request = requests.get(url = url, headers = headers) 
     data = location_request.json()
-    if(data['country_name'] == "Ghana"):
+    if(data['country_name'] == 	"Ghana"):
         print("YOU ARE IN GHANA")
     else:
         return redirect('forbidden')
