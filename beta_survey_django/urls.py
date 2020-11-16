@@ -35,7 +35,7 @@ urlpatterns = [
     path('survey/', views.survey, name='survey'),
     path('forbidden/', views.forbidden, name='forbidden'),
     path('verify_otp/', views.verify_otp, name='verify_otp'),
-    path('submitted/', submitted, name='submitted'),
+    # path('submitted/', submitted, name='submitted'),
     path('response', response_api, name="response"),
 ]
 

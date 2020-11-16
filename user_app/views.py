@@ -17,6 +17,7 @@ from django.views.generic.detail import SingleObjectMixin
 from django.utils.decorators import method_decorator
 from app.models import Responses
 from django.contrib.auth.decorators import login_required
+from django.db.models.functions import Lower
 
 import pandas as pd
 import numpy as np
@@ -25,6 +26,7 @@ import json
 
 class HomeView(TemplateView):
     template_name = 'user_app/index.html'
+
 
 class SignUpView(CreateView):
     model = User
@@ -63,7 +65,7 @@ def dashboard(request):
     # AGE
     age = 'age'
     age_queryset= list(Responses.objects.all().values(age).annotate(total=Count(age)).order_by('total'))
-
+    total_participants = Responses.objects.all().count()
     df = pd.DataFrame(age_queryset)
     conditions = [
     (df['age'] < 18),
@@ -86,7 +88,10 @@ def dashboard(request):
     for item in queryset['total'].values():
         age_data.append(item)
 
-    
+    # count
+    query = list(Responses.objects.values(age))
+    df = pd.DataFrame(query)
+    age_response_count = list(df[df[age] != ""].count())[0]
     
     ##########################################################################################################################################
     # GENDER
@@ -100,6 +105,11 @@ def dashboard(request):
         gender_labels.append(gender_queryset[idx][gender])
         gender_data.append(gender_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(gender))
+    df = pd.DataFrame(query)
+    gender_response_count = list(df[df[gender] != ""].count())[0]    
+
     ##########################################################################################################################################
     marital_status = 'marital_status'
     marital_status_queryset= list(Responses.objects.all().values(marital_status).annotate(total=Count(marital_status)).order_by('total'))
@@ -110,6 +120,11 @@ def dashboard(request):
     for idx,item in enumerate(marital_status_queryset):
         marital_status_labels.append(marital_status_queryset[idx]['marital_status'])
         marital_status_data.append(marital_status_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(marital_status))
+    df = pd.DataFrame(query)
+    marital_response_count = list(df[df[marital_status] != ""].count())[0]    
 
     ##########################################################################################################################################
     religion = 'religion'
@@ -122,6 +137,11 @@ def dashboard(request):
         religion_labels.append(religion_queryset[idx][religion])
         religion_data.append(religion_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(religion))
+    df = pd.DataFrame(query)
+    religion_response_count = list(df[df[religion] != ""].count())[0]     
+
     ##########################################################################################################################################
     job_type = 'job_type'
     job_type_queryset= list(Responses.objects.all().values(job_type).annotate(total=Count(job_type)).order_by('total'))
@@ -133,6 +153,11 @@ def dashboard(request):
         job_type_labels.append(job_type_queryset[idx][job_type])
         job_type_data.append(job_type_queryset[idx]['total'])
 
+     # count
+    query = list(Responses.objects.values(job_type))
+    df = pd.DataFrame(query)
+    jobType_response_count = list(df[df[job_type] != ""].count())[0]  
+
     ##########################################################################################################################################
     job_category_health_related = 'job_category_health_related'
     job_category_health_related_queryset= list(Responses.objects.all().values(job_category_health_related).annotate(total=Count(job_category_health_related)).order_by('total'))
@@ -143,6 +168,11 @@ def dashboard(request):
     for idx,item in enumerate(job_category_health_related_queryset):
         job_category_health_related_labels.append(job_category_health_related_queryset[idx][job_category_health_related])
         job_category_health_related_data.append(job_category_health_related_queryset[idx]['total'])
+
+     # count
+    query = list(Responses.objects.values(job_category_health_related))
+    df = pd.DataFrame(query)
+    jobCategory_response_count = list(df[df[job_category_health_related] != ""].count())[0] 
 
     ##########################################################################################################################################
 
@@ -156,6 +186,11 @@ def dashboard(request):
         clinical_or_nonclinical_job_labels.append(clinical_or_nonclinical_job_queryset[idx][clinical_or_nonclinical_job])
         clinical_or_nonclinical_job_data.append(clinical_or_nonclinical_job_queryset[idx]['total'])
 
+     # count
+    query = list(Responses.objects.values(clinical_or_nonclinical_job))
+    df = pd.DataFrame(query)
+    clinical_response_count = list(df[df[clinical_or_nonclinical_job] != ""].count())[0]
+
     ##########################################################################################################################################
     
     covid_knowledge_before_survey = 'covid_knowledge_before_survey'
@@ -167,6 +202,12 @@ def dashboard(request):
     for idx,item in enumerate(covid_knowledge_before_survey_queryset):
         covid_knowledge_before_survey_labels.append(covid_knowledge_before_survey_queryset[idx][covid_knowledge_before_survey])
         covid_knowledge_before_survey_data.append(covid_knowledge_before_survey_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(covid_knowledge_before_survey))
+    df = pd.DataFrame(query)
+    covidKnowledge_response_count = list(df[df[covid_knowledge_before_survey] != ""].count())[0] 
+
 
     ##########################################################################################################################################
 
@@ -180,6 +221,12 @@ def dashboard(request):
         risk_of_covid_exposure_labels.append(risk_of_covid_exposure_queryset[idx][risk_of_covid_exposure])
         risk_of_covid_exposure_data.append(risk_of_covid_exposure_queryset[idx]['total'])
 
+
+    # count
+    query = list(Responses.objects.values(risk_of_covid_exposure))
+    df = pd.DataFrame(query)
+    risk_response_count = list(df[df[risk_of_covid_exposure] != ""].count())[0] 
+
     ##########################################################################################################################################
 
     know_of_anyone_diagnosed_with_covid = 'know_of_anyone_diagnosed_with_covid'
@@ -191,6 +238,11 @@ def dashboard(request):
     for idx,item in enumerate(know_of_anyone_diagnosed_with_covid_queryset):
         know_of_anyone_diagnosed_with_covid_labels.append(know_of_anyone_diagnosed_with_covid_queryset[idx][know_of_anyone_diagnosed_with_covid])
         know_of_anyone_diagnosed_with_covid_data.append(know_of_anyone_diagnosed_with_covid_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(know_of_anyone_diagnosed_with_covid))
+    df = pd.DataFrame(query)
+    diagnosed_response_count = list(df[df[know_of_anyone_diagnosed_with_covid] != ""].count())[0]
 
     ##########################################################################################################################################
 
@@ -204,6 +256,11 @@ def dashboard(request):
         know_of_anyone_hospitalized_due_to_covid_labels.append(know_of_anyone_hospitalized_due_to_covid_queryset[idx][know_of_anyone_hospitalized_due_to_covid])
         know_of_anyone_hospitalized_due_to_covid_data.append(know_of_anyone_hospitalized_due_to_covid_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(know_of_anyone_hospitalized_due_to_covid))
+    df = pd.DataFrame(query)
+    hospitalized_response_count = list(df[df[know_of_anyone_hospitalized_due_to_covid] != ""].count())[0]
+
     ##########################################################################################################################################
 
     know_of_anyone_die_due_to_covid = 'know_of_anyone_die_due_to_covid'
@@ -215,6 +272,11 @@ def dashboard(request):
     for idx,item in enumerate(know_of_anyone_die_due_to_covid_queryset):
         know_of_anyone_die_due_to_covid_labels.append(know_of_anyone_die_due_to_covid_queryset[idx][know_of_anyone_die_due_to_covid])
         know_of_anyone_die_due_to_covid_data.append(know_of_anyone_die_due_to_covid_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(know_of_anyone_die_due_to_covid))
+    df = pd.DataFrame(query)
+    die_response_count = list(df[df[know_of_anyone_die_due_to_covid] != ""].count())[0]
 
     ##########################################################################################################################################
 
@@ -228,6 +290,11 @@ def dashboard(request):
         know_of_covid_preventive_measures_labels.append(know_of_covid_preventive_measures_queryset[idx][know_of_covid_preventive_measures])
         know_of_covid_preventive_measures_data.append(know_of_covid_preventive_measures_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(know_of_covid_preventive_measures))
+    df = pd.DataFrame(query)
+    preventive_response_count = list(df[df[know_of_covid_preventive_measures] != ""].count())[0]
+
     ##########################################################################################################################################
 
     believe_in_facemask_protection = 'believe_in_facemask_protection'
@@ -239,6 +306,11 @@ def dashboard(request):
     for idx,item in enumerate(believe_in_facemask_protection_queryset):
         believe_in_facemask_protection_labels.append(believe_in_facemask_protection_queryset[idx][believe_in_facemask_protection])
         believe_in_facemask_protection_data.append(believe_in_facemask_protection_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(believe_in_facemask_protection))
+    df = pd.DataFrame(query)
+    facemask_response_count = list(df[df[believe_in_facemask_protection] != ""].count())[0]
 
     ##########################################################################################################################################
 
@@ -252,6 +324,11 @@ def dashboard(request):
         believe_in_social_distancing_labels.append(believe_in_social_distancing_queryset[idx][believe_in_social_distancing])
         believe_in_social_distancing_data.append(believe_in_social_distancing_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(believe_in_social_distancing))
+    df = pd.DataFrame(query)
+    social_response_count = list(df[df[believe_in_social_distancing] != ""].count())[0]   
+
     ##########################################################################################################################################
 
     believe_in_hand_washing = 'believe_in_hand_washing'
@@ -263,6 +340,11 @@ def dashboard(request):
     for idx,item in enumerate(believe_in_hand_washing_queryset):
         believe_in_hand_washing_labels.append(believe_in_hand_washing_queryset[idx][believe_in_hand_washing])
         believe_in_hand_washing_data.append(believe_in_hand_washing_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(believe_in_hand_washing))
+    df = pd.DataFrame(query)
+    hand_response_count = list(df[df[believe_in_hand_washing] != ""].count())[0]
 
     ##########################################################################################################################################
 
@@ -276,6 +358,11 @@ def dashboard(request):
         think_covid_is_gone_labels.append(think_covid_is_gone_queryset[idx][think_covid_is_gone])
         think_covid_is_gone_data.append(think_covid_is_gone_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(think_covid_is_gone))
+    df = pd.DataFrame(query)
+    gone_response_count = list(df[df[think_covid_is_gone] != ""].count())[0]
+
     ##########################################################################################################################################
 
     think_we_need_covid_vaccine = 'think_we_need_covid_vaccine'
@@ -287,6 +374,11 @@ def dashboard(request):
     for idx,item in enumerate(think_we_need_covid_vaccine_queryset):
         think_we_need_covid_vaccine_labels.append(think_we_need_covid_vaccine_queryset[idx][think_we_need_covid_vaccine])
         think_we_need_covid_vaccine_data.append(think_we_need_covid_vaccine_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(think_we_need_covid_vaccine))
+    df = pd.DataFrame(query)
+    need_response_count = list(df[df[think_we_need_covid_vaccine] != ""].count())[0]
 
     ##########################################################################################################################################
  
@@ -300,6 +392,11 @@ def dashboard(request):
         think_vaccines_are_safe_labels.append(think_vaccines_are_safe_queryset[idx][think_vaccines_are_safe])
         think_vaccines_are_safe_data.append(think_vaccines_are_safe_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(think_vaccines_are_safe))
+    df = pd.DataFrame(query)
+    safe_response_count = list(df[df[think_vaccines_are_safe] != ""].count())[0]
+
     ##########################################################################################################################################
 
     heard_of_any_covid_candidate_vaccine = 'heard_of_any_covid_candidate_vaccine'
@@ -311,6 +408,11 @@ def dashboard(request):
     for idx,item in enumerate(heard_of_any_covid_candidate_vaccine_queryset):
         heard_of_any_covid_candidate_vaccine_labels.append(heard_of_any_covid_candidate_vaccine_queryset[idx][heard_of_any_covid_candidate_vaccine])
         heard_of_any_covid_candidate_vaccine_data.append(heard_of_any_covid_candidate_vaccine_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(heard_of_any_covid_candidate_vaccine))
+    df = pd.DataFrame(query)
+    candidate_response_count = list(df[df[heard_of_any_covid_candidate_vaccine] != ""].count())[0]
 
     ##########################################################################################################################################
 
@@ -324,6 +426,11 @@ def dashboard(request):
         participate_in_clinical_covid_vaccine_trial_labels.append(participate_in_clinical_covid_vaccine_trial_queryset[idx][participate_in_clinical_covid_vaccine_trial])
         participate_in_clinical_covid_vaccine_trial_data.append(participate_in_clinical_covid_vaccine_trial_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(participate_in_clinical_covid_vaccine_trial))
+    df = pd.DataFrame(query)
+    trial_response_count = list(df[df[participate_in_clinical_covid_vaccine_trial] != ""].count())[0]
+
     ##########################################################################################################################################
 
     reason_not_to_participate_in_clinical_covid_vaccine_trial = 'reason_not_to_participate_in_clinical_covid_vaccine_trial'
@@ -336,6 +443,11 @@ def dashboard(request):
         reason_not_to_participate_in_clinical_covid_vaccine_trial_labels.append(reason_not_to_participate_in_clinical_covid_vaccine_trial_queryset[idx][reason_not_to_participate_in_clinical_covid_vaccine_trial])
         reason_not_to_participate_in_clinical_covid_vaccine_trial_data.append(reason_not_to_participate_in_clinical_covid_vaccine_trial_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(reason_not_to_participate_in_clinical_covid_vaccine_trial))
+    df = pd.DataFrame(query)
+    reason_response_count = list(df[df[reason_not_to_participate_in_clinical_covid_vaccine_trial] != ""].count())[0]
+
     ##########################################################################################################################################
 
     motivation_for_participation = 'motivation_for_participation'
@@ -347,7 +459,12 @@ def dashboard(request):
     for idx,item in enumerate(motivation_for_participation_queryset):
         motivation_for_participation_labels.append(motivation_for_participation_queryset[idx][motivation_for_participation])
         motivation_for_participation_data.append(motivation_for_participation_queryset[idx]['total'])
-
+    
+    # count
+    query = list(Responses.objects.values(motivation_for_participation))
+    df = pd.DataFrame(query)
+    motivation_response_count = list(df[df[motivation_for_participation] != ""].count())[0]
+    
     ##########################################################################################################################################
 
     route_of_vaccine_administration = 'route_of_vaccine_administration'
@@ -359,6 +476,11 @@ def dashboard(request):
     for idx,item in enumerate(route_of_vaccine_administration_queryset):
         route_of_vaccine_administration_labels.append(route_of_vaccine_administration_queryset[idx][route_of_vaccine_administration])
         route_of_vaccine_administration_data.append(route_of_vaccine_administration_queryset[idx]['total'])
+
+     # count
+    query = list(Responses.objects.values(route_of_vaccine_administration))
+    df = pd.DataFrame(query)
+    route_response_count = list(df[df[route_of_vaccine_administration] != ""].count())[0]
 
     ##########################################################################################################################################
 
@@ -372,6 +494,11 @@ def dashboard(request):
         type_of_vaccine_acceptable_labels.append(type_of_vaccine_acceptable_queryset[idx][type_of_vaccine_acceptable])
         type_of_vaccine_acceptable_data.append(type_of_vaccine_acceptable_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(type_of_vaccine_acceptable))
+    df = pd.DataFrame(query)
+    vaccType_response_count = list(df[df[type_of_vaccine_acceptable] != ""].count())[0]
+
     ##########################################################################################################################################
 
     phase_of_clinical_trial_to_participate_in = 'phase_of_clinical_trial_to_participate_in'
@@ -383,6 +510,11 @@ def dashboard(request):
     for idx,item in enumerate(phase_of_clinical_trial_to_participate_in_queryset):
         phase_of_clinical_trial_to_participate_in_labels.append(phase_of_clinical_trial_to_participate_in_queryset[idx][phase_of_clinical_trial_to_participate_in])
         phase_of_clinical_trial_to_participate_in_data.append(phase_of_clinical_trial_to_participate_in_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(phase_of_clinical_trial_to_participate_in))
+    df = pd.DataFrame(query)
+    phase_response_count = list(df[df[phase_of_clinical_trial_to_participate_in] != ""].count())[0]
 
     ##########################################################################################################################################
 
@@ -396,6 +528,11 @@ def dashboard(request):
         country_of_vaccine_influence_your_decision_to_participate_labels.append(country_of_vaccine_influence_your_decision_to_participate_queryset[idx][country_of_vaccine_influence_your_decision_to_participate])
         country_of_vaccine_influence_your_decision_to_participate_data.append(country_of_vaccine_influence_your_decision_to_participate_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(country_of_vaccine_influence_your_decision_to_participate))
+    df = pd.DataFrame(query)
+    vaccCountry_response_count = list(df[df[country_of_vaccine_influence_your_decision_to_participate] != ""].count())[0]
+
     ##########################################################################################################################################
 
     preferred_vaccine_continent = 'preferred_vaccine_continent'
@@ -406,8 +543,12 @@ def dashboard(request):
 
     for idx,item in enumerate(preferred_vaccine_continent_queryset):
         preferred_vaccine_continent_labels.append(preferred_vaccine_continent_queryset[idx][preferred_vaccine_continent])
-        preferred_vaccine_continent_labels.append(preferred_vaccine_continent_queryset[idx]['total'])
+        preferred_vaccine_continent_data.append(preferred_vaccine_continent_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(preferred_vaccine_continent))
+    df = pd.DataFrame(query)
+    vaccContinent_response_count = list(df[df[preferred_vaccine_continent] != ""].count())[0]
 
     ##########################################################################################################################################
 
@@ -419,7 +560,12 @@ def dashboard(request):
 
     for idx,item in enumerate(vaccine_scientists_should_include_ghanaian_queryset):
         vaccine_scientists_should_include_ghanaian_labels.append(vaccine_scientists_should_include_ghanaian_queryset[idx][vaccine_scientists_should_include_ghanaian])
-        vaccine_scientists_should_include_ghanaian_labels.append(vaccine_scientists_should_include_ghanaian_queryset[idx]['total'])
+        vaccine_scientists_should_include_ghanaian_data.append(vaccine_scientists_should_include_ghanaian_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(vaccine_scientists_should_include_ghanaian))
+    df = pd.DataFrame(query)
+    gh_response_count = list(df[df[vaccine_scientists_should_include_ghanaian] != ""].count())[0]
 
     ##########################################################################################################################################
 
@@ -433,6 +579,11 @@ def dashboard(request):
         participate_in_mass_covid_vaccination_labels.append(participate_in_mass_covid_vaccination_queryset[idx][participate_in_mass_covid_vaccination])
         participate_in_mass_covid_vaccination_data.append(participate_in_mass_covid_vaccination_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(participate_in_mass_covid_vaccination))
+    df = pd.DataFrame(query)
+    mass_response_count = list(df[df[participate_in_mass_covid_vaccination] != ""].count())[0]
+
     ##########################################################################################################################################
 
     prepared_to_pay_for_vaccine = 'prepared_to_pay_for_vaccine'
@@ -442,10 +593,14 @@ def dashboard(request):
     prepared_to_pay_for_vaccine_data=[]
 
     for idx,item in enumerate(prepared_to_pay_for_vaccine_queryset):
-        preferred_vaccine_continent_labels.append(prepared_to_pay_for_vaccine_queryset[idx][prepared_to_pay_for_vaccine])
-        preferred_vaccine_continent_data.append(prepared_to_pay_for_vaccine_queryset[idx]['total'])
+        prepared_to_pay_for_vaccine_labels.append(prepared_to_pay_for_vaccine_queryset[idx][prepared_to_pay_for_vaccine])
+        prepared_to_pay_for_vaccine_data.append(prepared_to_pay_for_vaccine_queryset[idx]['total'])
 
-    
+    # count
+    query = list(Responses.objects.values(prepared_to_pay_for_vaccine))
+    df = pd.DataFrame(query)
+    pay_response_count = list(df[df[prepared_to_pay_for_vaccine] != ""].count())[0]
+
     ##########################################################################################################################################
 
     estimated_vaccine_cost_range = 'estimated_vaccine_cost_range'
@@ -457,6 +612,11 @@ def dashboard(request):
     for idx,item in enumerate(estimated_vaccine_cost_range_queryset):
         estimated_vaccine_cost_range_labels.append(estimated_vaccine_cost_range_queryset[idx][estimated_vaccine_cost_range])
         estimated_vaccine_cost_range_data.append(estimated_vaccine_cost_range_queryset[idx]['total'])
+
+    # count
+    query = list(Responses.objects.values(estimated_vaccine_cost_range))
+    df = pd.DataFrame(query)
+    cost_response_count = list(df[df[estimated_vaccine_cost_range] != ""].count())[0]
 
     ##########################################################################################################################################
 
@@ -470,6 +630,11 @@ def dashboard(request):
         origin_of_vaccine_influence_your_decision_to_participate_labels.append(origin_of_vaccine_influence_your_decision_to_participate_queryset[idx][origin_of_vaccine_influence_your_decision_to_participate])
         origin_of_vaccine_influence_your_decision_to_participate_data.append(origin_of_vaccine_influence_your_decision_to_participate_queryset[idx]['total'])
 
+    # count
+    query = list(Responses.objects.values(origin_of_vaccine_influence_your_decision_to_participate))
+    df = pd.DataFrame(query)
+    origin_response_count = list(df[df[origin_of_vaccine_influence_your_decision_to_participate] != ""].count())[0]
+
     ##########################################################################################################################################
 
     preferred_vaccine_origin = 'preferred_vaccine_origin'
@@ -482,7 +647,11 @@ def dashboard(request):
         preferred_vaccine_origin_labels.append(preferred_vaccine_origin_queryset[idx][preferred_vaccine_origin])
         preferred_vaccine_origin_data.append(preferred_vaccine_origin_queryset[idx]['total'])
 
-
+    # count
+    query = list(Responses.objects.values(preferred_vaccine_origin))
+    df = pd.DataFrame(query)
+    preferredOrigin_response_count = list(df[df[preferred_vaccine_origin] != ""].count())[0]
+    
     ##########################################################################################################################################
 
 
@@ -542,7 +711,7 @@ def dashboard(request):
         'think_we_need_covid_vaccine_data': think_we_need_covid_vaccine_data,
 
         'think_vaccines_are_safe_labels': think_vaccines_are_safe_labels,
-        'think_vaccines_are_safe_data': 'think_vaccines_are_safe_data',
+        'think_vaccines_are_safe_data': think_vaccines_are_safe_data,
 
         'heard_of_any_covid_candidate_vaccine_labels':heard_of_any_covid_candidate_vaccine_labels,
         'heard_of_any_covid_candidate_vaccine_data': heard_of_any_covid_candidate_vaccine_data,
@@ -550,14 +719,14 @@ def dashboard(request):
         'participate_in_clinical_covid_vaccine_trial_labels': participate_in_clinical_covid_vaccine_trial_labels,
         'participate_in_clinical_covid_vaccine_trial_data': participate_in_clinical_covid_vaccine_trial_data,
 
-        'reason_not_to_participate_in_clinical_covid_vaccine_trial': reason_not_to_participate_in_clinical_covid_vaccine_trial,
-        'participate_in_clinical_covid_vaccine_trial_data': participate_in_clinical_covid_vaccine_trial_data,
+        'reason_not_to_participate_in_clinical_covid_vaccine_trial_data': reason_not_to_participate_in_clinical_covid_vaccine_trial_data,
+        'reason_not_to_participate_in_clinical_covid_vaccine_trial_labels': reason_not_to_participate_in_clinical_covid_vaccine_trial_labels,
 
-        'participate_in_clinical_covid_vaccine_trial_labels': participate_in_clinical_covid_vaccine_trial_labels,
-        'participate_in_clinical_covid_vaccine_trial_data': participate_in_clinical_covid_vaccine_trial_data,
+        'motivation_for_participation_labels': motivation_for_participation_labels,
+        'motivation_for_participation_data': motivation_for_participation_data,
 
-        'participate_in_clinical_covid_vaccine_trial_labels': participate_in_clinical_covid_vaccine_trial_labels,
-        'participate_in_clinical_covid_vaccine_trial_data': participate_in_clinical_covid_vaccine_trial_data,
+        'route_of_vaccine_administration_labels': route_of_vaccine_administration_labels,
+        'route_of_vaccine_administration_data': route_of_vaccine_administration_data,
 
         'type_of_vaccine_acceptable_labels': type_of_vaccine_acceptable_labels,
         'type_of_vaccine_acceptable_data': type_of_vaccine_acceptable_data,
@@ -574,6 +743,9 @@ def dashboard(request):
         'vaccine_scientists_should_include_ghanaian_labels': vaccine_scientists_should_include_ghanaian_labels,
         'vaccine_scientists_should_include_ghanaian_data': vaccine_scientists_should_include_ghanaian_data,
 
+        'participate_in_mass_covid_vaccination_labels': participate_in_mass_covid_vaccination_labels,
+        'participate_in_mass_covid_vaccination_data': participate_in_mass_covid_vaccination_data,
+
         'prepared_to_pay_for_vaccine_labels': prepared_to_pay_for_vaccine_labels,
         'prepared_to_pay_for_vaccine_data': prepared_to_pay_for_vaccine_data,
 
@@ -584,8 +756,47 @@ def dashboard(request):
         'origin_of_vaccine_influence_your_decision_to_participate_data': origin_of_vaccine_influence_your_decision_to_participate_data,
 
         'preferred_vaccine_origin_labels': preferred_vaccine_origin_labels,
-        'preferred_vaccine_origin_data': preferred_vaccine_origin_data ,
-        'q': covid_knowledge_before_survey_queryset
+        'preferred_vaccine_origin_data': preferred_vaccine_origin_data,
+
+        'total_participants': total_participants,
+        'query': query,
+
+        ###############################################################################################
+        
+        'age_response_count': age_response_count,
+        'gender_response_count': gender_response_count,
+        'marital_response_count': marital_response_count,
+        'religion_response_count': religion_response_count,
+        'jobType_response_count':jobType_response_count,
+        'jobCategory_response_count': jobCategory_response_count,
+        'clinical_response_count': clinical_response_count,
+        'covidKnowledge_response_count': covidKnowledge_response_count,
+        'risk_response_count': risk_response_count,
+        'diagnosed_response_count': diagnosed_response_count,
+        'hospitalized_response_count': hospitalized_response_count,
+        'die_response_count': die_response_count,
+        'preventive_response_count': preventive_response_count,
+        'facemask_response_count': facemask_response_count,
+        'social_response_count': social_response_count,
+        'hand_response_count': hand_response_count,
+        'gone_response_count': gone_response_count,
+        'need_response_count': need_response_count,
+        'safe_response_count': safe_response_count,
+        'candidate_response_count': candidate_response_count,
+        'trial_response_count': trial_response_count,
+        'reason_response_count': reason_response_count,
+        'motivation_response_count': motivation_response_count,
+        'route_response_count': route_response_count,
+        'vaccType_response_count': vaccType_response_count,
+        'phase_response_count': phase_response_count,
+        'vaccCountry_response_count': vaccCountry_response_count,
+        'vaccContinent_response_count': vaccContinent_response_count,
+        'gh_response_count': gh_response_count,
+        'mass_response_count': mass_response_count,
+        'pay_response_count': pay_response_count,
+        'cost_response_count': cost_response_count,
+        'origin_response_count': origin_response_count,
+        'preferredOrigin_response_count': preferredOrigin_response_count
 
     })
    

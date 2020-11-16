@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-control" content="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="{% static 'app/assets/imgs/maame.png' %}" type="image/x-icon">
@@ -32,10 +33,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                    <nav class="navbar navbar-expand-xl navbar-light bg-light" style="background-color: darkgreen;">
                         <a class="navbar-brand" href="#">
                             <i class="fas fa-3x fa-tachometer-alt tm-site-icon"></i>
-                            <h1 class="tm-site-title mb-0">Survey Response Dashboard</h1>
+                            <h1 class="tm-site-title mb-0" style="color: black;">Survey Response Dashboard</h1>
                         </a>
                         <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -82,8 +83,8 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link d-flex" href="{% url 'login'%}">
-                                        <i class="far fa-user mr-2 tm-logout-icon"></i>
-                                        <span>Logout</span>
+                                        <i class="far fa-user mr-2 tm-logout-icon" style="color: black"></i>
+                                        <span style="color: black; font-weight: bold;">Logout</span>
                                     </a>
                                 </li>
                             </ul>
@@ -91,22 +92,29 @@
                     </nav>
                 </div>
             </div><br><br>
+             <div class="card" style="background-color:transparent; text-align: center; font-style: italic;">
+                <div class="card-body" id="card6">
+                  <h6 style="font-weight: bold; font-size: small; color:blue;">😊  Total number of Participants: {{ total_participants }}  😊</h6>
+                </div>
+            </div><br>
             <!-- AGE -->
             <div class="card">
                 <div class="card-body" id="card6">
-                  <h6 style="font-weight: normal; font-size: small; width: fit-content;">Responses provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+                  <h6 style="font-weight: bold; font-size: small; width: fit-content;">Hi, Kindly input your age</h6>
                 </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                        <p style="color: red">Response Count: {{ age_response_count }} </p>
                         <h2 class="tm-block-title">Age</h2>
                         <canvas id="ageChart"></canvas>
                     </div>
                   </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ age_response_count }} </p>
                         <h2 class="tm-block-title">Age</h2>
                         <canvas id="ageBar"></canvas>
                      </div>
@@ -118,97 +126,105 @@
             <div class="card">
                 <div class="card-body" id="card6">
             <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
-            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Responses provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            <h6 style="font-weight: bold; font-size: small; width: fit-content;">Kindly select your gender</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ gender_response_count }} </p>
                         <h2 class="tm-block-title">Gender</h2>
                         <canvas id="genderChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ age_response_count }} </p>
                         <h2 class="tm-block-title">Gender</h2>
                         <canvas id="genderBar"></canvas>
                     </div>
                   </div>
-                </div>
+                </div><br><br>
 {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
             <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
-            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Responses provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            <h6 style="font-weight: bold; font-size: small; width: fit-content;">Marital Status</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ marital_response_count }} </p>
                         <h2 class="tm-block-title">Marital Status</h2>
                         <canvas id="maritalChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ marital_response_count }} </p>
                         <h2 class="tm-block-title">Marital Status</h2>
                         <canvas id="maritalBar"></canvas>
                     </div>
                    </div>
-                </div>
+                </div><br><br>
 {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
             <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
-            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Religion provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            <h6 style="font-weight: bold; font-size: small; width: fit-content;">What is your religion?</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ religion_response_count }} </p>
                         <h2 class="tm-block-title">Religion</h2>
                         <canvas id="religionChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ religion_response_count }} </p>
                         <h2 class="tm-block-title">Religion</h2>
                         <canvas id="religionBar"></canvas>
                     </div>
                   </div>
-               </div>
+               </div><br><br>
 {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
-            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Religion provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            <h6 style="font-weight: bold; font-size: small; width: fit-content;">Type of job</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ jobType_response_count }} </p>
                         <h2 class="tm-block-title">Job Type</h2>
                         <canvas id="jobTypeChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ jobType_response_count }} </p>
                         <h2 class="tm-block-title">Job Type</h2>
                         <canvas id="jobTypeBar"></canvas>
                     </div>
                 </div>
-              </div>
+              </div><br><br>
 {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
-            <h6 style="font-weight: normal; font-size: small; width: fit-content;">Category provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+            <h6 style="font-weight: bold; font-size: small; width: fit-content;">Is your category of job Healthcare or Health-related?</h6>
             </div>
             </div>
             <!-- row -->
@@ -216,173 +232,690 @@
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
                         <h2 class="tm-block-title">Job Category Health Related?</h2>
+                        <p style="color: red">Response Count: {{ jobCategory_response_count }} </p>
                         <canvas id="jobCategoryChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ jobCategory_response_count }} </p>
                         <h2 class="tm-block-title">Job Category Health Related?</h2>
                         <canvas id="jobCategoryBar"></canvas>
                     </div>
                   </div>  
-                </div>                              
+                </div> <br><br>                             
  {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
-                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Category provided will be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Which of the categories below best fits your job?</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ clinical_response_count }} </p>
                         <h2 class="tm-block-title">Clinical or Administrative</h2>
                         <canvas id="clinicalOrNotChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ clinical_response_count }} </p>
                         <h2 class="tm-block-title">Clinical or Administrative</h2>
                         <canvas id="clinicalOrNotBar"></canvas>
                     </div>
                   </div>  
-                </div>  
+                </div> <br><br> 
  {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
-                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid Knowledge be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Have you heard about COVID-19 before this survey?</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ covidKnowledge_response_count }} </p>
                         <h2 class="tm-block-title">Covid Knowledge Before Survey</h2>
                         <canvas id="knowCovidChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ covidKnowledge_response_count }} </p>
                         <h2 class="tm-block-title">Covid Knowledge Before Survey</h2>
                         <canvas id="knowCovidBar"></canvas>
                     </div>
                   </div>  
-                </div>  
+                </div> <br><br> 
  {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
-                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid Knowledge be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you consider yourself to be at risk of exposure to SARS-CoV 2/COVID-19?</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ risk_response_count }} </p>
                         <h2 class="tm-block-title">Risk of Covid Exposure</h2>
                         <canvas id="covidRiskChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ risk_response_count }} </p>
                         <h2 class="tm-block-title">Risk of Covid Exposure</h2>
                         <canvas id="covidRiskBar"></canvas>
                     </div>
                   </div>  
-                </div> 
+                </div> <br><br>
  {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
-                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid Knowledge be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you know of anyone who has been diagnosed with COVID-19?</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ diagnosed_response_count }} </p>
                         <h2 class="tm-block-title">Knowledge of Covid Diagnosed People</h2>
                         <canvas id="covidDiagnosedChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ diagnosed_response_count }} </p>
                         <h2 class="tm-block-title">Knowledge of Covid Diagnosed People</h2>
                         <canvas id="covidDiagnosedBar"></canvas>
                     </div>
                   </div>  
-                </div> 
+                </div> <br><br>
  {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
-                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid Knowledge be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you know of anyone who has been hospitalized because of COVID-19?</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ hospitalized_response_count }} </p>
                         <h2 class="tm-block-title">Knowledge of Covid Hospitalized People</h2>
                         <canvas id="covidHospitalizedChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ hospitalized_response_count }} </p>
                         <h2 class="tm-block-title">Knowledge of Covid Hospitalized People</h2>
                         <canvas id="covidHospitalizedBar"></canvas>
                     </div>
                   </div>  
-                </div>
+                </div><br><br>
  {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
-                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid Knowledge be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you know of anyone who has died as a result of COVID-19?</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ die_response_count }} </p>
                         <h2 class="tm-block-title">Knowledge of People Dead Because of Covid</h2>
                         <canvas id="covidDeadChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ die_response_count }} </p>
                         <h2 class="tm-block-title">Knowledge of People Dead Because of Covid</h2>
                         <canvas id="covidDeadBar"></canvas>
                     </div>
                   </div>  
-                </div>
+                </div><br><br>
  {% comment %}  {% endcomment %}
 {% comment %}  {% endcomment %}
             <div class="card">
                 <div class="card-body" id="card6">
-                <h6 style="font-weight: normal; font-size: small; width: fit-content;">Covid P be confidential and used for the purposes of this research only. No identifying variable will be collected so your identity is protected..</h6>
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you know of the preventive measures for COVID-19?</h6>
             </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-md">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ preventive_response_count }} </p>
                         <h2 class="tm-block-title">Knowledge of Covid Preventive Measures</h2>
                         <canvas id="covidPreventiveChart"></canvas>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ preventive_response_count }} </p>
                         <h2 class="tm-block-title">Knowledge of Covid Preventive Measures</h2>
                         <canvas id="covidPreventiveBar"></canvas>
                     </div>
                   </div>  
-                </div>                
-
-
-
+                </div>   <br><br>             
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you believe face mask can protect you from getting COVID-19?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ facemask_response_count }} </p>
+                        <h2 class="tm-block-title">Belief in Facemask</h2>
+                        <canvas id="facemaskChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ facemask_response_count }} </p>
+                        <h2 class="tm-block-title">Belief in Facemask</h2>
+                        <canvas id="facemaskBar"></canvas>
+                    </div>
+                  </div>  
+                </div>  <br><br>
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you believe social distancing can protect you from getting COVID-19?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ social_response_count }} </p>
+                        <h2 class="tm-block-title">Belief in Social Distancing</h2>
+                        <canvas id="socialChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ social_response_count }} </p>
+                        <h2 class="tm-block-title">Belief in Social Distancing</h2>
+                        <canvas id="socialBar"></canvas>
+                    </div>
+                  </div>  
+                </div>  <br><br>
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you think COVID-19 is gone?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ hand_response_count }} </p>
+                        <h2 class="tm-block-title">Belief in Handwashing Protection</h2>
+                        <canvas id="handChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ hand_response_count }} </p>
+                        <h2 class="tm-block-title">Belief in Handwashing Protection</h2>
+                        <canvas id="handBar"></canvas>
+                    </div>
+                  </div>  
+                </div>  <br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you think COVID-19 is gone?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ gone_response_count }} </p>
+                        <h2 class="tm-block-title">Think Covid is Gone</h2>
+                        <canvas id="covidGoneChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ gone_response_count }} </p>
+                        <h2 class="tm-block-title">Think Covid is Gone</h2>
+                        <canvas id="covidGoneBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you think we need a vaccine to control COVID-19?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ need_response_count }} </p>
+                        <h2 class="tm-block-title">Think We Need Covid Vaccine</h2>
+                        <canvas id="needCovVaccChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ need_response_count }} </p>
+                        <h2 class="tm-block-title">Think We Need Covid Vaccine</h2>
+                        <canvas id="needCovVaccBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Do you think vaccines in general are safe or useful?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ safe_response_count }} </p>
+                        <h2 class="tm-block-title">Think Vaccines are Safe</h2>
+                        <canvas id="safeChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ safe_response_count }} </p>
+                        <h2 class="tm-block-title">Think Vaccines are Safe</h2>
+                        <canvas id="safeBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Have you ever heard of any COVID-19 candidate vaccine?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ candidate_response_count }} </p>
+                        <h2 class="tm-block-title">Heard of any Covid Candidate Vaccine</h2>
+                        <canvas id="candidateChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ candidate_response_count }} </p>
+                        <h2 class="tm-block-title">Heard of any Covid Candidate Vaccine</h2>
+                        <canvas id="candidateBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Will you willingly/voluntarily participate in a clinical trial for a COVID-19 candidate vaccine?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ trial_response_count }} </p>
+                        <h2 class="tm-block-title">Participate in Clinical Covid Vaccine Trial</h2>
+                        <canvas id="trialChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ trial_response_count }} </p>
+                        <h2 class="tm-block-title">Participate in Clinical Covid Vaccine Trial</h2>
+                        <canvas id="trialBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">What is your reason for answering No to the previous question?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ reason_response_count }} </p>
+                        <h2 class="tm-block-title">Reason Not to Participate in Clinical covid Vaccine Trial</h2>
+                        <canvas id="reasonChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ reason_response_count }} </p>
+                        <h2 class="tm-block-title">Reason Not to Participate in Clinical covid Vaccine Trial</h2>
+                        <canvas id="reasonBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">What will be your motivation to do so?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ motivation_response_count }} </p>
+                        <h2 class="tm-block-title">Motivation for Participation</h2>
+                        <canvas id="motivationChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ motivation_response_count }} </p>
+                        <h2 class="tm-block-title">Motivation for Participation</h2>
+                        <canvas id="motivationBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Which route of administration of the vaccine would you prefer?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ route_response_count }} </p>
+                        <h2 class="tm-block-title">Route of Vaccine Administration</h2>
+                        <canvas id="routeChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ route_response_count }} </p>
+                        <h2 class="tm-block-title">Route of Vaccine Administration</h2>
+                        <canvas id="routeBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Which type of vaccine against SARS-CoV-2 are you likely to accept?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ vaccType_response_count }} </p>
+                        <h2 class="tm-block-title">Type of Vaccine Acceptable</h2>
+                        <canvas id="typeChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ vaccType_response_count }} </p>
+                        <h2 class="tm-block-title">Type of Vaccine Acceptable</h2>
+                        <canvas id="typeBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Which phase of a clinical trial would you participate in?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ phase_response_count }} </p>
+                        <h2 class="tm-block-title">Phase to Partake in</h2>
+                        <canvas id="phaseChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ phase_response_count }} </p>
+                        <h2 class="tm-block-title">Phase to Partake in</h2>
+                        <canvas id="phaseBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Will the country or continent in which the vaccine is developed influence your decision to participate in the clinical trial?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ vaccCountry_response_count }} </p>
+                        <h2 class="tm-block-title">Origin Country of Vaccine to Influence Decision</h2>
+                        <canvas id="countryInfluenceChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ vaccCountry_response_count }} </p>
+                        <h2 class="tm-block-title">Origin Country of Vaccine to Influence Decision</h2>
+                        <canvas id="countryInfluenceBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Which of these vaccines would you prefer?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ vaccContinent_response_count }} </p>
+                        <h2 class="tm-block-title">Preferred Vaccine Continent</h2>
+                        <canvas id="continentChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ vaccContinent_response_count }} </p>
+                        <h2 class="tm-block-title">Preferred Vaccine Continent</h2>
+                        <canvas id="continentBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Would you prefer that the vaccine you take be developed by a Ghanaian or must have a Ghanaian scientist as part of the team of developers?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ gh_response_count }} </p>
+                        <h2 class="tm-block-title">Team Should Include Ghanaian Scientists</h2>
+                        <canvas id="ghChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ gh_response_count }} </p>
+                        <h2 class="tm-block-title">Team Should Include Ghanaian Scientists</h2>
+                        <canvas id="ghBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Will you participate in a targeted or mass vaccination exercise for COVID-19?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ mass_response_count }} </p>
+                        <h2 class="tm-block-title">Participate in Mass Vaccination</h2>
+                        <canvas id="massChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ mass_response_count }} </p>
+                        <h2 class="tm-block-title">Participate in Mass Vaccination</h2>
+                        <canvas id="massBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">What would be the acceptable cost?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ pay_response_count }} </p>
+                        <h2 class="tm-block-title">Prepared to Pay for Vaccine</h2>
+                        <canvas id="payChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ pay_response_count }} </p>
+                        <h2 class="tm-block-title">Prepared to Pay for Vaccine</h2>
+                        <canvas id="payBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">What would be the acceptable cost</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ cost_response_count }} </p>
+                        <h2 class="tm-block-title">Estimated Cost</h2>
+                        <canvas id="costChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ cost_response_count }} </p>
+                        <h2 class="tm-block-title">Estimated Cost</h2>
+                        <canvas id="costBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Would your participation be dependent on the origin/country in which the vaccine is developed?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ origin_response_count }} </p>
+                        <h2 class="tm-block-title">Vaccine Origin to Influence Your Decision</h2>
+                        <canvas id="originChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ origin_response_count }} </p>
+                        <h2 class="tm-block-title">Vaccine Origin to Influence Your Decision</h2>
+                        <canvas id="originBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+            <div class="card">
+                <div class="card-body" id="card6">
+                <h6 style="font-weight: bold; font-size: small; width: fit-content;">Which of these vaccines would you prefer?</h6>
+            </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="tm-col tm-col-md">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ preferredOrigin_response_count }} </p>
+                        <h2 class="tm-block-title">Preferred Vaccine Origin</h2>
+                        <canvas id="preferredOriginChart"></canvas>
+                    </div>
+                </div>
+                <div class="tm-col tm-col-big">
+                    <div class="bg-white tm-block h-100">
+                    <p style="color: red">Response Count: {{ preferredOrigin_response_count }} </p>
+                        <h2 class="tm-block-title">Preferred Vaccine Origin</h2>
+                        <canvas id="preferredOriginBar"></canvas>
+                    </div>
+                  </div>  
+                </div><br><br>
 
 
 
@@ -492,7 +1025,15 @@
         religionBar,religionChart, jobTypeChart, jobTypeBar, jobCategoryChart, jobCategoryBar,
         clinicalOrNotChart, clinicalOrNotBar, knowCovidChart, knowCovidBar, covidRiskBar, covidRiskChart,
         covidDiagnosedChart, covidDiagnosedBar, covidHospitalizedBar, covidHospitalizedChart,
-        covidDeadBar, covidDeadChart, covidPreventiveBar, covidPreventiveChart;
+        covidDeadBar, covidDeadChart, covidPreventiveBar, covidPreventiveChart, facemaskBar, facemaskChart,
+        socialBar, socialChart, handChart, handBar, covidGoneBar, covidGoneChart, needCovVaccChart, needCovVaccBar,
+        safeChart, safeBar, candidateChart, candidateBar, trialChart, trialBar, reasonBar, reasonChart,
+        motivationChart, motivationBar, routeBar, routeChart, typeChart, typeBar, phaseBar, phaseBar, countryInfluenceBar, countryInfluenceChart,
+        continentBar, continentChart, ghChart, ghBar, massChart, massBar, payChart, payBar, costChart, costBar,
+        originChart, originBar, preferredOriginChart, preferredOriginBar;
+
+
+
         // DOM is ready
         $(function () {
             updateChartOptions();
@@ -526,7 +1067,7 @@ function drawBarChart() {
             scaleLabel: {
               display: true,
               labelString: "Count"
-            }
+            },
           }
         ]
       }
@@ -775,7 +1316,7 @@ if ($("#jobTypeBar").length) {
         labels: {{ job_type_labels|safe }},
         datasets: [
           {
-            label: ["Job Type Data"],
+            label: "Job Type Data",
             data: {{ job_type_data|safe }},
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
@@ -802,6 +1343,7 @@ if ($("#jobTypeBar").length) {
 
     jobTypeBar = new Chart(ctxBar, configBar);
   }
+
 {% comment %}  {% endcomment %}
 if ($("#jobCategoryBar").length) {
     ctxBar = document.getElementById("jobCategoryBar").getContext("2d");
@@ -886,7 +1428,7 @@ if ($("#clinicalOrNotBar").length) {
     configBar = {
       type: "bar",
       data: {
-        labels: {{ clinical_or_nonclinical_job_data|safe }},
+        labels: {{ clinical_or_nonclinical_job_labels|safe }},
         datasets: [
           {
             label: "Clinical or Administrative Data",
@@ -1253,9 +1795,1219 @@ if ($("#clinicalOrNotBar").length) {
     covidPreventiveBar = new Chart(ctxBar, configBar);
   }
 
+  if ($("#facemaskBar").length) {
+    ctxBar = document.getElementById("facemaskBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ believe_in_facemask_protection_labels|safe }},
+        datasets: [
+          {
+            label: "Belief in Facemask Protection Data",
+            data: {{ believe_in_facemask_protection_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    facemaskBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#socialBar").length) {
+    ctxBar = document.getElementById("socialBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ believe_in_social_distancing_labels|safe }},
+        datasets: [
+          {
+            label: "Belief in Social Distancing Protection Data",
+            data: {{ believe_in_social_distancing_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    socialBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#handBar").length) {
+    ctxBar = document.getElementById("handBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ believe_in_hand_washing_labels|safe }},
+        datasets: [
+          {
+            label: "Belief in Handwashing Protection Data",
+            data: {{ believe_in_hand_washing_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    handBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#covidGoneBar").length) {
+    ctxBar = document.getElementById("covidGoneBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ think_covid_is_gone_labels|safe }},
+        datasets: [
+          {
+            label: "Think Covid is Gone Data",
+            data: {{ think_covid_is_gone_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    covidGoneBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#needCovVaccBar").length) {
+    ctxBar = document.getElementById("needCovVaccBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ think_we_need_covid_vaccine_labels|safe }},
+        datasets: [
+          {
+            label: "Think We Need Covid Vaccine Data",
+            data: {{ think_we_need_covid_vaccine_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    needCovVaccBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#safeBar").length) {
+    ctxBar = document.getElementById("safeBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ think_vaccines_are_safe_labels|safe }},
+        datasets: [
+          {
+            label: "Think We Need Covid Vaccine Data",
+            data: {{ think_vaccines_are_safe_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    safeBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#candidateBar").length) {
+    ctxBar = document.getElementById("candidateBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ heard_of_any_covid_candidate_vaccine_labels|safe }},
+        datasets: [
+          {
+            label: "Knowledge of Covid Candidate Vaccine",
+            data: {{ heard_of_any_covid_candidate_vaccine_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    candidateBar = new Chart(ctxBar, configBar);
+  }
+  
+  if ($("#trialBar").length) {
+    ctxBar = document.getElementById("trialBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ participate_in_clinical_covid_vaccine_trial_labels|safe }},
+        datasets: [
+          {
+            label: "Participate in Covid Vaccine Trial",
+            data: {{ participate_in_clinical_covid_vaccine_trial_data|safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    trialBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#reasonBar").length) {
+    ctxBar = document.getElementById("reasonBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ reason_not_to_participate_in_clinical_covid_vaccine_trial_labels|safe }},
+        datasets: [
+          {
+            label: "Participate in Covid Vaccine Trial",
+            data: {{ reason_not_to_participate_in_clinical_covid_vaccine_trial_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    reasonBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#motivationBar").length) {
+    ctxBar = document.getElementById("motivationBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ motivation_for_participation_labels|safe }},
+        datasets: [
+          {
+            label: "Motivation  to Participate in Covid Vaccine Trial",
+            data: {{ motivation_for_participation_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    motivationBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#routeBar").length) {
+    ctxBar = document.getElementById("routeBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ route_of_vaccine_administration_labels|safe }},
+        datasets: [
+          {
+            label: "Preferred Route of Vaccine Administration",
+            data: {{ route_of_vaccine_administration_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    routeBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#typeBar").length) {
+    ctxBar = document.getElementById("typeBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ type_of_vaccine_acceptable_labels|safe }},
+        datasets: [
+          {
+            label: "Vaccine Type",
+            data: {{ type_of_vaccine_acceptable_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    typeBar = new Chart(ctxBar, configBar);
+  }
+  {% comment %}  {% endcomment %}
+
+  if ($("#phaseBar").length) {
+    ctxBar = document.getElementById("phaseBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ phase_of_clinical_trial_to_participate_in_labels|safe }},
+        datasets: [
+          {
+            label: "Phase to partake in",
+            data: {{ phase_of_clinical_trial_to_participate_in_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    phaseBar = new Chart(ctxBar, configBar);
+  }
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+  if ($("#countryInfluenceBar").length) {
+    ctxBar = document.getElementById("countryInfluenceBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ country_of_vaccine_influence_your_decision_to_participate_labels|safe }},
+        datasets: [
+          {
+            label: "Phase to partake in",
+            data: {{ country_of_vaccine_influence_your_decision_to_participate_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    countryInfluenceBar = new Chart(ctxBar, configBar);
+  }
+
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+
+
+  if ($("#continentBar").length) {
+    ctxBar = document.getElementById("continentBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ preferred_vaccine_continent_labels|safe }},
+        datasets: [
+          {
+            label: "Phase to partake in",
+            data: {{ preferred_vaccine_continent_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    continentBar = new Chart(ctxBar, configBar);
+  }
+
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+
+  if ($("#ghBar").length) {
+    ctxBar = document.getElementById("ghBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ vaccine_scientists_should_include_ghanaian_labels|safe }},
+        datasets: [
+          {
+            label: "Team Should Include Ghanaian Scientists",
+            data: {{ vaccine_scientists_should_include_ghanaian_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    ghBar = new Chart(ctxBar, configBar);
+  }
+
+  if ($("#massBar").length) {
+    ctxBar = document.getElementById("massBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ participate_in_mass_covid_vaccination_labels|safe }},
+        datasets: [
+          {
+            label: "Participate in Mass Covid Vaccination",
+            data: {{ participate_in_mass_covid_vaccination_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    massBar = new Chart(ctxBar, configBar);
+  }
+
+  {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+if ($("#payBar").length) {
+    ctxBar = document.getElementById("payBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ prepared_to_pay_for_vaccine_labels|safe }},
+        datasets: [
+          {
+            label: "Participate in Mass Covid Vaccination",
+            data: {{ prepared_to_pay_for_vaccine_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    payBar = new Chart(ctxBar, configBar);
+  }
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+if ($("#costBar").length) {
+    ctxBar = document.getElementById("costBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ estimated_vaccine_cost_range_labels|safe }},
+        datasets: [
+          {
+            label: "Participate in Mass Covid Vaccination",
+            data: {{ estimated_vaccine_cost_range_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    costBar = new Chart(ctxBar, configBar);
+  }
+
+  {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+if ($("#originBar").length) {
+    ctxBar = document.getElementById("originBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ origin_of_vaccine_influence_your_decision_to_participate_labels|safe }},
+        datasets: [
+          {
+            label: "Vaccine Origin to Influence Your Decision",
+            data: {{ origin_of_vaccine_influence_your_decision_to_participate_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    originBar = new Chart(ctxBar, configBar);
+  }
+
+  {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+if ($("#preferredOriginBar").length) {
+    ctxBar = document.getElementById("preferredOriginBar").getContext("2d");
+
+    optionsBar = {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "Count"
+            }
+          }
+        ]
+      }
+    };
+
+    optionsBar.maintainAspectRatio = $(window).width() < width_threshold ? false : true;
+
+    configBar = {
+      type: "bar",
+      data: {
+        labels: {{ preferred_vaccine_origin_labels|safe }},
+        datasets: [
+          {
+            label: "Vaccine Origin to Influence Your Decision",
+            data: {{ preferred_vaccine_origin_data |safe }},
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: optionsBar
+    };
+
+    preferredOriginBar = new Chart(ctxBar, configBar);
+  }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 {% comment %}  {% endcomment %} {% comment %}  {% endcomment %} {% comment %}  {% endcomment %} {% comment %}  {% endcomment %}
@@ -1265,8 +3017,24 @@ function drawPieChart() {
   if ($("#ageChart").length) {
     ctxPie = document.getElementById("ageChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
-      maintainAspectRatio: false
+      maintainAspectRatio: false,
+      
     };
 
     configPie = {
@@ -1298,6 +3066,21 @@ function drawPieChart() {
   if ($("#genderChart").length) {
     ctxPie = document.getElementById("genderChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1330,6 +3113,21 @@ function drawPieChart() {
   if ($("#maritalChart").length) {
     ctxPie = document.getElementById("maritalChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1362,6 +3160,21 @@ function drawPieChart() {
   if ($("#religionChart").length) {
     ctxPie = document.getElementById("religionChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1395,6 +3208,21 @@ function drawPieChart() {
   if ($("#jobTypeChart").length) {
     ctxPie = document.getElementById("jobTypeChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1429,6 +3257,21 @@ function drawPieChart() {
 if ($("#jobCategoryChart").length) {
     ctxPie = document.getElementById("jobCategoryChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1462,6 +3305,21 @@ if ($("#jobCategoryChart").length) {
   if ($("#clinicalOrNotChart").length) {
     ctxPie = document.getElementById("clinicalOrNotChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1495,6 +3353,21 @@ if ($("#jobCategoryChart").length) {
   if ($("#knowCovidChart").length) {
     ctxPie = document.getElementById("knowCovidChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1528,6 +3401,21 @@ if ($("#jobCategoryChart").length) {
   if ($("#covidRiskChart").length) {
     ctxPie = document.getElementById("covidRiskChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1561,6 +3449,21 @@ if ($("#jobCategoryChart").length) {
   if ($("#covidDiagnosedChart").length) {
     ctxPie = document.getElementById("covidDiagnosedChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1594,6 +3497,21 @@ if ($("#jobCategoryChart").length) {
   if ($("#covidHospitalizedChart").length) {
     ctxPie = document.getElementById("covidHospitalizedChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1627,6 +3545,21 @@ if ($("#jobCategoryChart").length) {
   if ($("#covidDeadChart").length) {
     ctxPie = document.getElementById("covidDeadChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1660,6 +3593,21 @@ if ($("#jobCategoryChart").length) {
   if ($("#covidPreventiveChart").length) {
     ctxPie = document.getElementById("covidPreventiveChart").getContext("2d");
     optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
       responsive: true,
       maintainAspectRatio: false
     };
@@ -1689,6 +3637,1053 @@ if ($("#jobCategoryChart").length) {
 
     covidDeadChart = new Chart(ctxPie, configPie);
   }
+
+  if ($("#facemaskChart").length) {
+    ctxPie = document.getElementById("facemaskChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ believe_in_facemask_protection_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Belief in Facemask Protection Data"
+          }
+        ],
+        labels: {{ believe_in_facemask_protection_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    covidDeadChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#socialChart").length) {
+    ctxPie = document.getElementById("socialChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ believe_in_social_distancing_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Belief in Social Distancing Protection Data"
+          }
+        ],
+        labels: {{ believe_in_social_distancing_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    socialChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#handChart").length) {
+    ctxPie = document.getElementById("handChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ believe_in_hand_washing_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Belief in Handwashing Protection Data"
+          }
+        ],
+        labels: {{ believe_in_hand_washing_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    handChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#covidGoneChart").length) {
+    ctxPie = document.getElementById("covidGoneChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ think_covid_is_gone_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Think Covid is Gone Data"
+          }
+        ],
+        labels: {{ think_covid_is_gone_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    covidGoneChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#needCovVaccChart").length) {
+    ctxPie = document.getElementById("needCovVaccChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ think_we_need_covid_vaccine_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Think We Need Covid Vaccine Data"
+          }
+        ],
+        labels: {{ think_we_need_covid_vaccine_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    needCovVaccChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#safeChart").length) {
+    ctxPie = document.getElementById("safeChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ think_vaccines_are_safe_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Think We Need Covid Vaccine Data"
+          }
+        ],
+        labels: {{ think_vaccines_are_safe_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    safeChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#candidateChart").length) {
+    ctxPie = document.getElementById("candidateChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ heard_of_any_covid_candidate_vaccine_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Knowledge of Covid Candidate Vaccine"
+          }
+        ],
+        labels: {{ heard_of_any_covid_candidate_vaccine_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    candidateChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#trialChart").length) {
+    ctxPie = document.getElementById("trialChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ participate_in_clinical_covid_vaccine_trial_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Knowledge of Covid Candidate Vaccine"
+          }
+        ],
+        labels: {{ participate_in_clinical_covid_vaccine_trial_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    trialChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#reasonChart").length) {
+    ctxPie = document.getElementById("reasonChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ reason_not_to_participate_in_clinical_covid_vaccine_trial_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Knowledge of Covid Candidate Vaccine"
+          }
+        ],
+        labels: {{ reason_not_to_participate_in_clinical_covid_vaccine_trial_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    reasonChart = new Chart(ctxPie, configPie);
+  }
+
+  if ($("#motivationChart").length) {
+    ctxPie = document.getElementById("motivationChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ motivation_for_participation_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Knowledge of Covid Candidate Vaccine"
+          }
+        ],
+        labels: {{ motivation_for_participation_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    motivationChart = new Chart(ctxPie, configPie);
+  } 
+
+  if ($("#routeChart").length) {
+    ctxPie = document.getElementById("routeChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ route_of_vaccine_administration_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Preferred Route of Vaccine Administration"
+          }
+        ],
+        labels: {{ route_of_vaccine_administration_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    motivationChart = new Chart(ctxPie, configPie);
+  } 
+
+  if ($("#typeChart").length) {
+    ctxPie = document.getElementById("typeChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ type_of_vaccine_acceptable_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Vaccine Type"
+          }
+        ],
+        labels: {{ type_of_vaccine_acceptable_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    typeChart = new Chart(ctxPie, configPie);
+  } 
+  {% comment %}  {% endcomment %}
+  {% comment %}  {% endcomment %}
+  {% comment %}  {% endcomment %}
+
+  if ($("#phaseChart").length) {
+    ctxPie = document.getElementById("phaseChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ phase_of_clinical_trial_to_participate_in_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Vaccine Type"
+          }
+        ],
+        labels: {{ phase_of_clinical_trial_to_participate_in_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    phaseChart = new Chart(ctxPie, configPie);
+  } 
+
+  if ($("#countryInfluenceChart").length) {
+    ctxPie = document.getElementById("countryInfluenceChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ country_of_vaccine_influence_your_decision_to_participate_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Vaccine Type"
+          }
+        ],
+        labels: {{ country_of_vaccine_influence_your_decision_to_participate_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    countryInfluenceChart = new Chart(ctxPie, configPie);
+  } 
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+    
+if ($("#continentChart").length) {
+    ctxPie = document.getElementById("continentChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ preferred_vaccine_continent_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Vaccine Type"
+          }
+        ],
+        labels: {{ preferred_vaccine_continent_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    continentChart = new Chart(ctxPie, configPie);
+  } 
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+
+if ($("#ghChart").length) {
+    ctxPie = document.getElementById("ghChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ vaccine_scientists_should_include_ghanaian_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Team Should Include Ghanaian Scientists"
+          }
+        ],
+        labels: {{ vaccine_scientists_should_include_ghanaian_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    ghChart = new Chart(ctxPie, configPie);
+  } 
+
+  {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+
+if ($("#massChart").length) {
+    ctxPie = document.getElementById("massChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ participate_in_mass_covid_vaccination_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Team Should Include Ghanaian Scientists"
+          }
+        ],
+        labels: {{ participate_in_mass_covid_vaccination_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    massChart = new Chart(ctxPie, configPie);
+  } 
+
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+
+if ($("#payChart").length) {
+    ctxPie = document.getElementById("payChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ prepared_to_pay_for_vaccine_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Team Should Include Ghanaian Scientists"
+          }
+        ],
+        labels: {{ prepared_to_pay_for_vaccine_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    payChart = new Chart(ctxPie, configPie);
+  } 
+
+ {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+
+if ($("#costChart").length) {
+    ctxPie = document.getElementById("costChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ estimated_vaccine_cost_range_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Team Should Include Ghanaian Scientists"
+          }
+        ],
+        labels: {{ estimated_vaccine_cost_range_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    costChart = new Chart(ctxPie, configPie);
+  } 
+
+   {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+
+if ($("#originChart").length) {
+    ctxPie = document.getElementById("originChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ origin_of_vaccine_influence_your_decision_to_participate_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Team Should Include Ghanaian Scientists"
+          }
+        ],
+        labels: {{ origin_of_vaccine_influence_your_decision_to_participate_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    originChart = new Chart(ctxPie, configPie);
+  } 
+
+     {% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+
+if ($("#preferredOriginChart").length) {
+    ctxPie = document.getElementById("preferredOriginChart").getContext("2d");
+    optionsPie = {
+      tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        var dataset = data.datasets[tooltipItem.datasetIndex];
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var total = meta.total;
+        var currentValue = dataset.data[tooltipItem.index];
+        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+        return currentValue + ' (' + percentage + '%)';
+      },
+      title: function(tooltipItem, data) {
+        return data.labels[tooltipItem[0].index];
+      }
+    }
+  },
+      responsive: true,
+      maintainAspectRatio: false
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: {{ preferred_vaccine_origin_data|safe }},
+            backgroundColor: [
+             "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+
+            ],
+            label: "Team Should Include Ghanaian Scientists"
+          }
+        ],
+        labels: {{ preferred_vaccine_origin_labels|safe }}
+      },
+      options: optionsPie
+    };
+
+    preferredOriginChart = new Chart(ctxPie, configPie);
+  } 
+
+
+
+
 
 
 }
@@ -1760,10 +4755,88 @@ function updateBarChart() {
       covidDeadBar.options = optionsBar;
       covidDeadBar.update();
   }
+  if(facemaskBar){
+      facemaskBar.options = optionsBar;
+      facemaskBar.update();
+  }
+  if(handBar){
+      handBar.options = optionsBar;
+      handBar.update();
+  }
+  if (covidGoneBar){
+      covidGoneBar.options = optionsBar;
+      covidGoneBar.update();
+  }
+  if (needCovVaccBar){
+      needCovVaccBar.options = optionsBar;
+      needCovVaccBar.update();
+  }
+  if (safeBar){
+      safeBar.options = optionsBar;
+      safeBar.update();
+  }
+  if (candidateBar){
+      candidateBar.options = optionsBar;
+      candidateBar.update();
+  }
+   if (trialBar){
+      trialBar.options = optionsBar;
+      trialBar.update();
+  }
+   if (reasonBar){
+      reasonBar.options = optionsBar;
+      reasonBar.update();
+  }
+  if (motivationBar){
+      motivationBar.options = optionsBar;
+      motivationBar.update();
+  }
+  if (routeBar){
+      routeBar.options = optionsBar;
+      routeBar.update();
+  }
+  if (typeBar){
+      typeBar.options = optionsBar;
+      typeBar.update();
+  }
+  if (phaseBar){
+      phaseBar.options = optionsBar;
+      phaseBar.update();
+  }
+  if (countryInfluence){
+      countryInfluence.options = optionsBar;
+      countryInfluence.update();
+  }
+  if (continentBar){
+      continentBar.options = optionsBar;
+      continentBar.update();
+  }
+  if (ghBar){
+      ghBar.options = optionsBar;
+      ghBar.update();
+  }
+  if (massBar){
+      massBar.options = optionsBar;
+      massBar.update();
+  }
+   if (payBar){
+      payBar.options = optionsBar;
+      payBar.update();
+  }
+   if (costBar){
+      costBar.options = optionsBar;
+      costBar.update();
+  }
+  if (originBar){
+      originBar.options = optionsBar;
+      originBar.update();
+  }
+  if (preferredOriginBar){
+      preferredOriginBar.options = optionsBar;
+      preferredOriginBar.update();
+  }
 
 
-
-  
 }
 
 function reloadPage() {

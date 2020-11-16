@@ -1,5 +1,5 @@
 window.onload = function () {
-  //   window.location.reload();
+  
 
   document.body.onload = function() {
   window.extents.postMessage(document.body.offsetHeight)
@@ -12,12 +12,12 @@ window.onload = function () {
       // console.log(event)
       var userInput = event.detail.text;
       var formDataSerialized = conversationalForm.getFormData(true);
-       
-
+  
 
       if (userInput === "Hello" || userInput === "Hi") {
         conversationalForm.addRobotChatResponse("Hello 😊");
       }
+  
     },
     false
   );
@@ -31,7 +31,6 @@ window.onload = function () {
       eventDispatcher: dispatcher,
       loadExternalStyleSheet: true,
       submitCallback: function () {
-        // conversationalForm.addRobotChatResponse("Survey Complete. Your response has been submitted. Thank you for your time. 😊"); 
         const formDataSerialized = conversationalForm.getFormData(true);
         console.log(formDataSerialized);
         console.log()
