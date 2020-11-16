@@ -2902,3 +2902,5 @@ TypeError: unhashable type: 'dict'
 2020-11-16 09:35:56,336,336 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): deywuro.com:443
 2020-11-16 09:35:57,150,150 urllib3.connectionpool DEBUG https://deywuro.com:443 "GET /api/sms?username=sammy&password=suppORT_pass_0987&source=Test&destination=0556581928&message=Your+OTP+is+251314 HTTP/1.1" 200 None
 2020-11-16 10:05:29,196,196 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 11:00:07,386,386 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 11:00:33,601,601 asyncio DEBUG Using selector: KqueueSelector
