@@ -2939,3 +2939,87 @@ TypeError: unhashable type: 'dict'
 2020-11-16 19:36:22,149,149 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
 2020-11-16 19:36:42,755,755 django.request WARNING Not Found: /accounts/login/
 2020-11-16 19:37:37,258,258 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 20:44:32,442,442 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:44:32,522,522 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:44:37,280,280 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:44:37,294,294 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:44:49,421,421 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:44:49,435,435 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:45:07,585,585 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:45:07,621,621 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:45:14,676,676 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:45:14,706,706 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:45:23,467,467 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 20:49:57,229,229 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:49:57,365,365 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:51:40,030,30 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 20:53:46,850,850 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:53:46,934,934 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:53:52,789,789 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:53:52,807,807 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:53:59,673,673 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:53:59,690,690 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:54:58,442,442 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:54:58,464,464 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:55:31,494,494 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 20:56:03,648,648 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:56:03,736,736 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:56:06,966,966 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 20:56:18,261,261 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:56:18,337,337 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 20:56:57,412,412 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:56:57,437,437 django.request WARNING Bad Request: /api/get/categoty/contact/count
+2020-11-16 20:57:00,834,834 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 20:59:30,507,507 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:59:30,581,581 django.request WARNING Bad Request: /api/get/categoty/contact/count
+2020-11-16 20:59:46,159,159 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 20:59:46,175,175 django.request WARNING Bad Request: /admin/
+2020-11-16 20:59:56,150,150 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 21:09:33,191,191 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:09:33,277,277 django.request WARNING Bad Request: /api/get/categoty/contact/count
+2020-11-16 21:09:35,367,367 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:09:35,383,383 django.request WARNING Bad Request: /api/get/categoty/contact/count
+2020-11-16 21:09:39,893,893 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:09:39,905,905 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 21:09:56,656,656 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:09:56,671,671 django.request WARNING Bad Request: //api/get/categories
+2020-11-16 21:10:03,143,143 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 21:14:00,704,704 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:14:00,784,784 django.request WARNING Bad Request: //api/get/categories
+2020-11-16 21:14:22,750,750 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:14:22,772,772 django.request WARNING Bad Request: /api/get/categories
+2020-11-16 21:14:30,947,947 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:14:30,978,978 django.request WARNING Bad Request: /api/get/categories
+2020-11-16 21:14:46,152,152 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:14:46,179,179 django.request WARNING Bad Request: /api/get/categories
+2020-11-16 21:15:33,408,408 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:15:33,423,423 django.request WARNING Bad Request: /api/get/categories
+2020-11-16 21:16:14,430,430 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:16:14,466,466 django.request WARNING Bad Request: /api/get/categories
+2020-11-16 21:16:14,780,780 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:16:14,801,801 django.request WARNING Bad Request: /favicon.ico
+2020-11-16 21:19:15,957,957 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:19:15,974,974 django.request WARNING Bad Request: /api/get/category/contact/count
+2020-11-16 21:19:32,883,883 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:19:32,919,919 django.request WARNING Bad Request: /api/get/categories
+2020-11-16 21:19:44,963,963 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 21:20:29,913,913 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:20:30,013,13 django.request WARNING Bad Request: /api/get/categories
+2020-11-16 21:20:37,939,939 asyncio DEBUG Using selector: KqueueSelector
+2020-11-16 21:21:16,620,620 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:21:16,734,734 django.request WARNING Bad Request: /api/get/categories
+2020-11-16 21:21:23,374,374 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:21:23,402,402 django.request WARNING Bad Request: /api/get/categories/
+2020-11-16 21:21:36,259,259 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:21:36,278,278 django.request WARNING Bad Request: /
+2020-11-16 21:21:50,145,145 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:21:50,171,171 django.request WARNING Bad Request: /
+2020-11-16 21:22:25,422,422 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:22:25,435,435 django.request WARNING Bad Request: /
+2020-11-16 21:22:36,023,23 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-16 21:22:36,097,97 django.request WARNING Bad Request: /api/get/categories
+2020-11-16 21:22:54,752,752 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:42:36,677,677 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/beta_survey_django/settings.py changed, reloading.
+2020-11-17 14:42:36,678,678 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:42:45,161,161 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/beta_survey_django/views.py changed, reloading.
+2020-11-17 14:42:45,162,162 asyncio DEBUG Using selector: KqueueSelector

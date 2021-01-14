@@ -109,6 +109,7 @@ window.onload = function () {
         dataType: "json",
         success: function (data) {
             console.log(data);
+            window.location.href = String(window.location.origin)+"/submitted"
         },
         error: function (err) {
         console.log("ERROR: ",err);

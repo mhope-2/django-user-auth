@@ -1,0 +1,153 @@
+2020-11-17 14:36:12,488,488 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/beta_survey_django/views.py changed, reloading.
+2020-11-17 14:36:12,492,492 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:36:17,498,498 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/beta_survey_django/views.py changed, reloading.
+2020-11-17 14:36:17,499,499 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:36:29,610,610 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-17 14:36:29,837,837 django.request WARNING Bad Request: /
+2020-11-17 14:36:32,782,782 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-17 14:36:32,810,810 django.request WARNING Bad Request: /
+2020-11-17 14:37:40,636,636 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:37:51,722,722 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-17 14:37:51,810,810 django.request WARNING Bad Request: /
+2020-11-17 14:39:45,247,247 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:40:00,117,117 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-17 14:40:00,323,323 django.request WARNING Bad Request: /
+2020-11-17 14:40:02,826,826 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-17 14:40:02,867,867 django.request WARNING Bad Request: /
+2020-11-17 14:40:09,350,350 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:40:39,233,233 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-17 14:40:39,413,413 django.request WARNING Bad Request: /
+2020-11-17 14:40:52,815,815 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-17 14:40:52,834,834 django.request WARNING Bad Request: /
+2020-11-17 14:41:36,715,715 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2020-11-17 14:41:36,730,730 django.request WARNING Bad Request: /
+2020-11-17 14:41:48,364,364 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/beta_survey_django/views.py changed, reloading.
+2020-11-17 14:41:48,365,365 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:42:48,683,683 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:42:49,268,268 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:42:49,389,389 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:42:49,397,397 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:42:49,739,739 django.request WARNING Not Found: /static/charts/img/dash-bg-02.jpg
+2020-11-17 14:42:49,778,778 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:42:49,782,782 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:42:57,290,290 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:42:58,809,809 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:42:58,876,876 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:42:58,878,878 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:42:59,038,38 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:42:59,053,53 django.request WARNING Not Found: /static/charts/img/dash-bg-02.jpg
+2020-11-17 14:42:59,076,76 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:43:43,042,42 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:43:53,730,730 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:43:54,344,344 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:43:54,431,431 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:43:54,441,441 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:43:54,707,707 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:43:54,735,735 django.request WARNING Not Found: /static/charts/img/dash-bg-02.jpg
+2020-11-17 14:43:54,743,743 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:44:55,577,577 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:44:58,624,624 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:44:58,725,725 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:44:58,733,733 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:44:58,939,939 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:44:58,944,944 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:44:58,954,954 django.request WARNING Not Found: /static/charts/img/dash-bg-02.jpg
+2020-11-17 14:45:00,868,868 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:45:03,558,558 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:45:03,656,656 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:45:03,660,660 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:45:03,813,813 django.request WARNING Not Found: /static/charts/img/dash-bg-02.jpg
+2020-11-17 14:45:03,817,817 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:45:03,821,821 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:45:05,228,228 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:45:07,902,902 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:45:07,949,949 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:45:07,951,951 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:45:08,084,84 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2020-11-17 14:45:08,085,85 django.request WARNING Not Found: /static/charts/img/dash-bg-02.jpg
+2020-11-17 14:45:08,202,202 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:45:18,089,89 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:45:24,072,72 django.request WARNING Not Found: /static/app/js/index.js
+2020-11-17 14:45:46,243,243 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/beta_survey_django/settings.py changed, reloading.
+2020-11-17 14:45:46,261,261 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:46:04,242,242 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:46:06,278,278 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:46:11,357,357 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:46:11,920,920 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:46:16,412,412 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:46:16,977,977 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:46:24,138,138 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/beta_survey_django/settings.py changed, reloading.
+2020-11-17 14:46:24,139,139 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:46:29,548,548 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:46:30,302,302 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:46:39,433,433 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/beta_survey_django/settings.py changed, reloading.
+2020-11-17 14:46:39,440,440 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:46:42,743,743 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:46:43,317,317 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:48:43,286,286 django.request WARNING Not Found: /submitted/
+2020-11-17 14:49:29,642,642 django.utils.autoreload INFO /Users/mhope/Documents/projects/beta-survey-django/beta-survey-django/beta_survey_django/urls.py changed, reloading.
+2020-11-17 14:49:29,707,707 asyncio DEBUG Using selector: KqueueSelector
+2020-11-17 14:49:52,949,949 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:49:54,589,589 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:50:07,558,558 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:50:08,123,123 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:50:56,345,345 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:50:56,933,933 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:50:57,187,187 django.request WARNING Not Found: /favicon.ico
+2020-11-17 14:52:48,763,763 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:52:49,318,318 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:52:49,598,598 django.request WARNING Not Found: /favicon.ico
+2020-11-17 14:52:57,138,138 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:52:57,862,862 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:53:48,048,48 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): deywuro.com:443
+2020-11-17 14:53:48,865,865 urllib3.connectionpool DEBUG https://deywuro.com:443 "GET /api/sms?username=sammy&password=suppORT_pass_0987&source=Test&destination=072645394524&message=Your+OTP+is+132677 HTTP/1.1" 200 None
+2020-11-17 14:53:48,876,876 root DEBUG {'code': 0, 'message': '1 sms sent!'}
+2020-11-17 14:54:24,575,575 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:54:25,123,123 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:54:34,103,103 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): deywuro.com:443
+2020-11-17 14:54:34,927,927 urllib3.connectionpool DEBUG https://deywuro.com:443 "GET /api/sms?username=sammy&password=suppORT_pass_0987&source=Test&destination=0111111111&message=Your+OTP+is+913026 HTTP/1.1" 200 None
+2020-11-17 14:54:34,933,933 root DEBUG {'code': 0, 'message': '1 sms sent!'}
+2020-11-17 14:55:54,756,756 django.request WARNING Not Found: /favicon.ico
+2020-11-17 14:56:38,215,215 django.request WARNING Not Found: /favicon.ico
+2020-11-17 14:56:48,702,702 django.request WARNING Not Found: /favicon.ico
+2020-11-17 14:56:53,849,849 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 14:56:54,444,444 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 14:56:54,597,597 django.request WARNING Not Found: /favicon.ico
+2020-11-17 14:57:01,161,161 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): deywuro.com:443
+2020-11-17 14:57:02,031,31 urllib3.connectionpool DEBUG https://deywuro.com:443 "GET /api/sms?username=sammy&password=suppORT_pass_0987&source=Test&destination=0236291095&message=Your+OTP+is+176820 HTTP/1.1" 200 None
+2020-11-17 14:57:02,037,37 root DEBUG {'code': 0, 'message': '1 sms sent!'}
+2020-11-17 14:57:02,193,193 django.request WARNING Not Found: /favicon.ico
+2020-11-17 14:58:34,630,630 django.request WARNING Not Found: /subitted
+2020-11-17 15:25:14,278,278 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 15:25:14,926,926 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 15:25:15,288,288 django.request WARNING Not Found: /favicon.ico
+2020-11-17 15:26:03,833,833 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 15:26:06,311,311 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 15:26:50,260,260 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 15:26:50,877,877 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 15:26:59,533,533 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): deywuro.com:443
+2020-11-17 15:27:00,326,326 urllib3.connectionpool DEBUG https://deywuro.com:443 "GET /api/sms?username=sammy&password=suppORT_pass_0987&source=Test&destination=0236291095&message=Your+OTP+is+336465 HTTP/1.1" 200 None
+2020-11-17 15:27:00,331,331 root DEBUG {'code': 0, 'message': '1 sms sent!'}
+2020-11-17 15:28:27,119,119 django.request WARNING Not Found: /subitted
+2020-11-17 15:29:52,329,329 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 15:29:53,025,25 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 15:30:00,804,804 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): deywuro.com:443
+2020-11-17 15:30:01,664,664 urllib3.connectionpool DEBUG https://deywuro.com:443 "GET /api/sms?username=sammy&password=suppORT_pass_0987&source=Test&destination=0236291095&message=Your+OTP+is+275888 HTTP/1.1" 200 None
+2020-11-17 15:30:01,669,669 root DEBUG {'code': 0, 'message': '1 sms sent!'}
+2020-11-17 15:36:12,830,830 django.request WARNING Not Found: /subitted
+2020-11-17 15:37:12,891,891 django.request WARNING Not Found: /subitted
+2020-11-17 15:37:18,266,266 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 15:37:18,869,869 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 15:37:20,857,857 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 15:37:21,473,473 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 15:37:22,373,373 django.request WARNING Not Found: /favicon.ico
+2020-11-17 15:37:40,653,653 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 15:37:42,003,3 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 15:37:42,929,929 django.request WARNING Not Found: /favicon.ico
+2020-11-17 15:39:09,319,319 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2020-11-17 15:39:09,892,892 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2020-11-17 15:39:10,559,559 django.request WARNING Not Found: /favicon.ico
+2020-11-17 15:39:17,820,820 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): deywuro.com:443
+2020-11-17 15:39:18,602,602 urllib3.connectionpool DEBUG https://deywuro.com:443 "GET /api/sms?username=sammy&password=suppORT_pass_0987&source=Test&destination=0236291095&message=Your+OTP+is+282613 HTTP/1.1" 200 None
+2020-11-17 15:39:18,612,612 root DEBUG {'code': 0, 'message': '1 sms sent!'}
+2020-11-17 17:02:41,151,151 asyncio DEBUG Using selector: KqueueSelector

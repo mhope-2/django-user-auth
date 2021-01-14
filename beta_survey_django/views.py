@@ -9,6 +9,13 @@ from django.utils import timezone
 import datetime
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+import logging
+from django.conf import settings
+
+logging.basicConfig(filename=str(settings.BASE_DIR) + '/logs/smslog.logs',
+                    filemode='a',
+                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                    level=logging.DEBUG)
 
 # Create your views here.
 def index(request):
@@ -33,9 +40,9 @@ def index(request):
                 deywuro_sms = "https://deywuro.com/api/sms"
                 gen_otp=str(random.Random(uuid.uuid1().hex).getrandbits(128))[0:6]
                 params = {
-                        "username": "sammy",
-                        "password": "suppORT_pass_0987",
-                        "source": "Test",
+                        "username": "surveyhope",
+                        "password": "NpontuTestPassword",
+                        "source": "COVID-VAC",
                         "destination": "{}".format(str(phone)),
                         "message": "Your OTP is {}".format(gen_otp)
                 }
@@ -44,6 +51,7 @@ def index(request):
                 otp_save.save()
 
                 data = deywuro_request.json()
+                logging.debug(data)
                 print("SMS RESPONSE", data)
                 return redirect('verify_otp')
     else:
@@ -54,10 +62,10 @@ def index(request):
     # sending get request and saving the response as response object 
     location_request = requests.get(url = url, headers = headers) 
     data = location_request.json()
-    if(data['country_name'] == 	"Ghana"):
-        print("YOU ARE IN GHANA")
-    else:
-        return redirect('forbidden')
+    # if(data['country_name'] == 	"Ghana"):
+        # print("YOU ARE IN GHANA")
+    # else:
+        # return redirect('forbidden')
     return render(request, 'app/index.html',  {'form':form})
 
 

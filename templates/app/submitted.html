@@ -1,1 +1,80 @@
-Your response has been submitted. Thank you.
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{% static 'app/assets/imgs/maame.png' %}" type="image/x-icon">
+    <title>Response Submitted</title>
+    <!--
+
+    Template 2108 Dashboard
+
+	http://www.tooplate.com/view/2108-dashboard
+
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" type="text/css" href="{% static 'charts/css/fontawesome.min.css' %}" type="text/css"/>
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" type="text/css" href="{% static 'charts/css/fullcalendar.min.css' %}" type="text/css"/>
+    <!-- https://fullcalendar.io/ -->
+    <link rel="stylesheet" type="text/css" href="{% static 'charts/css/bootstrap.min.css' %}" type="text/css"/>
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" type="text/css" href="{% static 'charts/css/tooplate.css' %}" type="text/css"/>
+
+</head>
+{% block body_block %}
+<body id="reportsPage" style="background-image: url({% static 'charts/img/dash-bg-02.jpg' %})">
+    <div class="" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                </div>
+            </div><br><br>
+             <div class="card" style="background-color:transparent; text-align: center; font-style: italic;">
+
+            </div><br>
+            <!-- AGE -->
+
+            <!-- row -->
+            <div class="card" style="margin-top: 100px; text-align: center; border-radius: 25px; align-content: center;">
+                <div class="card-body" style="background-color:rgb(250, 225, 225); border-radius: 25px;">
+                   <!-- <h5 class="card-title">INVESTIGATORS</h5> -->
+                   <p style="color: rgb(53, 18, 211); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; align-content: center;">Your Response has been submitted. Thank you for your time. 🙂</p>
+                </div>
+             </div>
+                
+ 
+            <footer class="row tm-mt-small">
+                <div class="col-12 font-weight-light">
+                    {% comment %} <p class="d-inline-block tm-bg-black text-white py-2 px-4">
+                        Copyright &copy; 2020. Created by
+                        <a href="http://www.tooplate.com" class="text-white tm-footer-link">Tooplate</a> |  Distributed by <a href="https://themewagon.com" class="text-white tm-footer-link">ThemeWagon</a>
+                    </p> {% endcomment %}
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="{% static 'charts/js/jquery-3.3.1.min.js' %}"></script> 
+    <!-- https://jquery.com/download/ -->
+    <script src="{% static 'charts/js/moment.min.js' %}"></script> 
+    <!-- https://momentjs.com/ -->
+    <script src="{% static 'charts/js/utils.js' %}"></script> 
+    <script src="{% static 'charts/js/Chart.min.js' %}"></script> 
+    <!-- http://www.chartjs.org/docs/latest/ -->
+    <script src="{% static 'charts/js/fullcalendar.min.js' %}"></script> 
+    <!-- https://fullcalendar.io/ -->
+    <script src="{% static 'charts/js/bootstrap.min.js' %}"></script> 
+    <!-- https://getbootstrap.com/ -->
+    {% comment %} <script src="{% static 'charts/js/tooplate-scripts.js' %}"></script> {% endcomment %}
+
+
+
+
+</body>
+{% endblock body_block %}
+</html>
