@@ -19,8 +19,8 @@ from app.models import Responses
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 import json
 
 

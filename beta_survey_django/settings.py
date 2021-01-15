@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'g=33!vu8@_2t6hz#^us^-izxpd3rv760vvo31y5j@nle6kxx@g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['beta-survey.npontu.com', '127.0.0.1']
 
@@ -55,7 +55,11 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'hopemichael720@gmail.com'
 EMAIL_HOST_PASSWORD = 'wrtolgsgyvwxbhtg'
 EMAIL_PORT = 587
-DEFAULT_FROM_EMAIL = 'File Enc Team <noreply@surveyteam.com>'
+DEFAULT_FROM_EMAIL = 'COVID VACCINE <noreply@surveyteam.com>'
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
