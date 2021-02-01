@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'g=33!vu8@_2t6hz#^us^-izxpd3rv760vvo31y5j@nle6kxx@g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['beta-survey.npontu.com', '127.0.0.1']
 
@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django_celery_beat',
     'rest_framework',
     'corsheaders',
-    'app',
     'user_app',
 ]
 
@@ -73,7 +72,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-ROOT_URLCONF = 'beta_survey_django.urls'
+ROOT_URLCONF = 'user_auth.urls'
 
 
 CELERY_BROKER_URL = 'amqp://localhost'
@@ -98,7 +97,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'beta_survey_django.wsgi.application'
+WSGI_APPLICATION = 'user_auth.wsgi.application'
 
 
 # Database
@@ -170,4 +169,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'user_app:login_success'
+LOGIN_REDIRECT_URL = 'user_app:profile_view'

@@ -243,3 +243,96 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ipleak.net', port
 2021-01-15 10:45:07,388,388 urllib3.connectionpool DEBUG https://deywuro.com:443 "GET /api/sms?username=surveyhope&password=NpontuTestPassword&source=COVID-VAC&destination=0236291095&message=Your+OTP+is+152620 HTTP/1.1" 200 None
 2021-01-15 10:45:07,394,394 root DEBUG {'code': 0, 'message': '1 sms sent!'}
 2021-01-15 10:45:21,382,382 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 09:43:30,028,28 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/app/views.py changed, reloading.
+2021-02-01 09:43:30,029,29 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 09:43:49,632,632 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+2021-02-01 09:43:49,751,751 django.request WARNING Bad Request: /
+2021-02-01 09:43:50,085,85 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+2021-02-01 09:43:50,110,110 django.request WARNING Bad Request: /favicon.ico
+2021-02-01 09:43:55,621,621 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 09:44:08,820,820 django.security.DisallowedHost ERROR Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+2021-02-01 09:44:08,883,883 django.request WARNING Bad Request: /
+2021-02-01 09:44:58,571,571 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2021-02-01 09:45:00,512,512 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2021-02-01 09:45:00,607,607 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2021-02-01 09:45:00,611,611 django.request WARNING Not Found: /static/app/js/index.js
+2021-02-01 09:45:00,704,704 django.request WARNING Not Found: /static/charts/img/dash-bg-02.jpg
+2021-02-01 09:45:00,707,707 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2021-02-01 09:45:00,712,712 django.request WARNING Not Found: /static/app/js/index.js
+2021-02-01 09:45:00,788,788 django.request WARNING Not Found: /favicon.ico
+2021-02-01 09:46:12,768,768 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 09:46:46,913,913 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2021-02-01 09:46:47,354,354 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2021-02-01 09:46:47,467,467 django.request WARNING Not Found: /static/app/js/index.js
+2021-02-01 09:46:47,479,479 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2021-02-01 09:46:47,542,542 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2021-02-01 09:46:47,551,551 django.request WARNING Not Found: /static/app/js/index.js
+2021-02-01 09:46:47,565,565 django.request WARNING Not Found: /static/charts/img/dash-bg-02.jpg
+2021-02-01 09:46:51,257,257 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2021-02-01 09:46:51,754,754 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2021-02-01 09:46:51,807,807 django.request WARNING Not Found: /static/app/js/index.js
+2021-02-01 09:46:51,811,811 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2021-02-01 09:46:51,843,843 django.request WARNING Not Found: /static/charts/img/dash-bg-02.jpg
+2021-02-01 09:46:51,844,844 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2021-02-01 09:46:51,846,846 django.request WARNING Not Found: /static/app/js/index.js
+2021-02-01 09:47:35,499,499 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_auth/urls.py changed, reloading.
+2021-02-01 09:47:35,499,499 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 09:47:40,636,636 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 09:47:49,702,702 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2021-02-01 09:47:50,389,389 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2021-02-01 09:47:50,515,515 django.request WARNING Not Found: /static/app/js/index.js
+2021-02-01 09:47:50,525,525 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2021-02-01 09:47:50,566,566 django.request WARNING Not Found: /static/charts/img/dash-bg-02.jpg
+2021-02-01 09:47:50,572,572 django.request WARNING Not Found: /static/app/assets/imgs/cov.png
+2021-02-01 09:47:50,589,589 django.request WARNING Not Found: /static/app/js/index.js
+2021-02-01 09:47:56,094,94 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_auth/urls.py changed, reloading.
+2021-02-01 09:47:56,094,94 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 09:48:02,379,379 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_auth/urls.py changed, reloading.
+2021-02-01 09:48:02,379,379 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 11:15:23,739,739 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:09:12,320,320 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): ipleak.net:443
+2021-02-01 19:09:13,216,216 urllib3.connectionpool DEBUG https://ipleak.net:443 "GET /json/ HTTP/1.1" 200 None
+2021-02-01 19:09:16,971,971 django.request WARNING Not Found: /favicon.ico
+2021-02-01 19:10:01,302,302 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:37:19,505,505 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:50:10,907,907 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/views.py changed, reloading.
+2021-02-01 19:50:10,908,908 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:50:23,285,285 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_auth/urls.py changed, reloading.
+2021-02-01 19:50:23,285,285 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:50:33,559,559 django.request WARNING Not Found: /favicon.ico
+2021-02-01 19:52:32,574,574 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/views.py changed, reloading.
+2021-02-01 19:52:32,576,576 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:52:36,973,973 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/views.py changed, reloading.
+2021-02-01 19:52:36,974,974 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:52:41,665,665 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/views.py changed, reloading.
+2021-02-01 19:52:41,667,667 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:54:12,373,373 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/views.py changed, reloading.
+2021-02-01 19:54:12,374,374 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:54:15,748,748 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/views.py changed, reloading.
+2021-02-01 19:54:15,749,749 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:54:19,829,829 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/views.py changed, reloading.
+2021-02-01 19:54:19,830,830 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:54:26,247,247 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/views.py changed, reloading.
+2021-02-01 19:54:26,248,248 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:54:29,608,608 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/views.py changed, reloading.
+2021-02-01 19:54:29,609,609 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:55:18,741,741 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/urls.py changed, reloading.
+2021-02-01 19:55:18,746,746 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:55:30,225,225 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/urls.py changed, reloading.
+2021-02-01 19:55:30,225,225 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:55:35,576,576 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/urls.py changed, reloading.
+2021-02-01 19:55:35,576,576 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:55:40,148,148 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/urls.py changed, reloading.
+2021-02-01 19:55:40,148,148 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:55:44,705,705 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/urls.py changed, reloading.
+2021-02-01 19:55:44,706,706 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:55:48,992,992 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_app/urls.py changed, reloading.
+2021-02-01 19:55:48,992,992 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:55:54,973,973 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_auth/settings.py changed, reloading.
+2021-02-01 19:55:54,974,974 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:55:58,254,254 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_auth/settings.py changed, reloading.
+2021-02-01 19:55:58,256,256 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:56:01,311,311 django.utils.autoreload INFO /Users/mhope/Documents/stuff/pros/user_auth/user_auth/settings.py changed, reloading.
+2021-02-01 19:56:01,312,312 asyncio DEBUG Using selector: KqueueSelector
+2021-02-01 19:56:16,028,28 django.request WARNING Not Found: /login
+2021-02-01 20:52:44,396,396 asyncio DEBUG Using selector: KqueueSelector
