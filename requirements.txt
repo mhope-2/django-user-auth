@@ -17,7 +17,7 @@ djangorestframework==3.12.2
 idna==2.10
 kombu==5.0.2
 Markdown==3.3.3
-numpy==1.19.5
+numpy==1.22.0
 pandas==1.2.0
 prompt-toolkit==3.0.8
 python-crontab==2.5.1
