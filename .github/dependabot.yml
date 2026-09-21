@@ -1,0 +1,42 @@
+version: 2
+
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: daily
+
+    # Keep a burst of updates from overwhelming the review queue.
+    open-pull-requests-limit: 10
+
+    # Delay ordinary releases briefly so early regressions can surface.
+    # This does not delay security updates.
+    cooldown:
+      default-days: 3
+
+    groups:
+      # Group routine, low-risk upgrades while leaving major upgrades separate.
+      routine-minor-patch:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
+
+      # Group only patch-level security fixes. Security minor/major updates
+      # remain separate for manual review.
+      security-patches:
+        applies-to: security-updates
+        update-types:
+          - patch
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+
+    groups:
+      routine-action-updates:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
